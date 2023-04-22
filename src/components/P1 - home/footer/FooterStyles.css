@@ -1,0 +1,68 @@
+.footer-logo {
+  background-image: url(../../../assets/lume-logo.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 5px;
+  height: 55px;
+  min-width: 150px;
+  display: inline-block;
+  text-align: left;
+  margin-inline: 5px;
+  margin-top: 3vh;
+  z-index: 998 !important;
+}
+
+.footer-email {
+  background-image: url(../../../assets/email-icon.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding-inline: 10px;
+  margin-inline: 10px;
+  height: 14px;
+  object-fit: cover;
+  width: 17px;
+}
+
+.footer-column {
+  justify-content: center;
+  background-color: black;
+  list-style-type: none;
+  align-items: flex-start;
+  vertical-align: center;
+  padding-inline: 1%;
+  padding-left: 5%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-padding {
+  display: inline-block;
+  text-align: left;
+  font-family: var(--font-family-jaldi);
+  font-size: calc(15px + (21 - 10) * ((100vw - 300px) / (1600 - 300)));
+  margin-inline: 5px;
+  margin-top: 5vh;
+}
+
+.footer-li {
+  color: #808687;
+  font-family: var(--font-family-jaldi);
+  font-size: calc(10px + (21 - 10) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 100;
+  font-style: normal;
+  padding-left: 0;
+  line-height: 1px;
+  margin-inline: 5px;
+}
+
+.footer-h2 {
+  font-size: calc(15px + (25 - 10) * ((100vw - 300px) / (1600 - 300)));
+  color: var(--aquamarine);
+  line-height: 1vh;
+  z-index: 999;
+
+}

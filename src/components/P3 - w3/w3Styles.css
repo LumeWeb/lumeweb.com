@@ -1,0 +1,10 @@
+.page-two {
+    background-color: black;
+    white-space: nowrap;
+    justify-content: center;
+    display: flex;
+}
+.page-two::after{
+    content: ' page 2';
+    padding-left: 10px;
+}

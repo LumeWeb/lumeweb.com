@@ -1,0 +1,10 @@
+.page-one {
+    background-color: black;
+    white-space: nowrap;
+    justify-content: center;
+    display: flex;
+}
+.page-one::after{
+    content: ' page 1';
+    padding-left: 10px;
+}

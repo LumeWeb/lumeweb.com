@@ -1,0 +1,38 @@
+.header-container {
+  align-items: flex-start;
+  display: flex;
+  margin-block: calc(77px + 1.5625vw);
+  /* padding-bottom: calc(77px + 1.5625vw); */
+  z-index: -1 !important;
+  }
+
+.header {
+    color: var(--white);
+    font-family: var(--font-family-jetbrains_mono);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -6px;
+    line-height: calc(75px + (110 - 75) * ((100vw - 300px) / (1600 - 300)));
+    text-align: center;
+    width: 100%;
+  }
+
+.header-alt {
+        color: var(--aquamarine);
+        font-family: var(--font-family-jetbrains_mono);
+}
+
+.header-alignment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-underscore {
+    animation: blink 1.3s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { color: transparent }
+    50% { color: rgba(245, 245, 245) }
+}

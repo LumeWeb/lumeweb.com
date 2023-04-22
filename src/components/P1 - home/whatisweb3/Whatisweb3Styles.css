@@ -1,0 +1,111 @@
+.Whatisweb3-container {
+    align-self: flex-start;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    padding-block: 5vh;
+    /* padding-top: 15vh; */
+}
+
+.w3-container {
+    z-index: 999 !important;
+    width: 100%;
+    padding-left: 53vw;
+    transition: 0.5s;
+}
+
+.Whatisweb3-wrapper {
+    align-items: flex-start;
+    background-image: url(../../../assets/tilted-rectangle.webp);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80%;
+    padding-block: 10em;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    padding-left: calc(8px + 1.5625vw);
+}
+
+.img-left {
+    background-image: url(../../../assets/img-left.webp);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 817px;
+    left: 11%;
+    position: absolute;
+    display: flex;
+    width: 637px;
+    z-index: 998 !important;
+}
+
+.w3-btn-container {
+    align-items: center;
+    z-index: 999 !important;
+    background-color: var(--aquamarine);
+    border-radius: 5px;
+    display: flex;
+    height: 49px;
+    margin-left: -1.5px;
+    margin-top: 22px;
+    max-width: 105px;
+    padding: 0 3px;
+    transform: scale(1);
+    transition: 0.5s;
+}
+.w3-btn-container:hover {
+    transform: scale(1.01);
+    transition: 0.5s;
+}
+.w3-btn-container a {
+    color:black;
+}
+.w3-btn {
+    letter-spacing: 0;
+    min-height: 26px;
+    text-align: center;
+    width: 105px;
+    display: block;
+    font-size: 15px;
+}    
+.w3-transluscent {
+    background-color: #020e1076;
+    border-radius: 15px;
+    transition: 0.5s;
+    max-width: 71.5%;
+}
+@media screen and (max-width: 1050px) {
+    .w3-container {
+        z-index: 999 !important;
+        width: 100%;
+        padding-inline: 12%;
+        z-index: 999 !important;
+    }
+    .Whatisweb3-wrapper{
+        width: 100%;
+    }
+    .img-left {
+        left: 15%;
+        transition: 0.5s;
+    }
+    .w3-transluscent {
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 2200px) {
+    .w3-container {
+        padding-inline: 96vw;
+        width: 100%;
+        justify-content: center;
+        display: grid;
+    }
+    .img-left {
+        left: 5.5%;
+    }
+    .w3-transluscent {
+        max-width: 30%;
+    }
+      }
