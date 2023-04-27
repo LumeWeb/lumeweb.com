@@ -21,7 +21,8 @@ var lastIndex = randomString.lastIndexOf(" ");
     <h1
         class="mb-1 text-4xl whitespace-nowrap text-gray-100 md:text-6xl inline-flex overflow-x-hidden animate-type"
     >
-        {randomString}
+        {randomString.substring(0, lastIndex)}&nbsp;
+        <span class="header-alt">{lastWord(randomString)}</span>
         <span
             class="box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change-transform"
         ></span>
