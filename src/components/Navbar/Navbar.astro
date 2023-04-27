@@ -1,0 +1,54 @@
+---
+import React, { useState } from "react";
+import react from "@astrojs/react";
+import { Icon } from "astro-icon";
+
+import "./NavbarStyles.css";
+
+function Navbar() {
+    const [isOpen, setOpen] = useState(false);
+    const [nav, setNav] = useState(false);
+    const toggleNav = () => setNav(!nav);
+    const toggleHam = () => setOpen(!isOpen);
+}
+---
+
+<div class="navbar">
+    <div class="logo"></div>
+    <ul class="nav-menu">
+        <li><a href="home">Home</a></li>
+        <li><a href="vision">Vision</a></li>
+        <li><a href="w3">What is Web3</a></li>
+        <li>Donate</li>
+        <div class="download-btn-container">
+            <a class="download-btn" href="#">Download Extension</a>
+        </div>
+    </ul>
+
+    <div class="hamburger" onclick="toggleNav()">
+        <Icon pack="mdi" name="hamburger" toggled="isOpen" toggle="setOpen" />
+    </div>
+    <div class="mobile-menu">
+        <ul class="mobile-nav" onclick="toggleHam()">
+            <li onclick="toggleNav()">
+                <a href="#" onclick="toggleHam()">Home</a>
+            </li>
+            <li onclick="toggleNav()">
+                <a href="#vision" title="Vision" onclick="toggleHam()">Vision</a
+                >
+            </li>
+            <li onclick="toggleNav()">
+                <a href="#whatisweb3" title="What is Web3" onclick="toggleHam()"
+                    >What is Web3</a
+                >
+            </li>
+            <li onclick="toggleNav()">
+                <a href="#donate" onclick="toggleHam()">Donate</a>
+            </li>
+            <div class="download-btn-container">
+                <a class="download-btn" href="#">Download Extension</a>
+            </div>
+        </ul>
+        <div class="mobile-menu-btn"></div>
+    </div>
+</div>

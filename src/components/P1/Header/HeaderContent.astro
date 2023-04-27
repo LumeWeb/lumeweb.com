@@ -1,0 +1,29 @@
+---
+import react from "@astrojs/react";
+import Typewriter from "typewriter-effect";
+
+var headerStrings = [
+        `Access to the web for the masses`,
+        `An open web for business`,
+        `Web3 for the masses`,
+        `Web3 for you`,
+    ],
+    randomString =
+        headerStrings[Math.floor(Math.random() * headerStrings.length)];
+function lastWord(words) {
+    var n = words.split(" ");
+    return n[n.length - 1];
+}
+var lastIndex = randomString.lastIndexOf(" ");
+---
+
+<header class="mb-16 group">
+    <h1
+        class="mb-1 text-4xl whitespace-nowrap text-gray-100 md:text-6xl inline-flex overflow-x-hidden animate-type"
+    >
+        {randomString}
+        <span
+            class="box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change-transform"
+        ></span>
+    </h1>
+</header>
