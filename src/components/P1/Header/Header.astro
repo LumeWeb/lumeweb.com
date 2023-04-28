@@ -1,13 +1,13 @@
 ---
-import React from "react";
 import "./HeaderStyles.css";
 import HeaderContent from "./HeaderContent.astro";
-import image from "@astrojs/image";
 ---
 
-<div class="header-container">
-  <div class="header">
-    <h1 class="header-alignment">
+<div class="items-start flex header-container">
+  <div
+    class="text-[color:var(--white)] font-normal not-italic tracking-[-6px] leading-[calc(75px_+_(110_-_75)_*_((100vw_-_300px)_/_(1600_-_300)))] text-center w-full"
+  >
+    <h1 class="flex flex-col justify-center">
       <HeaderContent />
     </h1>
   </div>
