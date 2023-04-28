@@ -8,33 +8,33 @@ function Navbar() {
     const toggleNav = () => setNav(!nav)
 
     return (
-        <div className='navbar'>
-            <div className="logo">
+        <div class='navbar'>
+            <div class="logo">
             </div>
-            <ul className="nav-menu">
+            <ul class='transition-opacity duration-150 ease-out md:max-lg:opacity-0 lg:opacity-100 nav-menu'>
                 <li><a href="#">Home</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#whatisweb3">What is Web3</a></li>
                 <li>Donate</li>
-                <div className='download-btn-container'>
-                    <a className="download-btn" href="#">Download Extension</a>
+                <div class='download-btn-container class="transition duration-[0.3s]"'>
+                    <a class='download-btn' href="#">Download Extension</a>
                 </div>
             </ul>
 
-            <div className="hamburger" onClick={toggleNav}>
-                <HiOutlineMenuAlt4 className='icon items-end'/>
+            <div class="transition-opacity duration-150 ease-out nav-menu hamburger" onClick={toggleNav}>
+                <HiOutlineMenuAlt4 class='icon'/>
             </div>
-            <div className={nav ? 'mobile-menu active' : 'mobile-menu'}>
-                <ul className="mobile-nav">
+            <div class={nav ? 'mobile-menu active class="transition duration-[0.55s] linear"' : 'mobile-menu class="transition duration-[0.55s] linear"'}>
+                <ul class="mobile-nav">
                     <li onClick={toggleNav}><a href="#">Home</a></li>
                     <li onClick={toggleNav}><a href="#vision">Vision</a></li>
                     <li onClick={toggleNav}><a href="#whatisweb3">What is Web3</a></li>
                     <li onClick={toggleNav}>Donate</li>
-                    <div className='download-btn-container'>
-                        <a className="download-btn" href="#">Download Extension</a>
+                    <div class='download-btn-container'>
+                        <a class="download-btn" href="#">Download Extension</a>
                     </div>
                 </ul>
-                <div className="mobile-menu-btn"></div>
+                <div class="mobile-menu-btn"></div>
             </div>
         </div>
     )

@@ -1,131 +1,45 @@
-.logo {
-  /* background-image: url(../../../assets/lume-logo.webp); */
-  background-position: 50%;
-  background-size: cover;
-  margin-left: 5px;
-  height: 70px;
-  width: 210px;
-}
-
-.navbar-container {
-  white-space: nowrap;
-  display: inline-block;
-}
-
-.navbar {
-  width: 100%;
-  height: 80px;
+.header-container {
+  align-items: flex-start;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  white-space: nowrap;
-  gap: 36px;
+  margin-block: calc(77px + 1.5625vw);
+  /* padding-bottom: calc(77px + 1.5625vw); */
+  z-index: -1 !important;
 }
 
-.nav-menu {
-  display: flex;
-  align-items: flex-end;
-  padding: 1em;
-}
-
-li {
-  padding: 1rem;
-}
-
-.download-btn-container {
-  color: var(--black);
+.header {
+  color: var(--white);
   font-family: var(--font-family-jetbrains_mono);
-  font-size: var(--font-size-s);
   font-weight: 400;
   font-style: normal;
-  align-items: flex-end;
-  background-color: var(--aquamarine);
-  border-radius: 5px;
-  display: flex;
-  height: 52px;
-  min-width: 245px;
-  padding: 12px 5.2px;
-  transform: scale(1);
-  transition: 0.3s;
-}
-
-.download-btn-container a {
-  color: black;
-}
-
-.download-btn-container:hover {
-  transform: scale(1.01);
-  transition: 0.3s;
-}
-
-.download-btn {
-  letter-spacing: 0;
-  min-height: 26px;
+  letter-spacing: -6px;
+  line-height: calc(75px + (110 - 75) * ((100vw - 300px) / (1600 - 300)));
   text-align: center;
-  width: 234px;
-  display: block;
+  width: 100%;
 }
 
-.hamburger {
-  display: none;
+.header-alt {
+  color: var(--aquamarine);
+  font-family: var(--font-family-jetbrains_mono);
 }
 
-.mobile-menu {
-  display: none;
+.header-alignment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media screen and (max-width: 940px) {
-  .nav-menu {
-    display: none;
+.header-underscore {
+  animation: blink 1.3s step-end infinite;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    color: transparent
   }
 
-  .hamburger {
-    display: block;
-    position: flex;
-    max-width: fit-content;
-    z-index: 999;
-  }
-
-  .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-    margin-left: 50%;
-    top: -100vh;
-    left: 0;
-    position: absolute;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: #031418;
-    transition: 0.2s;
-  }
-
-  .active {
-    top: 2em;
-  }
-
-  .mobile-menu li {
-    padding: 1em 0.5em;
-    margin: 0 1em;
-  }
-
-  .download-btn-container {
-    transform: scale(0.7);
-    transition: 0.3s;
-    margin-left: -0.8em;
-  }
-
-  .download-btn-container:hover {
-    transform: scale(0.75);
-    transition: 0.3s;
-  }
-
-  .download-btn {
-    letter-spacing: 0;
-    min-height: 26px;
-    text-align: center;
-    width: 234px;
-    display: block;
+  50% {
+    color: rgba(245, 245, 245)
   }
 }
