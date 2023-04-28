@@ -1,5 +1,5 @@
 ---
-import Navbar from "../components/Navbar/Navbar.astro";
+import Navbar from "../components/Navbar/Navbar.jsx";
 import Header from "../components/P1/Header/Header.astro";
 import Vision from "../components/P1/Vision/Vision.astro";
 import "../index.css";
@@ -22,7 +22,7 @@ import "../index.css";
 		<link rel="stylesheet" href="./src/index.css" />
 	</head>
 	<body>
-		<Navbar />
+		<Navbar client:load />
 		<Header />
 		<Vision />
 	</body>

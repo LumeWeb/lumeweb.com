@@ -30,7 +30,7 @@
 
 .nav-menu {
     display: flex;
-    justify-content: right;
+    align-items: flex-end;
     padding: 1em;
     transition: all 1s linear;
 }
@@ -74,7 +74,7 @@ li {
 }
 
 .hamburger {
-    display: end;
+    display: none;
     font-size: var(--font-size-xl);
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -86,8 +86,7 @@ li {
 }
 
 .mobile-menu {
-    top: -50em;
-    position: relative;
+    display: none;
 }
 
 @media screen and (max-width: 940px) {
@@ -101,10 +100,9 @@ li {
 
     .hamburger {
         display: block;
-        position: absolute;
-        right: 20;
-        justify-content: right;
-        z-index: 999 !important;
+        position: flex;
+        max-width: fit-content;
+        z-index: 999;
     }
 
     .mobile-menu {
@@ -125,8 +123,11 @@ li {
         outline-color: #07363fa7;
         box-shadow: 0px 4px 4px #00000096;
         transition: 0.55s;
-        top: 2em;
         z-index: 998 !important;
+    }
+
+    .active {
+        top: 2em;
     }
 
     .mobile-menu li {
