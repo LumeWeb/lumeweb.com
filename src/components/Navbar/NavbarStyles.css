@@ -9,7 +9,7 @@ li {
 }
 
 .download-btn-container {
-    color: var(--black);
+    color: var(--black) !important;
     font-family: var(--font-family-jetbrains-mono);
     font-size: var(--font-size-s);
     font-weight: 400;
