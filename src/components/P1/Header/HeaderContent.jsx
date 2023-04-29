@@ -1,4 +1,3 @@
-import React, {useState, useEffect} from "react";
 import Typewriter from "typewriter-effect";
 
 const HeaderContent = () => {
@@ -20,7 +19,7 @@ const HeaderContent = () => {
                     typewriter.changeDelay(50).typeString(`${
                         randomString.substring(0, lastIndex)
                     }` + ' ').start();
-                    typewriter.typeString(`<span class="header-alt">${
+                    typewriter.typeString(`<span class="text-[color:var(--aquamarine)]">${
                         lastWord(randomString)
                     }</span>`)
                 }

@@ -8,8 +8,8 @@ function Navbar() {
     const toggleNav = () => setNav(!nav)
 
     return (
-        <div class='navbar'>
-            <div class="logo">
+        <div class='w-full h-20 flex justify-between items-center whitespace-nowrap gap-9 bg-[#031418] pt-[75px] pb-[3%] px-[7%]'>
+            <div class="bg-[url(../../src/assets/lume-logo.webp)] bg-no-repeat bg-contain h-[55px] min-w-[210px] z-[998] ml-[5px]">
             </div>
             <ul class='transition-opacity duration-150 ease-out md:max-lg:opacity-0 lg:opacity-100 nav-menu'>
                 <li><a href="#">Home</a></li>

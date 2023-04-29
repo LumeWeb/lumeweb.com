@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Jaldi:400|JetBrains+Mono:400,700|IBM+Plex+Sans+Devanagari:400");
 
 :root {
-  --primary-dark: #000000;
-  --primary-light: #ffffff;
+  --primary-dark: #000;
+  --primary-light: #fff;
 }
 
 :root {
@@ -31,7 +31,7 @@
 
   --font-family-ibm_plex_sans_devanagari: "IBM Plex Sans Devanagari";
   --font-family-jaldi: "Jaldi";
-  --font-family-jetbrains_mono: "JetBrains Mono";
+  --font-family-jetbrains-mono: "JetBrains Mono";
 }
 
 * {
