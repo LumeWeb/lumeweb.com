@@ -1,26 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Jaldi:400|JetBrains+Mono:400,700|IBM+Plex+Sans+Devanagari:400");
 
 :root {
-  --primary-dark: #000;
-  --primary-light: #fff;
-}
-
-:root {
+  --primary-dark: rgba(0 0 0 100%);
+  --primary-light: rgba(255 255 255 100%);
   --black:
-    rgba(0, 0, 0, 1);
+    rgba(0 0 0);
   --blue-charcoal:
-    rgba(1, 14, 16, 1);
+    rgba(1 14 16);
   --blue-charcoal-2:
-    rgba(3, 21, 24, 1);
+    rgba(3 21 24);
   --aquamarine:
-    rgba(122, 252, 187, 1);
+    rgba(122 252 187);
   --cloud:
-    rgba(199, 199, 199, 1);
+    rgba(199 199 199);
   --alto:
-    rgba(217, 217, 217, 1);
+    rgba(217 217 217);
   --white:
-    rgba(255, 255, 255, 1);
-
+    rgba(255 255 255);
   --font-size-s: 20px;
   --font-size-m: 21px;
   --font-size-l: 25px;
@@ -28,8 +24,7 @@
   --font-size-xxl: 32px;
   --font-size-xxxl: 45px;
   --font-size-xxxxl: 100px;
-
-  --font-family-ibm_plex_sans_devanagari: "IBM Plex Sans Devanagari";
+  --font-family-ibm-plex-sans-devanagari: "IBM Plex Sans Devanagari";
   --font-family-jaldi: "Jaldi";
   --font-family-jetbrains-mono: "JetBrains Mono";
 }
@@ -87,10 +82,6 @@ body {
   white-space: nowrap;
 }
 
-a {
-  text-decoration: none;
-}
-
 h1 {
   font-size: calc(26px + (82 - 26) * ((100vw - 300px) / (1600 - 300)));
   font-weight: 100;
@@ -114,7 +105,6 @@ h4 {
   font-size: calc(15px + (21 - 15) * ((100vw - 300px) / (1600 - 300)));
   color: var(--cloud);
   font-family: var(--font-family-jaldi);
-  font-size: var(--font-size-m);
   font-weight: 400;
   font-style: normal;
   max-width: 550px;
@@ -151,7 +141,7 @@ ul {
   padding: 0 1rem;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (width <=1050px) {
   .left {
     display: flex;
     position: relative;
