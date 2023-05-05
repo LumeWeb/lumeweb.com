@@ -1,0 +1,47 @@
+.socials-wrapper {
+    display: flex;
+    margin-left: -5%;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+}
+
+.gitHub {
+    background-image: url(../../../assets/github-logo.webp);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 48.3px;
+    width: 55px;
+}
+
+.discord {
+    background-image: url(../../../assets/discord-logo.webp);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 48.3px;
+    width: 48.3px;
+    margin-top: 0.4vh;
+    margin-left: 18px;
+}
+
+.twitter {
+    background-image: url(../../../assets/twitter-logo.webp);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 48.3px;
+    width: 55px;
+    margin-left: 18px;
+}
+
+.fb {
+    background-image: url(../../../assets/fb-logo.webp);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 0.5vh;
+    height: 42px;
+    width: 50px;
+    margin-left: 18px;
+}

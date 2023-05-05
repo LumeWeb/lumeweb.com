@@ -49,6 +49,7 @@ li {
 
 .hamburger {
     display: none;
+    cursor: default;
 }
 
 .mobile-menu {
@@ -67,6 +68,7 @@ li {
         z-index: 999;
         font-size: var(--font-size-xl);
         -webkit-tap-highlight-color: transparent;
+        cursor: default;
     }
 
     .mobile-menu {

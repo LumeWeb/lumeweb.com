@@ -22,7 +22,7 @@ function Navbar() {
             </ul>
 
             <div class="transition-opacity duration-150 ease-out nav-menu hamburger" onClick={toggleNav}>
-                <HiOutlineMenuAlt4 class='icon'/>
+            ☰
             </div>
             <div class={nav ? 'mobile-menu active class="transition duration-[0.55s] linear"' : 'mobile-menu class="transition duration-[0.55s] linear"'}>
                 <ul class="mobile-nav">
