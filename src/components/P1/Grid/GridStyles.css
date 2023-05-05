@@ -1,7 +1,7 @@
 .grid-grid {
     display: grid;
-    grid-template-columns: 25% 25% 25%;
-    grid-template-rows: 5% 5%;
+    grid:
+        "top-left top-mid top-right" 5% "bot-left bot-mid bot-right" 5% / 25% 25% 25%;
     gap: 44.5% 0.5%;
     margin-block: 15vh;
     grid-auto-flow: row;
@@ -9,9 +9,6 @@
     align-content: center;
     justify-items: center;
     align-items: center;
-    grid-template-areas:
-        "top-left top-mid top-right"
-        "bot-left bot-mid bot-right";
 }
 
 .top-left {
