@@ -1,5 +1,5 @@
 .footer-logo {
-    background-image: url(../../../assets/lume-logo.webp);
+    background-image: url('../../../assets/lume-logo.webp');
     background-repeat: no-repeat;
     background-size: contain;
     margin-left: 5px;
@@ -13,7 +13,7 @@
 }
 
 .footer-email {
-    background-image: url(../../../assets/email-icon.webp);
+    background-image: url('../../../assets/email-icon.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

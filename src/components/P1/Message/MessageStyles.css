@@ -12,7 +12,7 @@
 
 .message-header {
     color: var(--blue-charcoal-2);
-    font-family: var(--font-family-jetbrains_mono);
+    font-family: var(--font-family-jetbrains-mono);
     font-size: calc(25px + (32 - 24) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 700;
     line-height: 2em;

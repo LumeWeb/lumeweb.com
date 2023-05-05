@@ -5,8 +5,8 @@
     margin-bottom: 5vh;
 }
 
-.gitHub {
-    background-image: url(../../../assets/github-logo.webp);
+.github {
+    background-image: url('../../../assets/github-logo.webp');
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@
 }
 
 .discord {
-    background-image: url(../../../assets/discord-logo.webp);
+    background-image: url('../../../assets/discord-logo.webp');
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 }
 
 .twitter {
-    background-image: url(../../../assets/twitter-logo.webp);
+    background-image: url('../../../assets/twitter-logo.webp');
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -36,7 +36,7 @@
 }
 
 .fb {
-    background-image: url(../../../assets/fb-logo.webp);
+    background-image: url('../../../assets/fb-logo.webp');
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
