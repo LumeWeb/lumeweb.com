@@ -1,16 +1,5 @@
-.footer-card {
-    height: auto;
-    background-color: #020E10;
-}
-
 .footer-li {
-    color: #808687;
     font-family: var(--font-family-jaldi);
-    font-size: calc(10px + (21 - 10) * ((100vw - 300px) / (1600 - 300)));
-    font-weight: 100;
-    font-style: normal;
-    padding-left: 0;
-    line-height: 1px;
     margin-inline: 5px;
     list-style-type: none;
 }
