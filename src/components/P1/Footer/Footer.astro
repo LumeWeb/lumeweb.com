@@ -1,63 +1,81 @@
 ---
-import React from "react";
-import Grid from "dynamic-react-grid";
 import "./FooterStyles.css";
 ---
 
-<div class="justify-center bg-[black] list-none items-start pl-[5%];">
-    <div class="flex flex-row;" style={{ padding: 15 }}>
-        <Grid row spacing={1}>
-            <Grid>
-                <h6>
-                    <div class="footer-logo"></div>
-                    <ul>
-                        <li class="footer-li">
-                            <span class="footer-email"
-                            ></span>contact@lumeweb.com
-                        </li>
-                        <li>
-                            <span class="footer-h2"
-                                >Freedom, privacy, <br />ownership.</span
-                            >
-                        </li>
-                    </ul>
-                </h6>
-            </Grid>
-            <Grid>
-                <h5 class="footer-padding">General</h5><br /><h6>
-                    <li class="footer-li">Home</li>
-                    <li class="footer-li">Get Started</li>
-                    <li class="footer-li">Documentation</li>
-                    <li class="footer-li">Projects</li>
-                </h6>
-            </Grid>
-            <Grid>
-                <h5 class="footer-padding">Community</h5><br /><h6>
-                    <li class="footer-li">GitHub</li>
-                    <li class="footer-li">Discord</li>
-                    <li class="footer-li">Twitter</li>
-                    <li class="footer-li">facebook</li>
-                </h6>
-            </Grid>
-            <Grid>
-                <h5 class="footer-padding">Other</h5><br /><h6>
-                    <li class="footer-li">BrowserUniversal</li>
-                    <li class="footer-li">Storage</li>
-                </h6>
-            </Grid>
-            <Grid>
-                <h5 class="footer-padding">Other</h5><br /><h6>
-                    <li class="footer-li">BrowserUniversal</li>
-                    <li class="footer-li">Storage</li>
-                </h6>
-            </Grid>
-            <Grid>
-                <h5 class="footer-padding">Support Us</h5><br /><h6>
-                    <li class="footer-li">Donate</li>
-                    <li class="footer-li">Download App</li>
-                    <li class="footer-li">Partnerships</li>
-                </h6>
-            </Grid>
-        </Grid>
+<div class="footer-cards">
+    <div class="footer-card">
+        <h6>
+            <div class="footer-logo"></div>
+            <ul>
+                <li class="footer-li">
+                    <span class="footer-email"></span>contact@lumeweb.com
+                </li><div class="footer-span">
+                    <span class="footer-h2"
+                        >Freedom, privacy, <br />ownership.</span
+                    >
+                </div>
+            </ul>
+        </h6>
+    </div>
+    <div class="footer-card">
+        <h5
+            class="inline-block text-left text-[calc(15px_+_(21_-_10)_*_((100vw_-_300px)_/_(1600_-_300)))]"
+            style="padding-left: 0.25em;"
+        >
+            General
+        </h5><br /><h6>
+            <li class="footer-li">Home</li>
+            <li class="footer-li">Get Started</li>
+            <li class="footer-li">Documentation</li>
+            <li class="footer-li">Projects</li>
+        </h6>
+    </div>
+    <div class="footer-card">
+        <h5
+            class="inline-block text-left text-[calc(15px_+_(21_-_10)_*_((100vw_-_300px)_/_(1600_-_300)))]"
+            style="padding-left: 0.25em;"
+        >
+            Community
+        </h5><br /><h6>
+            <li class="footer-li">GitHub</li>
+            <li class="footer-li">Discord</li>
+            <li class="footer-li">Twitter</li>
+            <li class="footer-li">facebook</li>
+        </h6>
+    </div>
+    <div class="footer-card">
+        <h5
+            class="inline-block text-left text-[calc(15px_+_(21_-_10)_*_((100vw_-_300px)_/_(1600_-_300)))]"
+            style="padding-left: 0.25em;"
+        >
+            Ecosystem
+        </h5><br /><h6>
+            <li class="footer-li">Browser</li>
+            <li class="footer-li">Extension</li>
+            <li class="footer-li">Universal Storage</li>
+        </h6>
+    </div>
+    <div class="footer-card">
+        <h5
+            class="inline-block text-left text-[calc(15px_+_(21_-_10)_*_((100vw_-_300px)_/_(1600_-_300)))]"
+            style="padding-left: 0.25em;"
+        >
+            Other
+        </h5><br /><h6>
+            <li class="footer-li">BrowserUniversal</li>
+            <li class="footer-li">Storage</li>
+        </h6>
+    </div>
+    <div class="footer-card">
+        <h5
+            class="inline-block text-left text-[calc(15px_+_(21_-_10)_*_((100vw_-_300px)_/_(1600_-_300)))]"
+            style="padding-left: 0.25em;"
+        >
+            Support Us
+        </h5><br /><h6>
+            <li class="footer-li">Donate</li>
+            <li class="footer-li">Download App</li>
+            <li class="footer-li">Partnerships</li>
+        </h6>
     </div>
 </div>
