@@ -13,21 +13,21 @@
     height: auto;
 }
 
-@media (min-width: 600px) {
+@media (width >=600px) {
     .footer-cards {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
 }
 
-@media (min-width: 900px) {
+@media (width >=900px) {
     .footer-cards {
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 .footer-logo {
-    background-image: url(../../../assets/lume-logo.webp);
+    background-image: url('../../../assets/lume-logo.webp');
     background-repeat: no-repeat;
     background-size: contain;
     height: 55px;
@@ -38,7 +38,7 @@
 }
 
 .footer-email {
-    background-image: url(../../../assets/email-icon.webp);
+    background-image: url('../../../assets/email-icon.webp');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
