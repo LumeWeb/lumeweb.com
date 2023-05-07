@@ -1,55 +1,22 @@
 .w3-container {
     z-index: 999 !important;
     width: 100%;
-    padding-left: 53vw;
+    padding-left: 50vw;
     transition: 0.5s;
 }
 
 .whatisweb3-wrapper {
     background-image: url("../../../assets/tilted-rectangle.webp");
     background-size: 100% 100%;
-    background-position: center;
     background-repeat: no-repeat;
+    left: 0%;
     width: 80%;
-    padding-block: 10em;
+    padding-block: 11em;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     display: flex;
     padding-left: calc(8px + 1.5625vw);
-}
-
-.w3-btn-container {
-    align-items: center;
-    z-index: 999 !important;
-    background-color: var(--aquamarine);
-    border-radius: 5px;
-    display: flex;
-    height: 49px;
-    margin-left: -1.5px;
-    margin-top: 22px;
-    max-width: 105px;
-    padding: 0 3px;
-    transform: scale(1);
-    transition: 0.5s;
-}
-
-.w3-btn-container:hover {
-    transform: scale(1.01);
-    transition: 0.5s;
-}
-
-.w3-btn-container a {
-    color: black;
-}
-
-.w3-btn {
-    letter-spacing: 0;
-    min-height: 26px;
-    text-align: center;
-    width: 105px;
-    display: block;
-    font-size: 15px;
 }
 
 .w3-transluscent {

@@ -2,13 +2,14 @@
     font-family: var(--font-family-jaldi);
     margin-inline: 5px;
     list-style-type: none;
+    white-space: nowrap;
 }
 
 .footer-cards {
     margin: 0 auto;
     display: grid;
     gap: 1rem;
-    padding: 5% 11.5%;
+    padding: 7% 14.7%;
     background-color: #020E10;
     height: auto;
 }
@@ -42,6 +43,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
+    margin-right: 2%;
     padding-inline: 10px;
     height: 14px;
     object-fit: cover;

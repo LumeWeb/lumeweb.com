@@ -8,35 +8,9 @@ li {
     padding: 1rem;
 }
 
-.download-btn-container {
-    color: var(--black) !important;
-    font-family: var(--font-family-jetbrains-mono);
-    font-size: var(--font-size-s);
-    font-weight: 400;
-    font-style: normal;
-    align-items: flex-end;
-    background-color: var(--aquamarine);
-    border-radius: 5px;
-    display: flex;
-    height: 52px;
-    min-width: 245px;
-    padding: 12px 5.2px;
-    transform: scale(1);
-    transition: 0.3s;
-}
-
 .header-alt {
     color: var(--aquamarine);
     font-family: var(--font-family-jetbrains-mono);
-}
-
-.download-btn-container a {
-    color: black;
-}
-
-.download-btn-container:hover {
-    transform: scale(1.01);
-    transition: 0.3s;
 }
 
 .download-btn {
@@ -97,17 +71,6 @@ li {
     .mobile-menu li {
         padding: 1em 0.5em;
         margin: 0 1em;
-    }
-
-    .download-btn-container {
-        transform: scale(0.7);
-        transition: 0.3s;
-        margin-left: -0.8em;
-    }
-
-    .download-btn-container:hover {
-        transform: scale(0.75);
-        transition: 0.3s;
     }
 
     .download-btn {
