@@ -12,7 +12,9 @@ const HeaderContent = () => {
     var lastIndex = randomString.lastIndexOf(" ");
     return <div>
         <Typewriter options={
-                {cursor: "_"}
+                {cursor: `<span class="text-[color:var(--aquamarine)]">${
+                    '_'
+                }</span>`}
             }
             onInit={
                 (typewriter) => {
