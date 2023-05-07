@@ -16,7 +16,7 @@ function Navbar() {
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#whatisweb3">What is Web3</a></li>
                 <li>Donate</li>
-                <div class='text-[color:var(--black)] text-[length:var(--font-size-s)] font-normal not-italic items-end bg-[color:var(--aquamarine)] flex h-[52px] min-w-[245px] transition-[0.5s] border px-[5.2px] py-3 rounded-[5px] border-solid border-transparent scale-100 hover:transition-[0.5s] hover:bg-transparent hover:border hover:border-[color:var(--aquamarine)] hover:text-[white] hover:border-solid;'>
+                <div class='text-[color:var(--black)] font-normal not-italic items-end bg-[color:var(--aquamarine)] flex h-[52px] max-w-[195px] transition-[0.5s] border px-[5.2px] py-3 rounded-[5px] border-solid border-transparent scale-100 hover:transition-[0.5s] hover:bg-transparent hover:border hover:border-[color:var(--aquamarine)] hover:text-[white] hover:border-solid;'>
                     <a class='download-btn' href="#">Download Extension</a>
                 </div>
             </ul>
@@ -29,8 +29,8 @@ function Navbar() {
                     <li onClick={toggleNav}><a href="#">Home</a></li>
                     <li onClick={toggleNav}><a href="#vision">Vision</a></li>
                     <li onClick={toggleNav}><a href="#whatisweb3">What is Web3</a></li>
-                    <li onClick={toggleNav}>Donate</li>
-                    <div class='text-[color:var(--black)] text-[length:var(--font-size-s)] font-normal not-italic items-end bg-[color:var(--aquamarine)] flex h-[52px] min-w-[245px] transition-[0.5s] border px-[5.2px] py-3 rounded-[5px] border-solid border-transparent scale-100 hover:transition-[0.5s] hover:bg-transparent hover:border hover:border-[color:var(--aquamarine)] hover:text-[white] hover:border-solid transition-[0.5s] ml-[-0.8em] scale-[0.7] hover:scale-75;'>
+                    <li onClick={toggleNav}><a href="#donate">Donate</a></li>
+                    <div class='text-[color:var(--black)] text-[length:var(--font-size-s)] font-normal not-italic items-end bg-[color:var(--aquamarine)] flex h-[52px] min-w-[245px] transition-[0.5s] border px-[5.2px] py-3 rounded-[5px] border-solid border-transparent scale-100 hover:transition-[0.5s] hover:bg-transparent hover:border hover:border-[color:var(--aquamarine)] hover:text-[white] hover:border-solid transition-[0.5s] ml-[-0.8em] scale-[0.7] hover:scale-75'>
                         <a class="download-btn pl-2.5" href="#">Download Extension</a>
                     </div>
                 </ul>

@@ -1,7 +1,7 @@
 .w3-container {
     z-index: 999 !important;
     width: 100%;
-    padding-left: 50vw;
+    padding-left: 47.5vw;
     transition: 0.5s;
 }
 
@@ -10,7 +10,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     left: 0%;
-    width: 80%;
+    width: 100%;
     padding-block: 11em;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@
 @media screen and (width <=1050px) {
     .w3-container {
         width: 100%;
-        padding-inline: 12%;
+        padding-inline: 9%;
         z-index: 999 !important;
     }
 

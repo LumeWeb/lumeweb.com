@@ -9,7 +9,7 @@
     margin: 0 auto;
     display: grid;
     gap: 1rem;
-    padding: 7% 14.7%;
+    padding: 10% 12%;
     background-color: #020E10;
     height: auto;
 }
@@ -51,11 +51,12 @@
 }
 
 .footer-h2 {
-    font-size: calc(15px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(12px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
     color: var(--aquamarine);
     line-height: 1vh;
     z-index: 999;
     margin-top: 5em;
+    white-space: nowrap;
 }
 
 .footer-padding {
