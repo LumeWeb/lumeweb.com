@@ -51,8 +51,7 @@
 
     .shadowdrop {
         border-radius: 72.5px;
-        box-shadow: 0px 4px 4px #00000040;
-        /* margin-left: 12%; */
+        box-shadow: 4px 4px #00000040;
         transition: 0.5s;
         justify-content: center;
     }

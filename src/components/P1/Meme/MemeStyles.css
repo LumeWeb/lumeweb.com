@@ -22,18 +22,16 @@
     align-items: center;
     overflow: hidden;
     display: flex;
-    /* padding-left: 6.5%; */
     height: 80vh;
     transition: 0.5s;
 }
 
 .meme-bg {
     background-image: url("../../../assets/meme.webp");
-    background-position: 100% 50%;
+    background-position: 60% 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    /* margin-left: -0.8vw; */
-    height: calc(100% + 0.3vh);
+    height: calc(100% + 3vh);
     transition: 0.5s;
 }
 
