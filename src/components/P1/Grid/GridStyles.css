@@ -3,7 +3,6 @@
     margin: 126px auto;
     display: grid;
     gap: 1rem;
-    /* padding-left: 5.5%; */
 }
 
 @media (width >=600px) {
