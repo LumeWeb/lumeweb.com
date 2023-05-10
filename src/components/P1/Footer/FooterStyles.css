@@ -1,6 +1,6 @@
 .footer-li {
     font-family: var(--font-family-jaldi);
-    margin-inline: 5px;
+    margin-inline: 0.5vw;
     list-style-type: none;
     white-space: nowrap;
 }
@@ -19,11 +19,25 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
+
+    .footer-li {
+        margin-inline: 0.7vw;
+    }
 }
 
 @media (width >=900px) {
     .footer-cards {
         grid-template-columns: repeat(6, 1fr);
+    }
+
+    .footer-li {
+        margin-inline: 0.5vw;
+    }
+}
+
+@media (width <=600px) {
+    .footer-li {
+        margin-inline: 1vw;
     }
 }
 

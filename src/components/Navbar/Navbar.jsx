@@ -1,6 +1,4 @@
 import React, {useState} from 'react'
-import {HiOutlineMenuAlt4} from 'react-icons/hi'
-
 import './NavbarStyles.css'
 
 function Navbar() {
