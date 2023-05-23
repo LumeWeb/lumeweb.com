@@ -1,53 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Jaldi:400|JetBrains+Mono:400,700|IBM+Plex+Sans+Devanagari:400");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary-dark: rgba(0 0 0 100%);
   --primary-light: rgba(255 255 255 100%);
-  --black:
-    rgba(0 0 0);
-  --blue-charcoal:
-    rgba(1 14 16);
-  --blue-charcoal-2:
-    rgba(3 21 24);
-  --aquamarine:
-    rgba(122 252 187);
-  --cloud:
-    rgba(199 199 199);
-  --alto:
-    rgba(217 217 217);
-  --white:
-    rgba(255 255 255);
-  --font-size-s: 20px;
-  --font-size-m: 21px;
-  --font-size-l: 25px;
-  --font-size-xl: 30px;
-  --font-size-xxl: 32px;
-  --font-size-xxxl: 45px;
-  --font-size-xxxxl: 100px;
+  --black: rgba(0 0 0);
+  --blue-charcoal: rgba(1 14 16);
+  --blue-charcoal-2: rgba(3 21 24);
+  --aquamarine: rgba(122 252 187);
+  --cloud: rgba(199 199 199);
+  --alto: rgba(217 217 217);
+  --white: rgba(255 255 255);
+  --font-size-s: 10.25rem; /* 20px */
+  --font-size-m: 1.3125rem; /* 21px */
+  --font-size-l: 1.5625rem; /* 25px */
+  --font-size-xl: 1.875rem; /* 30px */
+  --font-size-xxl: 2rem; /* 32px */
+  --font-size-xxxl: 2.8125rem; /* 45px */
+  --font-size-xxxxl: 6.25rem; /* 100px */
   --font-family-ibm-plex-sans-devanagari: "IBM Plex Sans Devanagari";
   --font-family-jaldi: "Jaldi";
   --font-family-jetbrains-mono: "JetBrains Mono";
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   scroll-behavior: smooth;
 }
 
-a,
-a:visited {
-  text-decoration: none;
-}
-
 body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   font-family: "JetBrains Mono", sans-serif;
   background-color: rgb(3 20 24);
   color: white;
+}
+
+main {
+  flex-grow: 1;
 }
 
 .body-block {
@@ -96,7 +92,6 @@ h2 {
 
 h3 {
   font-size: calc(30px + (45 - 30) * ((100vw - 300px) / (1600 - 300)));
-  min-width: 75vw;
   margin-top: 0.5em;
   z-index: 999;
 }
@@ -131,17 +126,28 @@ h6 {
   max-width: 300;
 }
 
-ul {
-  list-style-type: none;
-}
-
 .container {
   max-width: 1240px;
   margin: auto;
   padding: 0 1rem;
 }
 
-@media screen and (width <=1050px) {
+.btn-main {
+    display: inline-block;
+    color: var(--black);
+    background: var(--aquamarine);
+    border: 1px solid var(--aquamarine);
+    padding: 0.625rem 1rem;
+    border-radius: 0.3125rem;
+    transition: color 200ms, background 200ms;
+
+    &:hover {
+        color: var(--white);
+        background: transparent;
+    }
+}
+
+@media screen and (width <= 1050px) {
   .left {
     display: flex;
     position: relative;

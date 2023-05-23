@@ -1,0 +1,56 @@
+.meme-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8% 12%;
+  background-image: url("../../../assets/tilted-rectangle.webp");
+  background-size: 100% 100%;
+}
+
+.meme-text {
+  width: 60%;
+  margin-right: 5%;
+  flex-shrink: 0;
+
+  p {
+    margin-top: 1rem;
+    font-size: calc(15px + (21 - 15) * ((100vw - 300px) / (1600 - 300)));
+    color: var(--cloud);
+    font-family: var(--font-family-jaldi);
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.meme-grid { 
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+  max-width: 31.25rem;
+
+  img {
+    margin-bottom: 0.5rem;
+  }
+
+  > div {
+    color: var(--aquamarine);
+    font-size: calc(15px + (25 - 10) * ((100vw - 300px) / (1600 - 300)) / 2.5);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (width <=900px) {
+  .meme-wrapper {
+    flex-direction: column;
+    padding: 20% 8%;
+    text-align: center;
+  }
+
+  .meme-text {
+    width: auto;
+    margin: 0 0 10%;
+  }
+}

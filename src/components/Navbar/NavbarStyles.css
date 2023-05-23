@@ -1,83 +1,73 @@
-.nav-menu {
-    display: flex;
-    align-items: flex-end;
-    padding: 1em;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.375rem;
+  padding: 2.5rem 3%;
+  background: #031418;
+  font-size: 1.125rem;
+  white-space: nowrap;
+
+  .logo {
+    flex-shrink: 0;
+
+    img {
+      width: 13.125rem;
+      height: 4.274rem;
+    }
+  }
 }
 
-li {
-    padding: 1rem;
-}
+menu {
+  display: flex;
+  align-items: center;
 
-.header-alt {
-    color: var(--aquamarine);
-    font-family: var(--font-family-jetbrains-mono);
-}
-
-.download-btn {
-    letter-spacing: 0;
-    min-height: 26px;
-    text-align: center;
-    width: 234px;
+  li > a {
     display: block;
+    padding: 1rem 1.125rem;
+  }
+
+  .download-btn {
+    margin-left: 1.25rem;
+  }
 }
 
 .hamburger {
-    display: none;
-    cursor: default;
-}
-
-.mobile-menu {
-    display: none;
+  display: none;
+  font-size: var(--font-size-xxl);
+  cursor: pointer;
+  z-index: 1;
+  margin: 0 2.125rem;
 }
 
 @media screen and (width <=940px) {
-    .nav-menu {
-        display: none;
+  menu {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    top: -100vh;
+    right: 3%;
+    padding: 1rem;
+    border: 1px solid red;
+    border-radius: 0.5rem;
+    transition: top 250ms;
+
+    &.active {
+      top: 2.25rem;
     }
 
-    .hamburger {
-        display: block;
-        position: flex;
-        max-width: fit-content;
-        z-index: 999;
-        font-size: var(--font-size-xl);
-        -webkit-tap-highlight-color: transparent;
-        cursor: default;
-    }
-
-    .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        margin-left: 50%;
-        top: -100vh;
-        right: 0;
-        opacity: 100;
-        position: absolute;
-        justify-content: space-between;
-        align-items: flex-end;
-        background-color: #031418;
-        border-radius: 10px;
-        outline: solid #07363fa7 0.1px;
-        box-shadow: 0.1px 4px 4px #00000096;
-        transition: 0.55s;
-        z-index: 998 !important;
-    }
-
-    .active {
-        top: 2em;
-    }
-
-    .mobile-menu li {
-        padding: 1em 0.5em;
-        margin: 0 1em;
+    li > a {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
     }
 
     .download-btn {
-        letter-spacing: 0;
-        min-height: 26px;
-        text-align: center;
-        width: 234px;
-        display: block;
+      margin: 0.5rem 0 0 0;
     }
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
