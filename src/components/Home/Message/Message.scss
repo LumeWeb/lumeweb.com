@@ -1,0 +1,28 @@
+@import "../../../styles/mixins.scss";
+
+#home-message {
+  padding-top: 3.16%;
+  padding-bottom: 3.16%;
+  @include fluid-padding-lr;
+  background: var(--aquamarine);
+  color: var(--blue-charcoal);
+
+  @media screen and (width < 48rem) {
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 0.25em;
+    @include fluid-font-size(2rem);
+    font-weight: 700;
+    line-height: 153%;
+    text-transform: none;
+    color: inherit;
+  }
+
+  p {
+    font-family: var(--font-family-jaldi);
+    @include fluid-font-size(1.3125rem);
+    line-height: 157%;
+  }
+}

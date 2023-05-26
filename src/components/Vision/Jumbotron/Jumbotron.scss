@@ -1,0 +1,16 @@
+@import "../../../styles/mixins.scss";
+
+#vision-jumbotron {
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    max-width: 21em;
+    margin: 2.12em 7.5% 0;
+    font-family: var(--font-family-ibm-plex-sans-devanagari);
+    @include fluid-font-size-s(3.6875rem);
+    line-height: 137.29%;
+    letter-spacing: -0.06em;
+    text-align: center;
+  }
+}

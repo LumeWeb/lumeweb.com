@@ -1,15 +1,10 @@
 ---
+import "./Header.scss";
 import HeaderContent from "./HeaderContent.jsx";
 ---
 
-<div class="mt-[145.5px] items-start flex items-start flex z-[-1]">
-  <div
-    class="text-[color:var(--white)] font-normal not-italic tracking-[-6px] leading-[calc(75px_+_(110_-_75)_*_((100vw_-_300px)_/_(1600_-_300)))] text-center w-full"
-  >
-    <h1
-      class="flex flex-col justify-center text-[calc(26px_+_(82_-_26)_*_((100vw_-_300px)_/_(1600_-_300)))] font-thin"
-    >
-      <HeaderContent client:load />
-    </h1>
-  </div>
-</div>
+<section id="home-header">
+  <h1 class="flex flex-col justify-center">
+    <HeaderContent client:load />
+  </h1>
+</section>

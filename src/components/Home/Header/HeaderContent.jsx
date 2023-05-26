@@ -10,22 +10,18 @@ const HeaderContent = () => {
         return n[n.length - 1];
     }
     var lastIndex = randomString.lastIndexOf(" ");
-    return <div>
-        <Typewriter options={
-                {cursor: `<span class="text-[color:var(--aquamarine)]">${
-                    '_'
-                }</span>`}
+    return (
+        <Typewriter options={{ cursor: `<span class="text-[color:var(--aquamarine)]">_</span>` }} onInit={
+            (typewriter) => {
+                typewriter.changeDelay(50).typeString(`${
+                    randomString.substring(0, lastIndex)
+                }` + ' ').start();
+                typewriter.typeString(`<span class="text-[color:var(--aquamarine)]">${
+                    lastWord(randomString)
+                }</span>`)
             }
-            onInit={
-                (typewriter) => {
-                    typewriter.changeDelay(50).typeString(`${
-                        randomString.substring(0, lastIndex)
-                    }` + ' ').start();
-                    typewriter.typeString(`<span class="text-[color:var(--aquamarine)]">${
-                        lastWord(randomString)
-                    }</span>`)
-                }
-            }/></div>;
+        }/>
+    );
 };
 
 export default HeaderContent;

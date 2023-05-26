@@ -1,19 +1,19 @@
+@import "../../styles/mixins.scss";
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 9.375rem;
-  padding: 2.5rem 3%;
-  background: #031418;
-  font-size: 1.125rem;
+  padding: 2em 3.75%;
+  @include fluid-font-size(1.25rem);
   white-space: nowrap;
 
   .logo {
     flex-shrink: 0;
 
     img {
-      width: 13.125rem;
-      height: 4.274rem;
+      @include fluid-width(13.125rem);
+      @include fluid-height(4.375rem);
     }
   }
 }
@@ -24,11 +24,11 @@ menu {
 
   li > a {
     display: block;
-    padding: 1rem 1.125rem;
+    padding: 0.55em 0.9em;
   }
 
   .download-btn {
-    margin-left: 1.25rem;
+    margin-left: 0.9em;
   }
 }
 
@@ -40,7 +40,7 @@ menu {
   margin: 0 2.125rem;
 }
 
-@media screen and (width <=940px) {
+@media screen and (width < 768px) {
   menu {
     display: flex;
     align-items: flex-start;
@@ -49,12 +49,15 @@ menu {
     top: -100vh;
     right: 3%;
     padding: 1rem;
+    font-size: 1.25rem;
+    background: var(--blue-charcoal);
     border: 1px solid red;
     border-radius: 0.5rem;
     transition: top 250ms;
+    z-index: 1;
 
     &.active {
-      top: 2.25rem;
+      top: 1.4rem;
     }
 
     li > a {

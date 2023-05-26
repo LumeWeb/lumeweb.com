@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import "../styles/global.scss";
 import Navbar from "../components/Navbar/Navbar.jsx";
 import Footer from "../components/Footer/Footer.astro";
 
@@ -22,7 +22,7 @@ const { view, title } = Astro.props;
   </head>
   <body>
     <Navbar view={view} client:load />
-    <main>
+    <main class={view}>
       <slot />
     </main>
     <Footer />

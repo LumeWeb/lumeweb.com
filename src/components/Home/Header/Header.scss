@@ -1,0 +1,17 @@
+@import "../../../styles/mixins.scss";
+
+#home-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 7.5%;
+
+  h1 {
+    height: 1.1em;
+    margin-top: 1.1em;
+    @include fluid-font-size-s(6.25rem);
+    line-height: 110%;
+    letter-spacing: -0.06em;
+    text-align: center;
+  }
+}

@@ -1,3 +1,5 @@
+@import "mixins.scss";
+
 @import url("https://fonts.googleapis.com/css?family=Jaldi:400|JetBrains+Mono:400,700|IBM+Plex+Sans+Devanagari:400");
 
 @tailwind base;
@@ -30,6 +32,7 @@ html {
   display: flex;
   flex-direction: column;
   height: 100%;
+  min-width: 20rem;
   scroll-behavior: smooth;
 }
 
@@ -46,6 +49,10 @@ main {
   flex-grow: 1;
 }
 
+a {
+  transition: color 200ms;
+}
+
 .body-block {
   align-items: center;
   display: flex;
@@ -60,17 +67,6 @@ main {
   margin-bottom: 1.5vh;
 }
 
-.home {
-  background-color: rgb(3 20 24);
-  flex-direction: column;
-  align-items: center;
-  display: absolute;
-  overflow: hidden;
-  border: 1px none;
-  height: auto;
-  width: 100%;
-}
-
 .title {
   height: 57px;
   letter-spacing: -1.5px;
@@ -78,22 +74,14 @@ main {
   white-space: nowrap;
 }
 
-h1 {
-  font-size: calc(26px + (82 - 26) * ((100vw - 300px) / (1600 - 300)));
-  font-weight: 100;
-}
-
 h2 {
-  font-size: calc(15px + (25 - 10) * ((100vw - 300px) / (1600 - 300)));
+  @include fluid-font(1rem, 2rem); /* 16px - 32px  */
   color: var(--aquamarine);
   text-transform: uppercase;
-  z-index: 999;
 }
 
 h3 {
   font-size: calc(30px + (45 - 30) * ((100vw - 300px) / (1600 - 300)));
-  margin-top: 0.5em;
-  z-index: 999;
 }
 
 h4 {
@@ -137,8 +125,8 @@ h6 {
     color: var(--black);
     background: var(--aquamarine);
     border: 1px solid var(--aquamarine);
-    padding: 0.625rem 1rem;
-    border-radius: 0.3125rem;
+    padding: 0.5em 0.8em;
+    border-radius: 0.25em;
     transition: color 200ms, background 200ms;
 
     &:hover {
@@ -176,5 +164,20 @@ h6 {
     font-weight: 100;
     font-style: normal;
     max-width: 300;
+  }
+}
+
+main.vision {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1031px;
+    height: 733px;
+    top: 0;
+    left: 50%;
+    margin-left: -515.5px;
+    z-index: -1;
+    background: url(../assets/vision-bg.png);
+    background-size: contain;
   }
 }

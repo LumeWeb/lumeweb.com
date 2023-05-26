@@ -1,0 +1,132 @@
+@import "../../styles/mixins.scss";
+
+footer {
+  display: flex;
+  gap: 2%;
+  padding-top: 3.16%;
+  padding-bottom: 4.61%;
+  @include fluid-padding-lr;
+  @include fluid-font-size(1.3125rem);
+  background: var(--blue-charcoal);
+
+  > div {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    &:first-child {
+      flex-grow: 1.5 !important;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  img {
+    @include fluid-width(8.4375rem);
+  }
+
+  a:hover {
+    color: var(--white);
+  }
+
+  h5 {
+    @include fluid-font-size(1.875rem);
+    line-height: 100%;
+    white-space: nowrap;
+    margin: 0.25em 0;
+  }
+
+  li {
+    font-family: var(--font-family-jaldi);
+    line-height: 138%;
+    color: var(--cloud);
+    list-style-type: none;
+    white-space: nowrap;
+  }
+}
+
+.footer-logo {
+  a {
+    display: inline-block;
+  }
+}
+
+.footer-contact {
+  margin: auto 0;
+  font-family: var(--font-family-jaldi);
+  color: var(--cloud);
+
+  a {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  span {
+    display: block;
+    background-image: url('../../assets/email-icon.webp');
+    background-size: cover;
+    margin-right: 0.375em;
+    @include fluid-width(1.0625rem);
+    @include fluid-height(0.875rem);
+  }
+}
+
+.footer-phrase {
+  margin: auto 0 0;
+  color: var(--aquamarine);
+  font-weight: bold;
+  line-height: 133%;
+}
+
+@media screen and (width >= 48rem) and (width < 64rem) {
+  footer {
+    flex-wrap: wrap;
+
+    > div:first-child {
+      order: 1;
+      flex: 0 0 100%;
+      margin-top: 3%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .footer-contact {
+    margin: 0;
+  }
+
+  .footer-phrase {
+    margin: 0;
+  }
+}
+
+@media screen and (width < 48rem) {
+  footer {
+    flex-direction: column;
+    padding-top: 1.25rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    font-size: 1.3125rem;
+
+    > div {
+      margin-top: 2.5rem;
+    }
+
+    > div:first-child {
+      margin-top: 5rem;
+      order: 2;
+    }
+
+    img {
+      width: 8.4375rem;
+    }
+  }
+
+  .footer-contact {
+    margin: 1.25rem 0;
+
+    a {
+      justify-content: center;
+    }
+  }
+}

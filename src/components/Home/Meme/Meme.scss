@@ -1,4 +1,4 @@
-.meme-wrapper {
+#home-meme {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@
 }
 
 @media screen and (width <=900px) {
-  .meme-wrapper {
+  #home-meme {
     flex-direction: column;
     padding: 20% 8%;
     text-align: center;

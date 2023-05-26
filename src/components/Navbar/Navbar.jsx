@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './NavbarStyles.css';
+import './Navbar.scss';
 import logo from '../../../src/assets/lume-logo.png';
 
 function Navbar({ view }) {
