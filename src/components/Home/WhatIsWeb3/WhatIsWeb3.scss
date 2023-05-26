@@ -1,0 +1,72 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+@mixin fluid-margin {
+  $min-vw: 48rem;
+  $max-vw: 96rem;
+
+  $min-margin: 3.75%;
+  $max-margin: 7.5%;
+
+  & {
+    margin-left: min(27.8em, max($min-margin, calc(100vw - 28em - $min-margin)));
+    margin-right: $min-margin;
+
+    @media screen and (width >= $min-vw) {
+      $margin: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      margin-left: min(calc(27.8em + $margin), max($margin, calc(100vw - 28em - $margin)));
+      margin-right: $margin;
+    }
+
+    @media screen and (width >= $max-vw) {
+      margin-left: min(calc(27.8em + $max-margin), max($max-margin, calc(100vw - 28em - $max-margin)));
+      margin-right: $max-margin;
+    }
+  }
+}
+
+#home-whatisweb3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: 32.42em;
+  margin-top: 2.48em;
+  @include fluid-font-size(1.3125rem);
+  background-image: url("../../../assets/tilted-rectangle.webp");
+  background-size: 100% 100%;
+
+  .background {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 38.9em;
+    max-width: 30.34em;
+    margin: -19em 0 0;
+    background-image: url("../../../src/assets/img-left.webp");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+  }
+
+  .feature-group {
+    @include fluid-margin;
+    max-width: 28em;
+    z-index: 1;
+
+    h1 {
+      margin-top: 1em;
+    }
+
+    @media screen and (width < 80rem) {
+      p {
+        background: rgba(2, 13, 17, 0.65);
+        border-radius: 0 0.5em 0.5em 0;
+        padding: 0.5em 0.5em;
+        margin: -0.5em -0.5em;
+      }
+    }
+  }
+}

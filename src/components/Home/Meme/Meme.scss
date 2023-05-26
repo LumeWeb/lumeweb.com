@@ -1,8 +1,11 @@
+@import "../../../styles/mixins.scss";
+
 #home-meme {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8% 12%;
+  @include fluid-font-size(1.3125rem);
   background-image: url("../../../assets/tilted-rectangle.webp");
   background-size: 100% 100%;
 }
@@ -11,15 +14,6 @@
   width: 60%;
   margin-right: 5%;
   flex-shrink: 0;
-
-  p {
-    margin-top: 1rem;
-    font-size: calc(15px + (21 - 15) * ((100vw - 300px) / (1600 - 300)));
-    color: var(--cloud);
-    font-family: var(--font-family-jaldi);
-    font-weight: 400;
-    font-style: normal;
-  }
 }
 
 .meme-grid { 

@@ -12,8 +12,7 @@ nav {
     flex-shrink: 0;
 
     img {
-      @include fluid-width(13.125rem);
-      @include fluid-height(4.375rem);
+      @include fluid-width-height(13.125rem, 4.375rem);
     }
   }
 }

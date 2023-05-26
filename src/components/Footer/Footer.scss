@@ -65,8 +65,7 @@ footer {
     background-image: url('../../assets/email-icon.webp');
     background-size: cover;
     margin-right: 0.375em;
-    @include fluid-width(1.0625rem);
-    @include fluid-height(0.875rem);
+    @include fluid-width-height(1.0625rem, 0.875rem);
   }
 }
 

@@ -1,55 +1,17 @@
 @import "../../../styles/mixins.scss";
 
 #vision-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 1fr;
-    gap: 1.125rem;
-    padding-top: 2.5625rem;
-    @include fluid-padding-lr;
+  padding-top: 2.05em;
+  padding-bottom: 4.5em;
 
-    @media screen and (width >= 48rem) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  div:first-child {
+    background: inherit;
+    border: none
+  }
 
-    @media screen and (width >= 64rem) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 39px;
-      color: var(--white);
-      border: 1px solid transparent;
-      font-family: var(--font-family-jaldi);
-
-      &:not(:first-child) {
-        background: var(--blue-charcoal);
-        transition: border-color 200ms;
-
-        &:hover {
-          border: 1px solid var(--aquamarine);
-        }
-      }
-    }
-
-    h2 {
-      @include fluid-font-size(2.75rem);
-      font-weight: bold;
-      line-height: 129.55%;
-    }
-
-    h3 {
-      @include fluid-font-size(1.875rem);
-      line-height: 103.33%;
-    }
-
-    p {
-      margin-top: 0.67em;
-      @include fluid-font-size(1.3125rem);
-      line-height: 123.81%;
-      color: #c7c7c7;
-    }
+  h2 {
+    @include fluid-font-size(2.75rem);
+    font-weight: bold;
+    line-height: 129.55%;
+  }
 }

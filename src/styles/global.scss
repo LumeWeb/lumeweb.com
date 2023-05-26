@@ -1,3 +1,4 @@
+@import "colors.scss";
 @import "mixins.scss";
 
 @import url("https://fonts.googleapis.com/css?family=Jaldi:400|JetBrains+Mono:400,700|IBM+Plex+Sans+Devanagari:400");
@@ -7,10 +8,10 @@
 @tailwind utilities;
 
 :root {
-  --primary-dark: rgba(0 0 0 100%);
-  --primary-light: rgba(255 255 255 100%);
+  --primary-dark: #000;
+  --primary-light: #fff;
   --black: rgba(0 0 0);
-  --blue-charcoal: rgba(1 14 16);
+  --blue-charcoal: #010e10;
   --blue-charcoal-2: rgba(3 21 24);
   --aquamarine: rgba(122 252 187);
   --cloud: rgba(199 199 199);
@@ -41,8 +42,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "JetBrains Mono", sans-serif;
-  background-color: rgb(3 20 24);
-  color: white;
+  background: $body-bg;
+  color: #fff;
 }
 
 main {
@@ -124,7 +125,7 @@ h6 {
     display: inline-block;
     color: var(--black);
     background: var(--aquamarine);
-    border: 1px solid var(--aquamarine);
+    border: 0.05em solid var(--aquamarine);
     padding: 0.5em 0.8em;
     border-radius: 0.25em;
     transition: color 200ms, background 200ms;
@@ -179,5 +180,79 @@ main.vision {
     z-index: -1;
     background: url(../assets/vision-bg.png);
     background-size: contain;
+  }
+}
+
+.feature-group {
+  h2 {
+    margin-bottom: 1em;
+    @include fluid-font-size(1.5625rem);
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--aquamarine);
+  }
+
+  h3 {
+    margin-bottom: 0.65em;
+    @include fluid-font-size(2.8125rem);
+    font-weight: 700;
+    line-height: 109%;
+  }
+
+  p {
+    font-family: var(--font-family-jaldi);
+    line-height: 167%;
+    color: var(--cloud);
+    transition: background 200ms;
+  }
+
+  .btn-main {
+    margin-top: 1.57em;
+  }
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 0.9em;
+  @include fluid-padding-lr;
+  @include fluid-font-size(1.25rem);
+
+  @media screen and (width >= 48rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (width >= 64rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.95em 1.95em;
+    color: var(--white);
+    background: #020e10;
+    border: 0.05em solid transparent;
+    border-radius: 0.5em;
+    font-family: var(--font-family-jaldi);
+
+    &:hover {
+      border-color: var(--aquamarine);
+    }
+  }
+
+  h3 {
+    @include fluid-font-size(1.875rem);
+    line-height: 103.33%;
+  }
+
+  p {
+    @include fluid-font-size(1.3125rem);
+    margin-top: 0.67em;
+    line-height: 123.81%;
+    color: var(--cloud);
   }
 }

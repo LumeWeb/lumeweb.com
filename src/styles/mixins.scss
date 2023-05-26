@@ -3,6 +3,12 @@
 $min-vw: 80rem;
 $max-vw: 384rem;
 
+$screen-min:     24rem; // 384px
+$screen-sm:      48rem; // 768px
+$screen-md:      64rem; // 1024px
+$screen-lg:      80rem; // 1280px
+$screen-default: 96rem; // 1536px
+
 @function strip-unit($value) {
   @return math.div($value, ($value * 0 + 1));
 }
@@ -79,6 +85,36 @@ $max-vw: 384rem;
   }
 }
 
+@mixin fluid-width-height($width, $height) {
+  $min-width: calc($width / 1.2);
+  $max-width: calc($width * 2);
+
+  $min-height: calc($height / 1.2);
+  $max-height: calc($height * 2);
+
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($width);
+  $u4: unit($height);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      width: $min-width;
+      height: $min-height;
+
+      @media screen and (width >= $min-vw) {
+        width: calc(#{$min-width} + #{strip-unit($max-width - $min-width)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        height: calc(#{$min-height} + #{strip-unit($max-height - $min-height)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (width >= $max-vw) {
+        width: $max-width;
+        height: $max-height;
+      }
+    }
+  }
+}
+
 @mixin fluid-width($width) {
   $min-width: calc($width / 1.2);
   $max-width: calc($width * 2);
@@ -144,6 +180,29 @@ $max-vw: 384rem;
     @media screen and (width >= $max-vw) {
       padding-left: $max-padding;
       padding-right: $max-padding;
+    }
+  }
+}
+
+@mixin fluid-margin-lr {
+  $min-vw: 48rem;
+  $max-vw: 96rem;
+
+  $min-margin: 3.75%;
+  $max-margin: 7.5%;
+
+  & {
+    margin-left: $min-margin;
+    margin-right: $min-margin;
+
+    @media screen and (width >= $min-vw) {
+      margin-left: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      margin-right: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+    }
+
+    @media screen and (width >= $max-vw) {
+      margin-left: $max-margin;
+      margin-right: $max-margin;
     }
   }
 }
