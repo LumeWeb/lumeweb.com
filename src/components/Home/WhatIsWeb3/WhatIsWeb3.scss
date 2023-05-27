@@ -29,12 +29,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
   height: 32.42em;
   margin-top: 2.48em;
   @include fluid-font-size(1.3125rem);
-  background-image: url("../../../assets/tilted-rectangle.webp");
-  background-size: 100% 100%;
 
   .background {
     position: absolute;

@@ -6,8 +6,6 @@
   align-items: center;
   padding: 8% 12%;
   @include fluid-font-size(1.3125rem);
-  background-image: url("../../../assets/tilted-rectangle.webp");
-  background-size: 100% 100%;
 }
 
 .meme-text {
