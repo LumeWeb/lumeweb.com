@@ -1,0 +1,39 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+#what-astronaut {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+  min-height: 36.72em;
+  @include fluid-font-size(1.3125rem);
+  background-image: url("../../../assets/astronaut.png");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+  }
+
+  > div {
+    @include fluid-margin-lr;
+    max-width: 30em;
+    padding: 3.14em 0;
+    z-index: 1;
+  }
+
+  @media screen and (width < 80rem) {
+    p {
+      background: rgba($body-bg-darker, 0.65);
+      border-radius: 0 0.5em 0.5em 0;
+      padding: 0.3em 0.5em;
+      margin: -0.3em -0.5em;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../../styles/mixins.scss";
+
+#home-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  margin: 5em 0 4.25em;
+  @include fluid-font-size(1.25rem);
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0.375em;
+  }
+
+  h2 {
+    @include fluid-font-size(1.5625rem);
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--aquamarine);
+  }
+
+  .github-logo {
+    @include fluid-width-height(4.375rem, 4.375rem);
+  }
+
+  .discord-logo {
+    @include fluid-width-height(4.3125rem, 4.375rem);
+  }
+
+  .twitter-logo {
+    @include fluid-width-height(4.375rem, 4.375rem);
+  }
+
+  .facebook-logo {
+    @include fluid-width-height(3.75rem, 3.75rem);
+  }
+}

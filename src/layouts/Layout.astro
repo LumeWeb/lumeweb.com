@@ -1,7 +1,8 @@
 ---
-import "../styles/global.scss";
-import Navbar from "../components/Navbar/Navbar.jsx";
-import Footer from "../components/Footer/Footer.astro";
+import '../styles/global.scss';
+import Navbar from '../components/Navbar/Navbar.jsx';
+import Footer from '../components/Footer/Footer.astro';
+import JoinCommunity from '../components/JoinCommunity/JoinCommunity.astro';
 
 export interface Props {
   view: string;
@@ -25,6 +26,7 @@ const { view, title } = Astro.props;
     <main class={view}>
       <slot />
     </main>
+    {view !== 'home' && <JoinCommunity />}
     <Footer />
   </body>
 </html>

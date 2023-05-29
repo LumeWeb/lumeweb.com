@@ -11,7 +11,7 @@ function Navbar({ view }) {
     const onResize = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
-        if(nav && window.innerWidth > 940) {
+        if(nav && window.innerWidth >= 768) {
           setNav(false);
         }
       }, 25);
@@ -37,13 +37,13 @@ function Navbar({ view }) {
           <a href="/vision" className={view === 'vision' ? 'underline' : undefined} aria-current={view === 'vision' ? 'page' : undefined}>Vision</a>
         </li>
         <li>
-          <a href="/what-is-web3" className={view === 'what-is-web3' ? 'underline' : undefined} aria-current={view === 'what-is-web3' ? 'page' : undefined}>What is Web3</a>
+          <a href="/what-is-web3" className={view === 'what' ? 'underline' : undefined} aria-current={view === 'what' ? 'page' : undefined}>What is Web3</a>
         </li>
         <li>
           <a href="/donate" className={view === 'donate' ? 'underline' : undefined} aria-current={view === 'donate' ? 'page' : undefined}>Donate</a>
         </li>
         <li>
-          <a className='btn-main download-btn' href="#">Download Extension</a>
+          <a className="btn-main download-btn" href="#">Download Extension</a>
         </li>
       </menu>
       <button className="hamburger" onClick={toggleNav}>☰</button>

@@ -1,21 +1,17 @@
 ---
-import "./SocialsStyles.css";
+import './Socials.scss';
+import githubLogo from '../../../assets/github-logo.webp';
+import discordLogo from '../../../assets/discord-logo.webp';
+import twitterLogo from '../../../assets/twitter-logo.webp';
+import facebookLogo from '../../../assets/facebook-logo.webp';
 ---
 
-<div class="grid place-items-center overflow-hidden h-auto my-[115px]">
-    <div>
-        <h2
-            class="centered grid place-items-center overflow-hidden h-auto mt-[35px] mb-[1.5vh] text-[calc(15px_+_(25_-_10)_*_((100vw_-_300px)_/_(1600_-_300)))]"
-        >
-            get in touch
-        </h2>
-        <div class="grid place-items-center overflow-hidden h-auto mb-[1.5vh];">
-            <div class="flex ml-[-5%] pb-[8vh]">
-                <div class="github"></div>
-                <div class="discord"></div>
-                <div class="twitter"></div>
-                <div class="fb"></div>
-            </div>
-        </div>
-    </div>
-</div>
+<section id="home-socials">
+  <h2>Get in touch</h2>
+  <div>
+    <img src={githubLogo.src} class="github-logo" />
+    <img src={discordLogo.src} class="discord-logo" />
+    <img src={twitterLogo.src} class="twitter-logo" />
+    <img src={facebookLogo.src} class="facebook-logo" />
+  </div>
+</section>

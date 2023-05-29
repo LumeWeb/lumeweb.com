@@ -33,13 +33,13 @@ menu {
 
 .hamburger {
   display: none;
-  font-size: var(--font-size-xxl);
+  font-size: 2rem;
   cursor: pointer;
   z-index: 1;
   margin: 0 2.125rem;
 }
 
-@media screen and (width < 768px) {
+@media screen and (width < 48rem) {
   menu {
     display: flex;
     align-items: flex-start;

@@ -10,8 +10,10 @@
   }
 
   h2 {
+    font-family: var(--font-family-jetbrains-mono);
     @include fluid-font-size(2.75rem);
-    font-weight: bold;
+    font-weight: 700;
     line-height: 129.55%;
+    color: var(--aquamarine);
   }
 }

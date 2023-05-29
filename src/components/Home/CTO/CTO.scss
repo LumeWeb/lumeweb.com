@@ -1,0 +1,45 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+#home-cto {
+  min-height: 28em;
+  @include fluid-font-size(1.3125rem);
+  background-image: url("../../../assets/geometric-bg.webp");
+  background-position: 99% 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  > div {
+    @include fluid-margin-lr;
+    max-width: 28em;
+    padding: 3.14em 0;
+  }
+
+  .bio {
+    display: flex;
+    align-items: center;
+    margin-top: 1.57em;
+    gap: 1.33em;
+    font-family: var(--font-family-jaldi);
+    color: var(--cloud);
+
+    img {
+        @include fluid-width-height(5.875rem, 5.875rem);
+    }
+
+    strong {
+        @include fluid-font-size(1.625rem);
+        line-height: 133%;
+        color: var(--white);
+    }
+  }
+
+  @media screen and (width < 80rem) {
+    p {
+      background: rgba($body-bg, 0.65);
+      border-radius: 0 0.5em 0.5em 0;
+      padding: 0.3em 0.5em;
+      margin: -0.3em -0.5em;
+    }
+  }
+}

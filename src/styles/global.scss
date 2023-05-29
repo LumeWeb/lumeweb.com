@@ -8,22 +8,13 @@
 @tailwind utilities;
 
 :root {
-  --primary-dark: #000;
-  --primary-light: #fff;
   --black: rgba(0 0 0);
+  --white: rgba(255 255 255);
   --blue-charcoal: #010e10;
   --blue-charcoal-2: rgba(3 21 24);
   --aquamarine: rgba(122 252 187);
   --cloud: rgba(199 199 199);
   --alto: rgba(217 217 217);
-  --white: rgba(255 255 255);
-  --font-size-s: 10.25rem; /* 20px */
-  --font-size-m: 1.3125rem; /* 21px */
-  --font-size-l: 1.5625rem; /* 25px */
-  --font-size-xl: 1.875rem; /* 30px */
-  --font-size-xxl: 2rem; /* 32px */
-  --font-size-xxxl: 2.8125rem; /* 45px */
-  --font-size-xxxxl: 6.25rem; /* 100px */
   --font-family-ibm-plex-sans-devanagari: "IBM Plex Sans Devanagari";
   --font-family-jaldi: "Jaldi";
   --font-family-jetbrains-mono: "JetBrains Mono";
@@ -44,81 +35,16 @@ body {
   font-family: "JetBrains Mono", sans-serif;
   background: $body-bg;
   color: #fff;
+  overflow-x: hidden;
 }
 
 main {
+  @include fluid-font-size(0.0625rem);
   flex-grow: 1;
 }
 
 a {
   transition: color 200ms;
-}
-
-.body-block {
-  align-items: center;
-  display: flex;
-  gap: 78px;
-}
-
-.centered {
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  height: auto;
-  margin-bottom: 1.5vh;
-}
-
-.title {
-  height: 57px;
-  letter-spacing: -1.5px;
-  line-height: 102px;
-  white-space: nowrap;
-}
-
-h2 {
-  @include fluid-font(1rem, 2rem); /* 16px - 32px  */
-  color: var(--aquamarine);
-  text-transform: uppercase;
-}
-
-h3 {
-  font-size: calc(30px + (45 - 30) * ((100vw - 300px) / (1600 - 300)));
-}
-
-h4 {
-  font-size: calc(15px + (21 - 15) * ((100vw - 300px) / (1600 - 300)));
-  color: var(--cloud);
-  font-family: var(--font-family-jaldi);
-  font-weight: 400;
-  font-style: normal;
-  max-width: 550px;
-  margin-top: 0.5em;
-  line-height: 35px;
-}
-
-h5 {
-  font-size: calc(15px + (29 - 15) * ((100vw - 300px) / (1600 - 300)));
-  color: var(--white);
-  font-family: var(--font-family-jaldi);
-  font-weight: 400;
-  font-style: normal;
-  max-width: 300;
-  line-height: 2rem;
-}
-
-h6 {
-  font-size: calc(15px + (19 - 15) * ((100vw - 300px) / (1600 - 300)));
-  color: var(--cloud);
-  font-family: var(--font-family-jaldi);
-  font-weight: 100;
-  font-style: normal;
-  max-width: 300;
-}
-
-.container {
-  max-width: 1240px;
-  margin: auto;
-  padding: 0 1rem;
 }
 
 .btn-main {
@@ -136,50 +62,37 @@ h6 {
     }
 }
 
-@media screen and (width <= 1050px) {
-  .left {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    white-space: normal;
-  }
-
-  .h2-alignment {
-    margin-left: -10em;
-  }
-
-  h5 {
-    font-size: calc(20px + (29 - 15) * ((100vw - 300px) / (1600 - 300)));
-    color: var(--white);
-    font-family: var(--font-family-jaldi);
-    font-weight: 400;
-    font-style: normal;
-    max-width: 300;
-    line-height: 2rem;
-  }
-
-  h6 {
-    font-size: calc(17px + (19 - 15) * ((100vw - 300px) / (1600 - 300)));
-    color: var(--cloud);
-    font-family: var(--font-family-jaldi);
-    font-weight: 100;
-    font-style: normal;
-    max-width: 300;
-  }
-}
-
 main.vision {
   &::before {
     content: "";
     position: absolute;
-    width: 1031px;
-    height: 733px;
+    width: max(min(1031em, 100vw), 320em);
+    height: max(min(733em, 100vw), 400em);
     top: 0;
     left: 50%;
-    margin-left: -515.5px;
+    margin-left: max(-515.5em, -50vw);
     z-index: -1;
     background: url(../assets/vision-bg.png);
     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+main.what {
+  &::before {
+    content: "";
+    position: absolute;
+    width: max(min(1513em, 100vw), 320em);
+    height: max(min(1224em, 100vw), 560em);
+    top: -20em;
+    left: 50%;
+    margin-left: max(-756.5em, -50vw);
+    z-index: -1;
+    background: url(../assets/what-bg.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -187,7 +100,6 @@ main.vision {
   h2 {
     margin-bottom: 1em;
     @include fluid-font-size(1.5625rem);
-    font-weight: 700;
     line-height: 100%;
     text-transform: uppercase;
     color: var(--aquamarine);
@@ -196,8 +108,12 @@ main.vision {
   h3 {
     margin-bottom: 0.65em;
     @include fluid-font-size(2.8125rem);
-    font-weight: 700;
     line-height: 109%;
+  }
+
+  h2, h3 {
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba($body-bg-darker, 0.65);
   }
 
   p {
@@ -267,7 +183,7 @@ main.vision {
     top: 0;
     right: -5%;
     bottom: 0;
-    left: -5%;
+    left: -25%;
     margin: 2% 0;
     background: $body-bg-darker;
     transform: matrix(1, -0.04, 0.04, 1, 0, 0);

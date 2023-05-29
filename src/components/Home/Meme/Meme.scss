@@ -18,23 +18,24 @@
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 1rem;
-  max-width: 31.25rem;
+  max-width: 22em;
 
   img {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
   }
 
   > div {
-    color: var(--aquamarine);
-    font-size: calc(15px + (25 - 10) * ((100vw - 300px) / (1600 - 300)) / 2.5);
+    @include fluid-font-size(1.5625rem);
+    font-weight: 700;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: var(--aquamarine);
   }
 }
 
-@media screen and (width <=900px) {
+@media screen and (width < 48rem) {
   #home-meme {
     flex-direction: column;
     padding: 20% 8%;
