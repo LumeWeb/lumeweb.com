@@ -1,0 +1,31 @@
+@import "../../../styles/mixins.scss";
+
+#donate-legal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 11em 0 9em;
+  @include fluid-padding-lr;
+
+  h2 {
+    margin-bottom: 1em;
+    @include fluid-font-size(2.5rem);
+    line-height: 122%;
+  }
+
+  p {
+    margin-top: 1.5em;
+    font-family: var(--font-family-jaldi);
+    @include fluid-font-size(1.3125rem);
+    line-height: 157%;
+    color: var(--cloud);
+  }
+
+  strong {
+    @include fluid-font-size(1.625rem);
+  }
+
+  &::before {
+    bottom: -12%;
+  }
+}

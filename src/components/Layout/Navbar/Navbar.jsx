@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.scss';
-import logo from '../../../src/assets/lume-logo.png';
+import logo from '../../../../src/assets/lume-logo.png';
 
 function Navbar({ view }) {
   const [nav, setNav] = useState(false);

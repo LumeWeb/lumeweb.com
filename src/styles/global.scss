@@ -39,7 +39,7 @@ body {
 }
 
 main {
-  @include fluid-font-size(0.0625rem);
+  @include fluid-font-size(0.625rem);
   flex-grow: 1;
 }
 
@@ -66,11 +66,11 @@ main.vision {
   &::before {
     content: "";
     position: absolute;
-    width: max(min(1031em, 100vw), 320em);
-    height: max(min(733em, 100vw), 400em);
+    width: max(min(103.1em, 100vw), 32em);
+    height: max(min(73.3em, 100vw), 40em);
     top: 0;
     left: 50%;
-    margin-left: max(-515.5em, -50vw);
+    margin-left: max(-51.55em, -50vw);
     z-index: -1;
     background: url(../assets/vision-bg.png);
     background-size: contain;
@@ -83,11 +83,11 @@ main.what {
   &::before {
     content: "";
     position: absolute;
-    width: max(min(1513em, 100vw), 320em);
-    height: max(min(1224em, 100vw), 560em);
+    width: max(min(151.3em, 100vw), 32em);
+    height: max(min(122.4em, 100vw), 56em);
     top: -20em;
     left: 50%;
-    margin-left: max(-756.5em, -50vw);
+    margin-left: max(-75.65em, -50vw);
     z-index: -1;
     background: url(../assets/what-bg.png);
     background-size: contain;
@@ -116,11 +116,17 @@ main.what {
     text-shadow: 1px 1px 2px rgba($body-bg-darker, 0.65);
   }
 
-  p {
+  p, li {
     font-family: var(--font-family-jaldi);
     line-height: 167%;
     color: var(--cloud);
     transition: background 200ms;
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    margin-bottom: 0.78em;
   }
 
   .btn-main {
@@ -149,7 +155,6 @@ main.what {
     flex-direction: column;
     justify-content: center;
     padding: 2.95em 1.95em;
-    color: var(--white);
     background: $body-bg-darker;
     border: 0.05em solid transparent;
     border-radius: 0.5em;
@@ -183,10 +188,27 @@ main.what {
     top: 0;
     right: -5%;
     bottom: 0;
-    left: -25%;
+    left: -5%;
     margin: 2% 0;
     background: $body-bg-darker;
     transform: matrix(1, -0.04, 0.04, 1, 0, 0);
+    z-index: -1;
+  }
+}
+
+.tilted-bg-r {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5%;
+    bottom: 0;
+    left: -5%;
+    margin: 2% 0;
+    background: $body-bg-darker;
+    transform: matrix(1, 0.04, -0.04, 1, 0, 0);
     z-index: -1;
   }
 }

@@ -1,18 +1,20 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/colors.scss";
+@import "./mixins.scss";
+@import "./colors.scss";
 
-#what-jumbotron {
+.jumbotron {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 18.78em;
+  margin: 12.5em 7.5% 0;
 
   h1 {
     max-width: 21em;
-    margin: 2.12em 7.5% 0;
     font-family: var(--font-family-ibm-plex-sans-devanagari);
     @include fluid-font-size-s(3.6875rem);
     line-height: 137%;
     letter-spacing: -0.06em;
     text-align: center;
-    text-shadow: 1px 1px 2px rgba($body-bg-darker, 0.65);
+    text-shadow: 0.017em 0.017em 0.034em rgba($body-bg-darker, 0.65);
   }
 }

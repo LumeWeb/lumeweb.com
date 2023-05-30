@@ -1,0 +1,65 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+#donate-methods {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 9em 0 14em;
+  @include fluid-padding-lr;
+
+  h2 {
+    margin-bottom: 1em;
+    @include fluid-font-size(2.5rem);
+    line-height: 122%;
+  }
+
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 0.9em;
+    @include fluid-font-size(1.25rem);
+
+    @media screen and (width >= 48rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2.95em 1.95em;
+      background: $body-bg-darker;
+      border: 0.05em solid transparent;
+      border-radius: 0.5em;
+      transition: border-color 200ms;
+
+      &:hover {
+        border-color: var(--aquamarine);
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+      }
+    }
+
+    img {
+      @include fluid-width-height(3.4375rem, 3.4375rem);
+    }
+
+    h3 {
+      @include fluid-font-size(1.4375rem);
+    }
+  }
+
+  p {
+    margin-top: 1.5em;
+    font-family: var(--font-family-jaldi);
+    @include fluid-font-size(1.0625rem);
+    line-height: 157%;
+    color: var(--cloud);
+  }
+}

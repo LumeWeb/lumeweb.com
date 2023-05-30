@@ -1,0 +1,61 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/mixins.scss";
+
+@mixin fluid-margin {
+  $min-vw: 48rem;
+  $max-vw: 96rem;
+
+  $min-margin: 3.75%;
+  $max-margin: 7.5%;
+
+  & {
+    margin-left: min(calc(43.9em + $min-margin), max($min-margin, calc(100vw - 28em - $min-margin)));
+    margin-right: $min-margin;
+
+    @media screen and (width >= $min-vw) {
+      $margin: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      margin-left: min(calc(43.9em + $margin), max($margin, calc(100vw - 28em - $margin)));
+      margin-right: $margin;
+    }
+
+    @media screen and (width >= $max-vw) {
+      margin-left: min(calc(43.9em + $max-margin), max($max-margin, calc(100vw - 28em - $max-margin)));
+      margin-right: $max-margin;
+    }
+  }
+}
+
+#donate-why {
+  position: relative;
+  margin: 9em 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92.2em;
+    max-width: 100vw;
+    height: 58.8em;
+    background-image: url("../../../assets/donate-why-bg.png");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  > div {
+    @include fluid-font-size(1.3125rem);
+    @include fluid-margin;
+    max-width: 29em;
+    padding: 0.5em 0;
+  }
+
+  @media screen and (width < 80rem) {
+    p {
+      background: rgba($body-bg, 0.65);
+      border-radius: 0 0.5em 0.5em 0;
+      padding: 0.3em 0.5em;
+      margin: -0.3em -0.5em;
+    }
+  }
+}
