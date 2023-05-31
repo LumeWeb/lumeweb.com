@@ -1,18 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import './Navbar.scss';
 import logo from '../../../../src/assets/lume-logo.png';
 
 function Navbar({ view }) {
   const [nav, setNav] = useState(false);
-  const toggleNav = () => setNav(!nav);
+
+  const toggleNav = () => {
+    if(nav) {
+      document.body.classList.remove("scroll-lock");
+      setNav(false);
+    } else {
+      document.body.classList.add("scroll-lock");
+      setNav(true);
+    }
+  }
+
+  const onMenuClick = function(event) {
+    if(!nav) {
+      return;
+    }
+
+    if(event.pageX < event.target.offsetLeft) {
+      // click outside of menu
+      toggleNav();
+    }
+  }
 
   useEffect(() => {
     let resizeTimeout;
     const onResize = () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
-        if(nav && window.innerWidth >= 768) {
-          setNav(false);
+        if(nav && window.innerWidth >= 900) {
+          toggleNav();
         }
       }, 25);
     };
@@ -29,7 +49,7 @@ function Navbar({ view }) {
           <img src={logo.src} alt="Lume" />
         </a>
       </div>
-      <menu className={nav ? 'active' : undefined}>
+      <menu className={nav ? 'active' : undefined} onClick={onMenuClick}>
         <li>
           <a href="/" className={view === 'home' ? 'underline' : undefined} aria-current={view === 'home' ? 'page' : undefined}>Home</a>
         </li>

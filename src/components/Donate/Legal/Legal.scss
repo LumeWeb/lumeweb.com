@@ -1,4 +1,5 @@
 @import "../../../styles/mixins.scss";
+@import "../../../styles/vars.scss";
 
 #donate-legal {
   display: flex;
@@ -15,10 +16,10 @@
 
   p {
     margin-top: 1.5em;
-    font-family: var(--font-family-jaldi);
+    font-family: $font-family-jaldi;
     @include fluid-font-size(1.3125rem);
     line-height: 157%;
-    color: var(--cloud);
+    color: $color-cloud;
   }
 
   strong {

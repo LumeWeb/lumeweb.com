@@ -1,5 +1,5 @@
 @import "./mixins.scss";
-@import "./colors.scss";
+@import "./vars.scss";
 
 .jumbotron {
   display: flex;
@@ -10,11 +10,11 @@
 
   h1 {
     max-width: 21em;
-    font-family: var(--font-family-ibm-plex-sans-devanagari);
+    font-family: $font-family-ibm-plex-sans-devanagari;
     @include fluid-font-size-s(3.6875rem);
     line-height: 137%;
     letter-spacing: -0.06em;
     text-align: center;
-    text-shadow: 0.017em 0.017em 0.034em rgba($body-bg-darker, 0.65);
+    text-shadow: 0.017em 0.017em 0.034em rgba($color-blue-charcoal, 0.65);
   }
 }

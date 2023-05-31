@@ -1,13 +1,14 @@
 @import "../../../styles/mixins.scss";
+@import "../../../styles/vars.scss";
 
 #home-message {
   padding-top: 3.16%;
   padding-bottom: 3.16%;
   @include fluid-padding-lr;
-  background: var(--aquamarine);
-  color: var(--blue-charcoal);
+  background: $color-aquamarine;
+  color: $color-blue-charcoal-2;
 
-  @media screen and (width < 48rem) {
+  @media screen and (max-width: 47.99999rem) {
     text-align: center;
   }
 
@@ -21,7 +22,7 @@
   }
 
   p {
-    font-family: var(--font-family-jaldi);
+    font-family: $font-family-jaldi;
     @include fluid-font-size(1.3125rem);
     line-height: 157%;
   }

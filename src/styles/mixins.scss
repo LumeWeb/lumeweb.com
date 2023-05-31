@@ -46,11 +46,11 @@ $screen-default: 96rem; // 1536px
     & {
       font-size: $min-font-size;
 
-      @media screen and (width >= $min-vw) {
+      @media screen and (min-width: $min-vw) {
         font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
 
-      @media screen and (width >= $max-vw) {
+      @media screen and (min-width: $max-vw) {
         font-size: $max-font-size;
       }
     }
@@ -70,15 +70,15 @@ $screen-default: 96rem; // 1536px
     & {
       font-size: $min-font-size;
 
-      @media screen and (width >= 20rem) and (width < $min-vw) {
+      @media screen and (min-width: 20rem) {
         font-size: calc(#{$min-font-size} + #{strip-unit($medium-font-size - $min-font-size)} * ((100vw - 20rem) / (80 - 20)));
       }
 
-      @media screen and (width >= $min-vw) {
+      @media screen and (min-width: $min-vw) {
         font-size: calc(#{$medium-font-size} + #{strip-unit($max-font-size - $medium-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
 
-      @media screen and (width >= $max-vw) {
+      @media screen and (min-width: $max-vw) {
         font-size: $max-font-size;
       }
     }
@@ -102,12 +102,12 @@ $screen-default: 96rem; // 1536px
       width: $min-width;
       height: $min-height;
 
-      @media screen and (width >= $min-vw) {
+      @media screen and (min-width: $min-vw) {
         width: calc(#{$min-width} + #{strip-unit($max-width - $min-width)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
         height: calc(#{$min-height} + #{strip-unit($max-height - $min-height)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
 
-      @media screen and (width >= $max-vw) {
+      @media screen and (min-width: $max-vw) {
         width: $max-width;
         height: $max-height;
       }
@@ -127,11 +127,11 @@ $screen-default: 96rem; // 1536px
     & {
       width: $min-width;
 
-      @media screen and (width >= $min-vw) {
+      @media screen and (min-width: $min-vw) {
         width: calc(#{$min-width} + #{strip-unit($max-width - $min-width)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
 
-      @media screen and (width >= $max-vw) {
+      @media screen and (min-width: $max-vw) {
         width: $max-width;
       }
     }
@@ -150,13 +150,37 @@ $screen-default: 96rem; // 1536px
     & {
       height: $min-height;
 
-      @media screen and (width >= $min-vw) {
+      @media screen and (min-width: $min-vw) {
         height: calc(#{$min-height} + #{strip-unit($max-height - $min-height)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       }
 
-      @media screen and (width >= $max-vw) {
+      @media screen and (min-width: $max-vw) {
         height: $max-height;
       }
+    }
+  }
+}
+
+@mixin fluid-position-left($offset, $width) {
+  $min-vw: 48rem;
+  $max-vw: 96rem;
+
+  $min-margin: 3.75%;
+  $max-margin: 7.5%;
+
+  & {
+    margin-left: min(calc($offset + $min-margin), max($min-margin, calc(100vw - $width - $min-margin)));
+    margin-right: $min-margin;
+
+    @media screen and (min-width: $min-vw) {
+      $margin: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      margin-left: min(calc($offset + $margin), max($margin, calc(100vw - $width - $margin)));
+      margin-right: $margin;
+    }
+
+    @media screen and (min-width: $max-vw) {
+      margin-left: min(calc($offset + $max-margin), max($max-margin, calc(100vw - $width - $max-margin)));
+      margin-right: $max-margin;
     }
   }
 }
@@ -172,12 +196,12 @@ $screen-default: 96rem; // 1536px
     padding-left: $min-padding;
     padding-right: $min-padding;
 
-    @media screen and (width >= $min-vw) {
+    @media screen and (min-width: $min-vw) {
       padding-left: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       padding-right: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
     }
 
-    @media screen and (width >= $max-vw) {
+    @media screen and (min-width: $max-vw) {
       padding-left: $max-padding;
       padding-right: $max-padding;
     }
@@ -195,12 +219,12 @@ $screen-default: 96rem; // 1536px
     margin-left: $min-margin;
     margin-right: $min-margin;
 
-    @media screen and (width >= $min-vw) {
+    @media screen and (min-width: $min-vw) {
       margin-left: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
       margin-right: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
     }
 
-    @media screen and (width >= $max-vw) {
+    @media screen and (min-width: $max-vw) {
       margin-left: $max-margin;
       margin-right: $max-margin;
     }

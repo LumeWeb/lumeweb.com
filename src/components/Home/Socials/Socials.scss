@@ -1,4 +1,5 @@
 @import "../../../styles/mixins.scss";
+@import "../../../styles/vars.scss";
 
 #home-socials {
   display: flex;
@@ -21,7 +22,7 @@
     font-weight: 700;
     line-height: 100%;
     text-transform: uppercase;
-    color: var(--aquamarine);
+    color: $color-aquamarine;
   }
 
   .github-logo {

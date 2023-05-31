@@ -1,4 +1,5 @@
 @import "../../../styles/mixins.scss";
+@import "../../../styles/vars.scss";
 
 #home-meme {
   display: flex;
@@ -32,19 +33,19 @@
       @include fluid-font-size(1.5625rem);
       font-weight: 700;
       text-align: center;
-      color: var(--aquamarine);
+      color: $color-aquamarine;
       text-transform: uppercase;
     }
 
     p {
-      font-family: var(--font-family-jaldi);
+      font-family: $font-family-jaldi;
       @include fluid-font-size(1.3125rem);
       line-height: 123.81%;
-      color: var(--cloud);
+      color: $color-cloud;
     }
   }
 
-  @media screen and (width < 48rem) {
+  @media screen and (max-width: 47.99999rem) {
     .meme-item {
       div {
         flex-direction: column;

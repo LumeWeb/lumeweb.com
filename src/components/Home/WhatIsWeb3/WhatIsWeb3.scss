@@ -1,29 +1,5 @@
-@import "../../../styles/colors.scss";
 @import "../../../styles/mixins.scss";
-
-@mixin fluid-margin {
-  $min-vw: 48rem;
-  $max-vw: 96rem;
-
-  $min-margin: 3.75%;
-  $max-margin: 7.5%;
-
-  & {
-    margin-left: min(27.8em, max($min-margin, calc(100vw - 28em - $min-margin)));
-    margin-right: $min-margin;
-
-    @media screen and (width >= $min-vw) {
-      $margin: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      margin-left: min(calc(27.8em + $margin), max($margin, calc(100vw - 28em - $margin)));
-      margin-right: $margin;
-    }
-
-    @media screen and (width >= $max-vw) {
-      margin-left: min(calc(27.8em + $max-margin), max($max-margin, calc(100vw - 28em - $max-margin)));
-      margin-right: $max-margin;
-    }
-  }
-}
+@import "../../../styles/vars.scss";
 
 #home-whatisweb3 {
   display: flex;
@@ -49,7 +25,7 @@
   }
 
   .feature-group {
-    @include fluid-margin;
+    @include fluid-position-left(27.8em, 28em);
     max-width: 28em;
     z-index: 1;
 
@@ -57,9 +33,9 @@
       margin-top: 1em;
     }
 
-    @media screen and (width < 80rem) {
+    @media screen and (max-width: 80rem) {
       p {
-        background: rgba(2, 13, 17, 0.65);
+        background: rgba($color-blue-charcoal, 0.65);
         border-radius: 0.5em;
         padding: 0.3em 0.5em;
         margin: -0.3em -0.5em;

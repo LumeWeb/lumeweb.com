@@ -1,5 +1,5 @@
-@import "../../../styles/colors.scss";
 @import "../../../styles/mixins.scss";
+@import "../../../styles/vars.scss";
 
 #donate-methods {
   display: flex;
@@ -21,7 +21,7 @@
     gap: 0.9em;
     @include fluid-font-size(1.25rem);
 
-    @media screen and (width >= 48rem) {
+    @media screen and (min-width: 48rem) {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -30,13 +30,13 @@
       flex-direction: column;
       justify-content: center;
       padding: 2.95em 1.95em;
-      background: $body-bg-darker;
+      background: $color-blue-charcoal;
       border: 0.05em solid transparent;
       border-radius: 0.5em;
       transition: border-color 200ms;
 
       &:hover {
-        border-color: var(--aquamarine);
+        border-color: $color-aquamarine;
       }
 
       > div {
@@ -57,9 +57,9 @@
 
   p {
     margin-top: 1.5em;
-    font-family: var(--font-family-jaldi);
+    font-family: $font-family-jaldi;
     @include fluid-font-size(1.0625rem);
     line-height: 157%;
-    color: var(--cloud);
+    color: $color-cloud;
   }
 }

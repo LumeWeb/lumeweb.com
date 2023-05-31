@@ -1,4 +1,5 @@
 @import "../../../styles/mixins.scss";
+@import "../../../styles/vars.scss";
 
 nav {
   display: flex;
@@ -36,40 +37,65 @@ menu {
   font-size: 2rem;
   cursor: pointer;
   z-index: 1;
-  margin: 0 2.125rem;
+  margin: 0 3.75% 0 2rem;
 }
 
-@media screen and (width < 48rem) {
+@media screen and (max-width: 56rem) {
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba($color-body-bg, 0.85);
+    z-index: 1;
+  }
+
   menu {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    position: absolute;
-    top: -100vh;
-    right: 3%;
-    padding: 1rem;
-    font-size: 1.25rem;
-    background: var(--blue-charcoal);
-    border: 1px solid red;
-    border-radius: 0.5rem;
-    transition: top 250ms;
-    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: min(20rem, -100vw);
+    bottom: 0;
+    padding: 7.5em 7.5% 1em;
+    background: rgba($color-body-bg, 0.85);
+    transition: right 200ms;
+    overflow-y: auto;
 
     &.active {
-      top: 1.4rem;
+      right: 0;
+
+      &::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: $color-black;
+        animation: 200ms bg-opacity forwards;
+        z-index: -1;
+      }
     }
 
     li > a {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+      font-size: 1.25rem;
+      padding-left: 0.8em;
     }
 
     .download-btn {
-      margin: 0.5rem 0 0 0;
+      font-size: 1.25rem;
+      margin: 1.1em 0 0 0;
     }
   }
 
   .hamburger {
     display: block;
+  }
+}
+
+@keyframes bg-opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.85;
   }
 }

@@ -1,4 +1,5 @@
 @import "../../../styles/mixins.scss";
+@import "../../../styles/vars.scss";
 
 #home-powered-by {
   display: flex;
@@ -8,7 +9,7 @@
   margin: 5em 0;
   @include fluid-font-size(1.25rem);
 
-  @media screen and (width < 48rem) {
+  @media screen and (max-width: 47.99999rem) {
     flex-direction: column;
     gap: 1em;
   }
@@ -24,9 +25,9 @@
     font-weight: 700;
     line-height: 100%;
     text-transform: uppercase;
-    color: var(--aquamarine);
+    color: $color-aquamarine;
 
-    @media screen and (width >= 48rem) {
+    @media screen and (min-width: 48rem) {
       margin-top: 0.75em;
     }
   }
