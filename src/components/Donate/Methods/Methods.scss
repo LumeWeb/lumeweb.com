@@ -1,12 +1,14 @@
 @import "../../../styles/mixins.scss";
 @import "../../../styles/vars.scss";
 
-#donate-methods {
+#methods {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 9em 0 14em;
-  @include fluid-padding-lr;
+  margin: 2em 0 6em;
+  padding-top: 3em;
+  @include fluid-margin-lr;
+  font-family: $font-family-jaldi;
 
   h2 {
     margin-bottom: 1em;
@@ -17,9 +19,8 @@
   .method-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 1fr;
-    gap: 0.9em;
-    @include fluid-font-size(1.25rem);
+    gap: 2em;
+    margin-bottom: 4em;
 
     @media screen and (min-width: 48rem) {
       grid-template-columns: repeat(2, 1fr);
@@ -28,11 +29,10 @@
     > div {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding: 2.95em 1.95em;
+      padding: 4em 4em 2em;
       background: $color-blue-charcoal;
-      border: 0.05em solid transparent;
-      border-radius: 0.5em;
+      border: 0.1em solid transparent;
+      border-radius: 1em;
       transition: border-color 200ms;
 
       &:hover {
@@ -42,24 +42,102 @@
       > div {
         display: flex;
         align-items: center;
-        gap: 1em;
+        gap: 2em;
+        margin-bottom: 2em;
       }
     }
 
-    img {
-      @include fluid-width-height(3.4375rem, 3.4375rem);
+    img, svg {
+      @include fluid-max-width-height(3.4375rem, 3.4375rem);
     }
 
     h3 {
+      flex-grow: 1;
+      font-family: $font-family-jetbrains-mono;
       @include fluid-font-size(1.4375rem);
+    }
+
+    .address {
+      color: $color-cloud;
+      margin-bottom: 1em;
+      word-break: break-all;
+      user-select: all;
+      @include fluid-font-size(1.3125rem);
     }
   }
 
   p {
-    margin-top: 1.5em;
-    font-family: $font-family-jaldi;
+    margin-top: 1em;
     @include fluid-font-size(1.0625rem);
     line-height: 157%;
     color: $color-cloud;
+  }
+
+  .btn-main {
+    @include fluid-font-size(1.3125rem);
+  }
+
+  #donate-bitcoin:hover {
+    border-color: #f7931a;
+  }
+
+  #donate-litecoin:hover {
+    border-color: #345d9d;
+  }
+
+  #donate-ethereum:hover {
+    border-color: #8c8c8c;
+  }
+
+  #donate-polygon:hover {
+    border-color: #8247e5;
+  }
+
+  #donate-solana:hover {
+    border-color: #dc1fff;
+  }
+
+  #donate-cardano:hover {
+    border-color: #0033ad;
+  }
+
+  #donate-siacoin:hover {
+    border-color: #20ee82;
+  }
+
+  #donate-monero:hover {
+    border-color: #f26822;
+  }
+
+  #donate-paypal {
+    &:hover {
+      border-color: #019be1;
+    }
+
+    .btn-main {
+      color: $color-white;
+      background: #019be1;
+      border-color: #019be1;
+
+      &:hover {
+        background: inherit;
+      }
+    }
+  }
+
+  #donate-patreon {
+    &:hover {
+      border-color: #ff424d;
+    }
+
+    .btn-main {
+      color: $color-white;
+      background: #ff424d;
+      border-color: #ff424d;
+
+      &:hover {
+        background: inherit;
+      }
+    }
   }
 }

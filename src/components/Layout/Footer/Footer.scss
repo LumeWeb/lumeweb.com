@@ -60,12 +60,9 @@ footer {
     align-items: center;
   }
 
-  span {
-    display: block;
-    background-image: url('../../../assets/email-icon.webp');
-    background-size: cover;
-    margin-right: 0.375em;
-    @include fluid-width-height(1.0625rem, 0.875rem);
+  svg {
+    @include fluid-width-height(1.375rem, 1.375rem);
+    margin-right: 0.5em;
   }
 }
 

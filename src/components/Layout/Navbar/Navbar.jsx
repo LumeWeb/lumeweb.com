@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.scss';
 import logo from '../../../../src/assets/lume-logo.png';
 

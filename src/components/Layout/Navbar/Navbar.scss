@@ -54,7 +54,7 @@ menu {
     flex-direction: column;
     position: fixed;
     top: 0;
-    right: min(20rem, -100vw);
+    right: min(-20rem, -100vw);
     bottom: 0;
     padding: 7.5em 7.5% 1em;
     background: rgba($color-body-bg, 0.85);

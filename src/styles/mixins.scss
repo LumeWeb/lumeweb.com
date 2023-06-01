@@ -161,6 +161,36 @@ $screen-default: 96rem; // 1536px
   }
 }
 
+@mixin fluid-max-width-height($width, $height) {
+  $min-width: calc($width / 1.2);
+  $max-width: calc($width * 2);
+
+  $min-height: calc($height / 1.2);
+  $max-height: calc($height * 2);
+
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($width);
+  $u4: unit($height);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      max-width: $min-width;
+      max-height: $min-height;
+
+      @media screen and (min-width: $min-vw) {
+        max-width: calc(#{$min-width} + #{strip-unit($max-width - $min-width)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        max-height: calc(#{$min-height} + #{strip-unit($max-height - $min-height)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        max-width: $max-width;
+        max-height: $max-height;
+      }
+    }
+  }
+}
+
 @mixin fluid-position-left($offset, $width) {
   $min-vw: 48rem;
   $max-vw: 96rem;

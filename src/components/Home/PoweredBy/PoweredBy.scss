@@ -5,19 +5,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5em;
-  margin: 5em 0;
-  @include fluid-font-size(1.25rem);
+  gap: 4em;
+  margin: 10em 0;
 
   @media screen and (max-width: 47.99999rem) {
     flex-direction: column;
-    gap: 1em;
+    gap: 2.5em;
   }
 
   div {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 2.5em;
   }
 
   h2 {
@@ -32,15 +31,24 @@
     }
   }
 
-  .sia-logo {
-    @include fluid-width-height(8rem, 4.625rem);
+  a {
+    padding: 0.5em;
+    color: $color-alto;
+
+    &:hover {
+      color: $color-aquamarine;
+    }
   }
 
-  .hns-logo {
-    @include fluid-width-height(3.875rem, 4.125rem);
+  .sia-logo svg {
+    @include fluid-width(5.5rem);
   }
 
-  .osi-logo {
-    @include fluid-width-height(5.1875rem, 6.25rem);
+  .hns-logo svg {
+    @include fluid-width(4.5rem);
+  }
+
+  .osi-logo svg {
+    @include fluid-width(4.5rem);
   }
 }
