@@ -260,3 +260,29 @@ $screen-default: 96rem; // 1536px
     }
   }
 }
+
+@mixin fluid-margin-lr-rem($margin) {
+  $min-margin: calc($margin / 1.2);
+  $max-margin: calc($margin * 2);
+
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($margin);
+
+  @if $u1 == $u2 and $u1 == $u3 {
+    & {
+      margin-left: $min-margin;
+      margin-right: $min-margin;
+
+      @media screen and (min-width: $min-vw) {
+        margin-left: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        margin-right: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        margin-left: $max-margin;
+        margin-right: $max-margin;
+      }
+    }
+  }
+}

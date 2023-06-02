@@ -1,150 +1,60 @@
 ---
 import './Methods.scss';
-import paypalLogo from '../../../../src/assets/paypal-logo.png';
-import patreonLogo from '../../../../src/assets/patreon-logo.png';
+import QRCode from 'qrcode';
+
+const currencies = [];
+
+const addCurrency = async (id, title, address) => {
+  currencies.push({
+    id: id,
+    title: title,
+    address: address,
+    svgLogo: await import('./icons/' + id + '.svg?raw'),
+    qrSmall: await QRCode.toDataURL(address, { version: 6, scale: 1, margin: 1 }),
+    qrLarge: await QRCode.toDataURL(address, { version: 6, scale: 7, margin: 2 })
+  });
+};
+
+await addCurrency('bitcoin', 'Bitcoin (BTC)', 'bc1q9xq2w4w2hjc240rs6mf0g8gpzz3rmcz4h77a2a');
+await addCurrency('litecoin', 'Litecoin (LTC)', 'ltc1qgk6fc4u6grqyhfzw208477ze35vrr5tcwhq8zq');
+await addCurrency('ethereum', 'Ethereum (ETH, USDT/USDC, ERC20)', '0x63cd2C691632720Ff2ABDD0b6AABA2466D3Fe468');
+await addCurrency('polygon', 'Polygon (MATIC)', '0x63cd2C691632720Ff2ABDD0b6AABA2466D3Fe468');
+await addCurrency('solana', 'Solana (SOL)', '4nMRucCuqttipwQXm31vBgoaxDW6o25TnD8fj1imviCu');
+await addCurrency('cardano', 'Cardano (ADA)', 'addr1q9jd69s53pdy9j567a27ac6uvc2966x0rjz2l9sxy4y5w8383jl87mrdf6uuk9ja7lmagm2p4vw30sa42kjylxxrdufqucgst6');
+await addCurrency('siacoin', 'Siacoin (SC)', '7506caa950cdddbaec8f465937b50324e942ac6f5280a053662e58e3cc8bdb543ab88ccd5c23');
+await addCurrency('monero', 'Monero (XMR)', '48A33fSyFo9YAiux3KHKVBagPGvqmcr2h4oy5pufJn6NUWyZsPF6PAufmrET3gLJjsLwxfU7HU9xe8mEeCqtHqvZN3Ly12h');
+await addCurrency('handshake', 'Handshake (HNS)', 'hs1qe67ak3j2u4yrq0qnfs2hmycxqdvaf9v5rjsxzy');
+await addCurrency('cosmos', 'Cosmos (ATOM)', 'cosmos1pvy8zyzqwz2r2jl9j9d3zrfmg6dqc5hyhj6d5z');
+await addCurrency('secret', 'Secret (SCRT)', 'secret18377vc3af588ggauhrpuyfd954lmmu05xqhf0y');
+await addCurrency('algorand', 'Algorand (ALGO)', '3QBE5TZ63TF5W7V2QRJWRB72M7INQLA3RZW4XHD3ISRE7CRYCVNU4EEVAE');
 ---
 
 <section id="methods">
   <div>
     <h2>Donate Cryptocurrency</h2>
     <div class="method-grid">
-      <div id="donate-bitcoin">
-        <div>
-          <svg viewBox="0 0 4091.27 4091.73" fill-rule="evenodd" clip-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#F7931A" fill-rule="nonzero" d="M4030.06 2540.77c-273.24,1096.01 -1383.32,1763.02 -2479.46,1489.71 -1095.68,-273.24 -1762.69,-1383.39 -1489.33,-2479.31 273.12,-1096.13 1383.2,-1763.19 2479,-1489.95 1096.06,273.24 1763.03,1383.51 1489.76,2479.57l0.02 -0.02z"/>
-            <path fill="white" fill-rule="nonzero" d="M2947.77 1754.38c40.72,-272.26 -166.56,-418.61 -450,-516.24l91.95 -368.8 -224.5 -55.94 -89.51 359.09c-59.02,-14.72 -119.63,-28.59 -179.87,-42.34l90.16 -361.46 -224.36 -55.94 -92 368.68c-48.84,-11.12 -96.81,-22.11 -143.35,-33.69l0.26 -1.16 -309.59 -77.31 -59.72 239.78c0,0 166.56,38.18 163.05,40.53 90.91,22.69 107.35,82.87 104.62,130.57l-104.74 420.15c6.26,1.59 14.38,3.89 23.34,7.49 -7.49,-1.86 -15.46,-3.89 -23.73,-5.87l-146.81 588.57c-11.11,27.62 -39.31,69.07 -102.87,53.33 2.25,3.26 -163.17,-40.72 -163.17,-40.72l-111.46 256.98 292.15 72.83c54.35,13.63 107.61,27.89 160.06,41.3l-92.9 373.03 224.24 55.94 92 -369.07c61.26,16.63 120.71,31.97 178.91,46.43l-91.69 367.33 224.51 55.94 92.89 -372.33c382.82,72.45 670.67,43.24 791.83,-303.02 97.63,-278.78 -4.86,-439.58 -206.26,-544.44 146.69,-33.83 257.18,-130.31 286.64,-329.61l-0.07 -0.05zm-512.93 719.26c-69.38,278.78 -538.76,128.08 -690.94,90.29l123.28 -494.2c152.17,37.99 640.17,113.17 567.67,403.91zm69.43 -723.3c-63.29,253.58 -453.96,124.75 -580.69,93.16l111.77 -448.21c126.73,31.59 534.85,90.55 468.94,355.05l-0.02 0z"/>
-          </svg>
-          <h3>Bitcoin (BTC)</h3>
+      {currencies.map(async currency => (
+        <div id={'donate-' + currency.id}>
+          <div>
+            <Fragment set:html={currency.svgLogo.default} />
+            <h3>{currency.title}</h3>
+            <img onclick={"openDialog('" + currency.qrLarge + "')"} src={currency.qrSmall}/>
+          </div>
+          <div class="address">
+            <button onclick="copyToClipboard(this)"></button>
+            <div>{currency.address}</div>
+          </div>
         </div>
-        <div class="address">bc1q9xq2w4w2hjc240rs6mf0g8gpzz3rmcz4h77a2a</div>
-      </div>
-      <div id="donate-litecoin">
-        <div>
-          <svg viewBox="0 0 82.6 82.6" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="41.3" cy="41.3" r="36.83" style="fill:#fff"/>
-            <path d="M41.3,0A41.3,41.3,0,1,0,82.6,41.3h0A41.18,41.18,0,0,0,41.54,0ZM42,42.7,37.7,57.2h23a1.16,1.16,0,0,1,1.2,1.12v.38l-2,6.9a1.49,1.49,0,0,1-1.5,1.1H23.2l5.9-20.1-6.6,2L24,44l6.6-2,8.3-28.2a1.51,1.51,0,0,1,1.5-1.1h8.9a1.16,1.16,0,0,1,1.2,1.12v.38L43.5,38l6.6-2-1.4,4.8Z" style="fill:#345d9d"/>
-          </svg>
-          <h3>Litecoin (LTC)</h3>
-        </div>
-        <div class="address">ltc1qgk6fc4u6grqyhfzw208477ze35vrr5tcwhq8zq</div>
-      </div>
-      <div id="donate-ethereum">
-        <div>
-          <svg version="1.1" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 784.37 1277.39" xmlns="http://www.w3.org/2000/svg">
-            <g>
-              <polygon fill="#343434" fill-rule="nonzero" points="392.07,0 383.5,29.11 383.5,873.74 392.07,882.29 784.13,650.54 "/>
-              <polygon fill="#8C8C8C" fill-rule="nonzero" points="392.07,0 -0,650.54 392.07,882.29 392.07,472.33 "/>
-              <polygon fill="#3C3C3B" fill-rule="nonzero" points="392.07,956.52 387.24,962.41 387.24,1263.28 392.07,1277.38 784.37,724.89 "/>
-              <polygon fill="#8C8C8C" fill-rule="nonzero" points="392.07,1277.38 392.07,956.52 -0,724.89 "/>
-              <polygon fill="#141414" fill-rule="nonzero" points="392.07,882.29 784.13,650.54 392.07,472.33 "/>
-              <polygon fill="#393939" fill-rule="nonzero" points="0,650.54 392.07,882.29 392.07,472.33 "/>
-            </g>
-          </svg>
-          <h3>Ethereum (ETH, USDT/USDC, ERC20)</h3>
-        </div>
-        <div class="address">0x63cd2C691632720Ff2ABDD0b6AABA2466D3Fe468</div>
-      </div>
-      <div id="donate-polygon">
-        <div>
-          <svg version="1.1" viewBox="0 0 38.4 33.5" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#8247E5" d="M29,10.2c-0.7-0.4-1.6-0.4-2.4,0L21,13.5l-3.8,2.1l-5.5,3.3c-0.7,0.4-1.6,0.4-2.4,0L5,16.3 c-0.7-0.4-1.2-1.2-1.2-2.1v-5c0-0.8,0.4-1.6,1.2-2.1l4.3-2.5c0.7-0.4,1.6-0.4,2.4,0L16,7.2c0.7,0.4,1.2,1.2,1.2,2.1v3.3l3.8-2.2V7 c0-0.8-0.4-1.6-1.2-2.1l-8-4.7c-0.7-0.4-1.6-0.4-2.4,0L1.2,5C0.4,5.4,0,6.2,0,7v9.4c0,0.8,0.4,1.6,1.2,2.1l8.1,4.7 c0.7,0.4,1.6,0.4,2.4,0l5.5-3.2l3.8-2.2l5.5-3.2c0.7-0.4,1.6-0.4,2.4,0l4.3,2.5c0.7,0.4,1.2,1.2,1.2,2.1v5c0,0.8-0.4,1.6-1.2,2.1 L29,28.8c-0.7,0.4-1.6,0.4-2.4,0l-4.3-2.5c-0.7-0.4-1.2-1.2-1.2-2.1V21l-3.8,2.2v3.3c0,0.8,0.4,1.6,1.2,2.1l8.1,4.7 c0.7,0.4,1.6,0.4,2.4,0l8.1-4.7c0.7-0.4,1.2-1.2,1.2-2.1V17c0-0.8-0.4-1.6-1.2-2.1L29,10.2z"/>
-          </svg>
-          <h3>Polygon (MATIC)</h3>
-        </div>
-        <div class="address">0x63cd2C691632720Ff2ABDD0b6AABA2466D3Fe468</div>
-      </div>
-      <div id="donate-solana">
-        <div>
-          <svg version="1.1" viewBox="0 0 397.7 311.7" xmlns="http://www.w3.org/2000/svg">
-            <style type="text/css">
-              .st0{fill:url(#SVGID_1_);}
-              .st1{fill:url(#SVGID_2_);}
-              .st2{fill:url(#SVGID_3_);}
-            </style>
-            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="360.8791" y1="351.4553" x2="141.213" y2="-69.2936" gradientTransform="matrix(1 0 0 -1 0 314)">
-              <stop offset="0" style="stop-color:#00FFA3"/>
-              <stop offset="1" style="stop-color:#DC1FFF"/>
-            </linearGradient>
-            <path class="st0" d="M64.6,237.9c2.4-2.4,5.7-3.8,9.2-3.8h317.4c5.8,0,8.7,7,4.6,11.1l-62.7,62.7c-2.4,2.4-5.7,3.8-9.2,3.8H6.5
-              c-5.8,0-8.7-7-4.6-11.1L64.6,237.9z"/>
-            <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="264.8291" y1="401.6014" x2="45.163" y2="-19.1475" gradientTransform="matrix(1 0 0 -1 0 314)">
-              <stop offset="0" style="stop-color:#00FFA3"/>
-              <stop offset="1" style="stop-color:#DC1FFF"/>
-            </linearGradient>
-            <path class="st1" d="M64.6,3.8C67.1,1.4,70.4,0,73.8,0h317.4c5.8,0,8.7,7,4.6,11.1l-62.7,62.7c-2.4,2.4-5.7,3.8-9.2,3.8H6.5
-              c-5.8,0-8.7-7-4.6-11.1L64.6,3.8z"/>
-            <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="312.5484" y1="376.688" x2="92.8822" y2="-44.061" gradientTransform="matrix(1 0 0 -1 0 314)">
-              <stop offset="0" style="stop-color:#00FFA3"/>
-              <stop offset="1" style="stop-color:#DC1FFF"/>
-            </linearGradient>
-            <path class="st2" d="M333.1,120.1c-2.4-2.4-5.7-3.8-9.2-3.8H6.5c-5.8,0-8.7,7-4.6,11.1l62.7,62.7c2.4,2.4,5.7,3.8,9.2,3.8h317.4
-              c5.8,0,8.7-7,4.6-11.1L333.1,120.1z"/>
-          </svg>
-          <h3>Solana (SOL)</h3>
-        </div>
-        <div class="address">4nMRucCuqttipwQXm31vBgoaxDW6o25TnD8fj1imviCu</div>
-      </div>
-      <div id="donate-cardano">
-        <div>
-          <svg version="1.1" viewBox="0 0 375 346.5" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#0033AD" d="M102.8,172c-0.8,13.9,9.9,25.8,23.8,26.6c0.5,0,1,0,1.5,0c14,0,25.3-11.3,25.2-25.3c0-14-11.3-25.3-25.3-25.2 C114.6,148.1,103.5,158.6,102.8,172z"/>
-            <path fill="#0033AD" d="M8.6,165.5c-4.5-0.3-8.4,3.2-8.6,7.7s3.2,8.4,7.7,8.6c4.5,0.3,8.3-3.2,8.6-7.7 C16.6,169.6,13.1,165.8,8.6,165.5C8.6,165.5,8.6,165.5,8.6,165.5z"/>
-            <path fill="#0033AD" d="M101.2,25.4c4-2,5.6-7,3.6-11c-2-4-7-5.6-11-3.6c-4,2-5.6,6.9-3.6,10.9C92.2,25.8,97.1,27.5,101.2,25.4 C101.1,25.4,101.2,25.4,101.2,25.4z"/>
-            <path fill="#0033AD" d="M126.8,70.1c6.2-3.1,8.7-10.7,5.6-16.9s-10.7-8.7-16.9-5.6c-6.2,3.1-8.7,10.7-5.6,16.9 C113,70.7,120.6,73.2,126.8,70.1z"/>
-            <path fill="#0033AD" d="M40.6,100.8c4.8,3.1,11.2,1.8,14.4-3c3.1-4.8,1.8-11.2-3-14.4c-4.8-3.1-11.2-1.8-14.4,3c0,0,0,0,0,0 C34.4,91.2,35.8,97.7,40.6,100.8z"/>
-            <path fill="#0033AD" d="M55.9,161c-7-0.4-12.9,4.9-13.3,11.9s4.9,12.9,11.9,13.3c7,0.4,12.9-4.9,13.3-11.9c0,0,0,0,0,0 C68.2,167.4,62.9,161.4,55.9,161z"/>
-            <path fill="#0033AD" d="M42,245.7c-5.1,2.6-7.2,8.8-4.6,14c2.6,5.1,8.8,7.2,14,4.6c5.1-2.6,7.2-8.8,4.6-14c0,0,0,0,0,0 C53.4,245.2,47.1,243.1,42,245.7C42,245.7,42,245.7,42,245.7z"/>
-            <path fill="#0033AD" d="M91,134.9c6.9,4.5,16.1,2.6,20.5-4.3c4.5-6.9,2.6-16.1-4.3-20.5c-6.9-4.5-16.1-2.6-20.5,4.3 C82.2,121.2,84.1,130.4,91,134.9C91,134.9,91,134.9,91,134.9z"/>
-            <path fill="#0033AD" d="M246.5,69.1c5.8,3.8,13.7,2.2,17.5-3.6s2.2-13.7-3.6-17.5c-5.8-3.8-13.7-2.2-17.5,3.6c0,0,0,0,0,0 C239,57.5,240.6,65.3,246.5,69.1C246.5,69.1,246.5,69.1,246.5,69.1z"/>
-            <path fill="#0033AD" d="M272.3,24.6c3.8,2.5,8.8,1.4,11.3-2.4s1.4-8.8-2.4-11.3c-3.8-2.5-8.8-1.4-11.3,2.3 C267.5,17,268.6,22.1,272.3,24.6C272.3,24.6,272.3,24.6,272.3,24.6z"/>
-            <path fill="#0033AD" d="M248.4,147.9c-13.9-0.8-25.9,9.9-26.6,23.8c-0.8,13.9,9.9,25.9,23.8,26.6c0.5,0,1,0,1.4,0 c13.9,0,25.2-11.3,25.2-25.3C272.3,159.7,261.8,148.6,248.4,147.9L248.4,147.9z"/>
-            <path fill="#0033AD" d="M135.1,133.1c4.3,8.5,13,13.9,22.6,13.9c13.9,0,25.2-11.3,25.2-25.3c0-3.9-0.9-7.8-2.7-11.4 c-6.3-12.5-21.5-17.5-33.9-11.2C133.8,105.5,128.8,120.7,135.1,133.1L135.1,133.1z"/>
-            <path fill="#0033AD" d="M333,100.8c5.1-2.6,7.1-8.9,4.5-14c-2.6-5.1-8.9-7.1-14-4.5c-5.1,2.6-7.1,8.8-4.6,13.9 C321.6,101.3,327.8,103.4,333,100.8C333,100.8,333,100.8,333,100.8z"/>
-            <path fill="#0033AD" d="M269,108.8c-7.3,3.7-10.3,12.6-6.6,19.9c3.7,7.3,12.6,10.3,19.9,6.6c7.3-3.7,10.3-12.6,6.6-19.9 C285.2,108.1,276.3,105.2,269,108.8z"/>
-            <path fill="#0033AD" d="M186.5,20.8c5.7,0.3,10.6-4.1,11-9.8s-4.1-10.6-9.8-11c-5.7-0.3-10.6,4-11,9.7 C176.4,15.5,180.8,20.4,186.5,20.8C186.5,20.8,186.5,20.8,186.5,20.8z"/>
-            <path fill="#0033AD" d="M186.4,86.1c8.2,0.5,15.2-5.8,15.6-14c0.5-8.2-5.8-15.2-14-15.6c-8.2-0.5-15.2,5.8-15.6,14 C172,78.7,178.2,85.7,186.4,86.1C186.4,86.1,186.4,86.1,186.4,86.1z"/>
-            <path fill="#0033AD" d="M106,237.7c7.3-3.7,10.3-12.6,6.6-19.9c-3.7-7.3-12.6-10.3-19.9-6.6c-7.3,3.7-10.3,12.6-6.6,19.9 C89.8,238.4,98.7,241.4,106,237.7z"/>
-            <path fill="#0033AD" d="M196,107.8c-7.6,11.7-4.4,27.3,7.3,34.9c11.7,7.6,27.3,4.4,34.9-7.3c7.6-11.7,4.4-27.3-7.3-34.9 c-4.1-2.7-8.9-4.1-13.8-4.1C208.6,96.4,200.7,100.7,196,107.8z"/>
-            <path fill="#0033AD" d="M239.9,213.4c-6.3-12.5-21.5-17.5-33.9-11.2c-12.5,6.3-17.5,21.5-11.2,33.9c6.3,12.5,21.5,17.5,33.9,11.2 c0,0,0,0,0,0c12.4-6.2,17.5-21.2,11.3-33.7C240,213.5,240,213.5,239.9,213.4z"/>
-            <path fill="#0033AD" d="M284,211.6c-6.9-4.5-16.1-2.6-20.5,4.3c-4.5,6.9-2.6,16.1,4.3,20.5c6.9,4.5,16.1,2.6,20.5-4.3 C292.8,225.3,290.9,216.1,284,211.6C284,211.6,284,211.6,284,211.6z"/>
-            <path fill="#0033AD" d="M332.4,173.7c0.4-7-4.9-12.9-11.9-13.3c-7-0.4-12.9,4.9-13.3,11.9c-0.4,7,4.9,12.9,11.9,13.3c0,0,0,0,0,0 C326,186,332,180.6,332.4,173.7z"/>
-            <path fill="#0033AD" d="M367.3,164.7c-4.5-0.3-8.4,3.2-8.6,7.7s3.2,8.4,7.7,8.6c4.5,0.3,8.3-3.2,8.6-7.7 C375.2,168.8,371.8,165,367.3,164.7z"/>
-            <path fill="#0033AD" d="M334.4,245.7c-4.8-3.1-11.2-1.8-14.4,3c-3.1,4.8-1.8,11.2,3,14.4c4.8,3.1,11.2,1.8,14.4-3 C340.6,255.3,339.2,248.8,334.4,245.7C334.4,245.7,334.4,245.7,334.4,245.7z"/>
-            <path fill="#0033AD" d="M102.6,321.9c-3.8-2.5-8.8-1.4-11.3,2.3c-2.5,3.8-1.4,8.8,2.3,11.3c3.8,2.5,8.8,1.4,11.3-2.3c0,0,0,0,0,0 C107.5,329.5,106.4,324.4,102.6,321.9z"/>
-            <path fill="#0033AD" d="M273.8,321.1c-4,2-5.6,7-3.6,11c2,4,7,5.6,11,3.6c4-2,5.6-6.9,3.6-10.9C282.8,320.7,277.9,319,273.8,321.1 C273.9,321.1,273.8,321.1,273.8,321.1z"/>
-            <path fill="#0033AD" d="M179,238.7c7.6-11.7,4.4-27.3-7.3-35c-11.7-7.6-27.3-4.4-35,7.3s-4.4,27.3,7.3,35c4.1,2.7,8.9,4.1,13.8,4.1 C166.4,250.2,174.3,245.9,179,238.7z"/>
-            <path fill="#0033AD" d="M128.5,277.4c-5.8-3.8-13.7-2.2-17.5,3.6c-3.8,5.8-2.2,13.7,3.6,17.5s13.7,2.2,17.5-3.6c0,0,0,0,0,0 C136,289.1,134.4,281.2,128.5,277.4z"/>
-            <path fill="#0033AD" d="M187.4,325.7c-5.7-0.3-10.6,4.1-11,9.8s4.1,10.6,9.8,11c5.7,0.3,10.6-4,11-9.7 C197.5,331,193.1,326.1,187.4,325.7C187.4,325.7,187.4,325.7,187.4,325.7z"/>
-            <path fill="#0033AD" d="M187.5,260.4c-8.2-0.5-15.2,5.8-15.6,14c-0.5,8.2,5.8,15.2,14,15.6c8.2,0.4,15.2-5.8,15.6-14 C202,267.9,195.7,260.8,187.5,260.4C187.5,260.4,187.5,260.4,187.5,260.4z"/>
-            <path fill="#0033AD" d="M248.2,276.4c-6.2,3.2-8.7,10.8-5.5,17c3.2,6.2,10.8,8.7,17,5.5c6.2-3.1,8.7-10.7,5.6-16.9 C262.1,275.8,254.5,273.2,248.2,276.4C248.2,276.4,248.2,276.4,248.2,276.4z"/>
-          </svg>
-          <h3>Cardano (ADA)</h3>
-        </div>
-        <div class="address">addr1q9jd69s53pdy9j567a27ac6uvc2966x0rjz2l9sxy4y5w8383jl87mrdf6uuk9ja7lmagm2p4vw30sa42kjylxxrdufqucgst6</div>
-      </div>
-      <div id="donate-siacoin">
-        <div>
-          <svg viewBox="0 0 404.03 404.04" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#20ee82" d="M262.65,202v60.6H202a60.6,60.6,0,1,1,60.6-60.6m-59.8-101a101,101,0,1,0-6,202H303v-99.8c0-55.7-44.5-101.8-100.2-102.2"/>
-            <path fill="#7f8c8d" d="M344.85,59.17a202,202,0,0,0-254.2-25.7,40.5,40.5,0,0,1,5.8,8.3,192.2,192.2,0,0,1,241.2,24.6c74.8,74.7,74.8,196.4,0,271.2s-196.5,74.8-271.3,0a192.2,192.2,0,0,1-24.5-241.2,40.1,40.1,0,0,1-8.3-5.8c-61.55,93-36,218.37,57,279.92s218.37,36,279.92-57A202,202,0,0,0,344.85,59.17"/>
-            <path fill="#20ee82" d="M46.45,46.37a20.2,20.2,0,1,1,.07,28.57l-0.07-.07a20.2,20.2,0,0,1,0-28.5"/>
-          </svg>
-          <h3>Siacoin (SC)</h3>
-        </div>
-        <div class="address">7506caa950cdddbaec8f465937b50324e942ac6f5280a053662e58e3cc8bdb543ab88ccd5c23</div>
-      </div>
-      <div id="donate-monero">
-        <div>
-          <svg viewBox="0 0 3756.09 3756.49" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4128,2249.81C4128,3287,3287.26,4127.86,2250,4127.86S372,3287,372,2249.81,1212.76,371.75,2250,371.75,4128,1212.54,4128,2249.81Z" transform="translate(-371.96 -371.75)" style="fill:#fff"/><path id="_149931032" data-name=" 149931032" d="M2250,371.75c-1036.89,0-1879.12,842.06-1877.8,1878,0.26,207.26,33.31,406.63,95.34,593.12h561.88V1263L2250,2483.57,3470.52,1263v1579.9h562c62.12-186.48,95-385.85,95.37-593.12C4129.66,1212.76,3287,372,2250,372Z" transform="translate(-371.96 -371.75)" style="fill:#f26822"/><path id="_149931160" data-name=" 149931160" d="M1969.3,2764.17l-532.67-532.7v994.14H1029.38l-384.29.07c329.63,540.8,925.35,902.56,1604.91,902.56S3525.31,3766.4,3855,3225.6H3063.25V2231.47l-532.7,532.7-280.61,280.61-280.62-280.61h0Z" transform="translate(-371.96 -371.75)" style="fill:#4d4d4d"/>
-          </svg>
-          <h3>Monero (XMR)</h3>
-        </div>
-        <div class="address">48A33fSyFo9YAiux3KHKVBagPGvqmcr2h4oy5pufJn6NUWyZsPF6PAufmrET3gLJjsLwxfU7HU9xe8mEeCqtHqvZN3Ly12h</div>
-      </div>
+      ))}
       <div id="donate-paypal">
         <div>
-          <img src={paypalLogo.src} alt="Paypal" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154.728 190.5">
+            <g transform="translate(898.192 276.071)">
+              <path clip-path="none" d="M-837.663-237.968a5.49 5.49 0 0 0-5.423 4.633l-9.013 57.15-8.281 52.514-.005.044.01-.044 8.281-52.514c.421-2.669 2.719-4.633 5.42-4.633h26.404c26.573 0 49.127-19.387 53.246-45.658.314-1.996.482-3.973.52-5.924v-.003h-.003c-6.753-3.543-14.683-5.565-23.372-5.565z" fill="#001c64"/>
+              <path clip-path="none" d="M-766.506-232.402c-.037 1.951-.207 3.93-.52 5.926-4.119 26.271-26.673 45.658-53.246 45.658h-26.404c-2.701 0-4.999 1.964-5.42 4.633l-8.281 52.514-5.197 32.947a4.46 4.46 0 0 0 4.405 5.153h28.66a5.49 5.49 0 0 0 5.423-4.633l7.55-47.881c.423-2.669 2.722-4.636 5.423-4.636h16.876c26.573 0 49.124-19.386 53.243-45.655 2.924-18.649-6.46-35.614-22.511-44.026z" fill="#0070e0"/>
+              <path clip-path="none" d="M-870.225-276.071a5.49 5.49 0 0 0-5.423 4.636l-22.489 142.608a4.46 4.46 0 0 0 4.405 5.156h33.351l8.281-52.514 9.013-57.15a5.49 5.49 0 0 1 5.423-4.633h47.782c8.691 0 16.621 2.025 23.375 5.563.46-23.917-19.275-43.666-46.412-43.666z" fill="#003087"/>
+            </g>
+          </svg>
           <h3>PayPal</h3>
           <form action="https://www.paypal.com/donate" method="post" target="_top">
             <input type="hidden" name="hosted_button_id" value="LKDLTQQRQV2U8">
@@ -154,9 +64,30 @@ import patreonLogo from '../../../../src/assets/patreon-logo.png';
       </div>
       <div id="donate-patreon">
         <div>
-          <img src={patreonLogo.src} alt="Patreon" />
+          <svg version="1.1" viewBox="0 -4.5 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M45.1355837,0 L45.1355837,246.35001 L0,246.35001 L0,0 L45.1355837,0 Z M163.657111,0 C214.65668,0 256,41.3433196 256,92.3428889 C256,143.342458 214.65668,184.685778 163.657111,184.685778 C112.657542,184.685778 71.3142222,143.342458 71.3142222,92.3428889 C71.3142222,41.3433196 112.657542,0 163.657111,0 Z" fill="#FF424D"/>
+          </svg>
           <h3>Patreon</h3>
           <a class="btn-main" href="https://www.patreon.com/bePatron?u=71702133">Become a Patron!</a>
+        </div>
+      </div>
+      <div id="donate-liberapay">
+        <div>
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <rect fill="#f6c915" width="80" height="80" rx="8"/>
+            <path fill="#FFF" d="M32.73 56.2651c-2.5867 0-4.6175-.3376-6.0925-1.0107s-2.5308-1.5936-3.1708-2.7611-.9458-2.4933-.9275-4.015.2267-3.1234.6284-4.8357l6.9391-29.0143 8.47-1.3108-7.595 31.4733c-.1458.655-.2275 1.2567-.2458 1.8025s.0817 1.0292.3 1.4475.5917.7566 1.12 1.0108 1.2658.42 2.2133.4925zM40.5333 28.0209c1.46-.4367 3.1267-.8284 5.0025-1.175s3.9075-.5183 6.0933-.5183 3.7985.3092 5.2726.9283 2.6864 1.4667 3.6341 2.5409 1.6475 2.3316 2.1024 3.77.6832 2.9783.6832 4.6183c0 2.6583-.4373 5.09-1.3214 7.2942s-2.076 4.1075-3.6237 5.71-3.4059 2.851-5.5763 3.7475-4.5235 1.3344-7.0718 1.3344c-1.2391 0-2.4775-.1104-3.7158-.3296l-2.4592 9.8912h-8.0865zM43.4867 49.3867c.6192.1458 1.3842.2133 2.295.2133 1.42 0 2.7133-.2583 3.8792-.7875s2.1583-1.265 2.9783-2.2125 1.4557-2.0842 1.9117-3.415.6827-2.795.6827-4.3983-.3467-2.8958-1.0379-3.9892-1.894-1.6391-3.6057-1.6391c-1.1667 0-2.2592.1092-3.2792.3283z"/>
+          </svg>
+          <h3>Liberapay</h3>
+          <a class="btn-main" href="https://liberapay.com/lumeweb/donate">Donate</a>
+        </div>
+      </div>
+      <div id="donate-github">
+        <div>
+          <svg viewBox="0 0 98 96" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#fff"/>
+          </svg>
+          <h3>GitHub Sponsors</h3>
+          <a class="btn-main" href="https://github.com/sponsors/LumeWeb">Donate</a>
         </div>
       </div>
     </div>
@@ -167,4 +98,53 @@ import patreonLogo from '../../../../src/assets/patreon-logo.png';
       If you are interested in donating through other means, please get in touch with us to discuss. If there is a cryptocurrency you wish to contribute with that we have not listed, please let me know!
     </p>
   </div>
+  <dialog id="qr-dialog"></dialog>
+  <script is:inline>
+    var
+      msgCallback,
+      msgTimeout,
+      qrDialog = document.getElementById('qr-dialog');
+
+    function copyToClipboard(element) {
+      var
+        range = document.createRange(),
+        selection = window.getSelection();
+
+      if(msgCallback) {
+        clearTimeout(msgTimeout);
+        msgCallback();
+      }
+
+      range.selectNode(element.nextElementSibling); // select address container
+      selection.removeAllRanges();                  // clear current selection
+      selection.addRange(range);                    // select address
+      document.execCommand('copy');                 // copy
+      selection.removeAllRanges();                  // deselect
+
+      element.classList.add('success');
+
+      msgCallback = function() {
+        element.classList.remove('success');
+        msgCallback = undefined;
+      }
+
+      msgTimeout = window.setTimeout(msgCallback, 5000);
+    }
+
+    function openDialog(qrLarge) {
+      document.body.classList.add('scroll-lock');
+      qrDialog.innerHTML = '<img src="' + qrLarge + '"/>';
+      qrDialog.showModal();
+    }
+
+    qrDialog.addEventListener('close', function() {
+      document.body.classList.remove('scroll-lock');
+    });
+
+    qrDialog.addEventListener('click', function(event) {
+      if (event.target === this) {
+        this.close();
+      }
+    });
+  </script>
 </section>

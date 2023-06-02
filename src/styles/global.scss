@@ -35,18 +35,19 @@ main {
   flex-grow: 1;
 }
 
-a {
-  transition: color 250ms;
+a, button {
+  transition: color $transition-duration;
 }
 
 .btn-main {
     display: inline-block;
+    padding: 0.5em 0.8em;
     color: $color-black;
     background: $color-aquamarine;
     border: 0.05em solid $color-aquamarine;
-    padding: 0.5em 0.8em;
     border-radius: 0.25em;
-    transition: color 200ms, background 200ms;
+    transition: color $transition-duration, background $transition-duration;
+    white-space: nowrap;
 
     &:hover {
         color: $color-white;
@@ -129,7 +130,7 @@ main.donate {
     font-family: $font-family-jaldi;
     line-height: 167%;
     color: $color-cloud;
-    transition: background 200ms;
+    transition: background $transition-duration;
   }
 
   ul {
@@ -168,7 +169,7 @@ main.donate {
     border: 0.05em solid transparent;
     border-radius: 0.5em;
     font-family: $font-family-jaldi;
-    transition: border-color 200ms;
+    transition: border-color $transition-duration;
 
     &:hover {
       border-color: $color-aquamarine;

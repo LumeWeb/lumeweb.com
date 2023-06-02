@@ -58,7 +58,7 @@ menu {
     bottom: 0;
     padding: 7.5em 7.5% 1em;
     background: rgba($color-body-bg, 0.85);
-    transition: right 200ms;
+    transition: right $transition-duration;
     overflow-y: auto;
 
     &.active {
@@ -69,7 +69,7 @@ menu {
         position: fixed;
         inset: 0;
         background: $color-black;
-        animation: 200ms bg-opacity forwards;
+        animation: $transition-duration bg-opacity forwards;
         z-index: -1;
       }
     }
