@@ -28,23 +28,23 @@
     color: $color-alto;
 
     &:hover {
-      color: $color-aquamarine;
+      color: $color-white;
     }
   }
 
   .github-logo svg {
-    @include fluid-width(4.375rem);
+    @include fluid-width(3.5rem);
   }
 
   .discord-logo svg {
-    @include fluid-width(4.375rem);
+    @include fluid-width(3.5rem);
   }
 
   .twitter-logo svg {
-    @include fluid-width(4.375rem);
+    @include fluid-width(3.5rem);
   }
 
   .facebook-logo svg {
-    @include fluid-width(4.375rem);
+    @include fluid-width(3.5rem);
   }
 }

@@ -9,7 +9,8 @@
   margin-top: 2.48em;
   @include fluid-font-size(1.3125rem);
 
-  .background {
+  &::after {
+    content: "";
     position: absolute;
     left: 0;
     top: 50%;
@@ -22,12 +23,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     pointer-events: none;
+    z-index: -1;
   }
 
   .feature-group {
     @include fluid-position-left(27.8em, 28em);
     max-width: 28em;
-    z-index: 1;
 
     h1 {
       margin-top: 1em;

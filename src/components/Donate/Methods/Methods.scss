@@ -71,6 +71,7 @@
 
       div {
         order: 1;
+        flex-grow: 1;
         position: relative;
         @include fluid-font-size(1.3125rem);
         word-break: break-all;
@@ -112,12 +113,12 @@
           top: 0;
           right: -0.5em;
           padding: 0 0.5em;
-          background: $color-blue-charcoal;
+          background: rgba($color-blue-charcoal, 0.75);
           text-align: center;
           white-space: nowrap;
           color: $color-white;
           border-radius: 0.5em 0 0 0.5em;
-          animation: $transition-duration overlay-opacity forwards;
+          animation: $transition-duration hint-opacity forwards;
           transition: color $transition-duration;
         }
       }
@@ -272,5 +273,15 @@
 
   100% {
     opacity: 0.75;
+  }
+}
+
+@keyframes hint-opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

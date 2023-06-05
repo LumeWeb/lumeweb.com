@@ -2,15 +2,35 @@
 @import "../../../styles/vars.scss";
 
 #home-cto {
-  min-height: 28em;
-  @include fluid-font-size(1.3125rem);
-  background-image: url("../../../assets/geometric-bg.webp");
-  background-position: 99% 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
+  @include fluid-padding-lr;
 
   > div {
-    @include fluid-margin-lr;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    @include fluid-font-size(1.3125rem);
+    max-width: 75em;
+    min-height: 28em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: min(0rem, calc((100vw - 40rem) / 2));
+      width: 100%;
+      min-width: 40rem;
+      background-image: url("../../../assets/geometric-bg.webp");
+      background-position: 1%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
+    }
+  }
+
+  .feature-group {
     max-width: 28em;
     padding: 3.14em 0;
   }
@@ -36,7 +56,7 @@
 
   @media screen and (max-width: 80rem) {
     p, .bio {
-      background: rgba($color-body-bg, 0.65);
+      background: rgba($color-blue-charcoal-2, 0.65);
       border-radius: 0 0.5em 0.5em 0;
       padding: 0.3em 0.5em;
       margin: -0.3em -0.5em;

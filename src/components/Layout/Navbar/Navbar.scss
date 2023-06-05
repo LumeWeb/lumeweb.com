@@ -13,7 +13,7 @@ nav {
     flex-shrink: 0;
 
     img {
-      @include fluid-width-height(13.125rem, 4.375rem);
+      @include fluid-width-height(11.25rem, 3.75rem);
     }
   }
 }
@@ -25,10 +25,18 @@ menu {
   li > a {
     display: block;
     padding: 0.55em 0.9em;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color $transition-duration;
+
+    &.current, &:hover, &:active {
+      text-decoration-color: inherit;
+    }
   }
 
   .download-btn {
     margin-left: 0.9em;
+    text-decoration: none;
   }
 }
 
@@ -44,8 +52,8 @@ menu {
   nav {
     position: sticky;
     top: 0;
-    background: rgba($color-body-bg, 0.85);
-    z-index: 1;
+    background: rgba($color-blue-charcoal-2, 0.85);
+    z-index: 2;
   }
 
   menu {
@@ -57,7 +65,7 @@ menu {
     right: min(-20rem, -100vw);
     bottom: 0;
     padding: 7.5em 7.5% 1em;
-    background: rgba($color-body-bg, 0.85);
+    background: rgba($color-blue-charcoal-2, 0.85);
     transition: right $transition-duration;
     overflow-y: auto;
 

@@ -56,6 +56,11 @@
 
   a {
     display: block;
+    color: #0B3F48;
+
+    &:hover {
+      color: inherit;
+    }
   }
 
   .github-logo svg {

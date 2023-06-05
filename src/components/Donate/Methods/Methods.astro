@@ -33,7 +33,7 @@ await addCurrency('algorand', 'Algorand (ALGO)', '3QBE5TZ63TF5W7V2QRJWRB72M7INQL
   <div>
     <h2>Donate Cryptocurrency</h2>
     <div class="method-grid">
-      {currencies.map(async currency => (
+      {currencies.map(currency => (
         <div id={'donate-' + currency.id}>
           <div>
             <Fragment set:html={currency.svgLogo.default} />

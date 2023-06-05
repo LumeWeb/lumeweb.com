@@ -51,16 +51,16 @@ function Navbar({ view }) {
       </div>
       <menu className={nav ? 'active' : undefined} onClick={onMenuClick}>
         <li>
-          <a href="/" className={view === 'home' ? 'underline' : undefined} aria-current={view === 'home' ? 'page' : undefined}>Home</a>
+          <a href="/" className={view === 'home' ? 'current' : undefined} aria-current={view === 'home' ? 'page' : undefined}>Home</a>
         </li>
         <li>
-          <a href="/vision" className={view === 'vision' ? 'underline' : undefined} aria-current={view === 'vision' ? 'page' : undefined}>Vision</a>
+          <a href="/vision" className={view === 'vision' ? 'current' : undefined} aria-current={view === 'vision' ? 'page' : undefined}>Vision</a>
         </li>
         <li>
-          <a href="/what-is-web3" className={view === 'what' ? 'underline' : undefined} aria-current={view === 'what' ? 'page' : undefined}>What is Web3</a>
+          <a href="/what-is-web3" className={view === 'what' ? 'current' : undefined} aria-current={view === 'what' ? 'page' : undefined}>What is Web3</a>
         </li>
         <li>
-          <a href="/donate" className={view === 'donate' ? 'underline' : undefined} aria-current={view === 'donate' ? 'page' : undefined}>Donate</a>
+          <a href="/donate" className={view === 'donate' ? 'current' : undefined} aria-current={view === 'donate' ? 'page' : undefined}>Donate</a>
         </li>
         <li>
           <a className="btn-main download-btn" href="#">Download Extension</a>

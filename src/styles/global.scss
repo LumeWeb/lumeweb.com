@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "JetBrains Mono", sans-serif;
-  background: $color-body-bg;
+  background: $color-blue-charcoal-2;
   color: $color-white;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -133,10 +133,13 @@ main.donate {
     transition: background $transition-duration;
   }
 
+  p + p, ul + p {
+    margin-top: 0.78em;
+  }
+
   ul {
     list-style-type: disc;
     margin-left: 1.5em;
-    margin-bottom: 0.78em;
   }
 
   .btn-main {
