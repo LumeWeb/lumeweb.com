@@ -1,14 +1,12 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
-#vision-community {
+#community {
   position: relative;
-  background-image: url("../../../assets/community-power-bg.png");
-  margin-top: 7.8125rem;
-  background-size: max(75rem, 100%);
+  background-image: url("/src/assets/community-power-bg.png");
+  background-size: max(157.5em, 100%);
   background-position: right;
-  padding-top: max(29.25rem, 39.02%);
-  @include fluid-font-size(1.3125rem);
+  padding-top: max(61.4525em, 39.0175%);
 
   .feature-group {
     position: absolute;
@@ -18,15 +16,13 @@
     flex-direction: column;
     justify-content: center;
     @include fluid-margin-lr;
-    max-width: 27em;
+    max-width: 64em;
   }
 
-  @media screen and (max-width: 80rem) {
-    p {
-      background: rgba($color-blue-charcoal, 0.65);
-      border-radius: 0.5em;
-      padding: 0.3em 0.5em;
-      margin: -0.3em -0.5em;
-    }
+  p {
+    background: rgba($color-blue-charcoal, 0.65);
+    border-radius: 0.5em;
+    padding: 0.3em 0.5em;
+    margin: -0.3em -0.5em;
   }
 }

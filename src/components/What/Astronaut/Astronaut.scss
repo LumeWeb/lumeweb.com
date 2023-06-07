@@ -1,38 +1,37 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
-#what-astronaut {
+#astronaut {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 36.72em;
-  @include fluid-font-size(1.3125rem);
-  background-image: url("../../../assets/astronaut.png");
-  background-position: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
+  min-height: 71.1em;
+  background: $color-blue-charcoal;
 
   &::before {
     content: "";
     position: absolute;
+    top: 0;
+    right: min(0em, calc(100% - 100.3em) / 2);
+    bottom: 0;
+    width: 100.3em;
+    background-image: url("/src/assets/astronaut.png");
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.8);
-    z-index: 1;
   }
 
-  > div {
+  .feature-group {
     @include fluid-margin-lr;
-    max-width: 30em;
-    padding: 3.14em 0;
+    max-width: 64em;
+    padding: 6em 0;
     z-index: 1;
-  }
-
-  @media screen and (max-width: 80rem) {
-    p {
-      background: rgba($color-blue-charcoal, 0.65);
-      border-radius: 0 0.5em 0.5em 0;
-      padding: 0.3em 0.5em;
-      margin: -0.3em -0.5em;
-    }
   }
 }

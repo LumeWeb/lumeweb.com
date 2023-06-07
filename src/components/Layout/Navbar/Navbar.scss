@@ -1,5 +1,5 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
 nav {
   display: flex;
@@ -13,7 +13,7 @@ nav {
     flex-shrink: 0;
 
     img {
-      @include fluid-width-height(11.25rem, 3.75rem);
+      @include fluid-width-height(13.125rem, 4.375rem);
     }
   }
 }
@@ -25,6 +25,7 @@ menu {
   li > a {
     display: block;
     padding: 0.55em 0.9em;
+    @include fluid-font-size(1.375rem);
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: text-decoration-color $transition-duration;
@@ -36,6 +37,7 @@ menu {
 
   .download-btn {
     margin-left: 0.9em;
+    @include fluid-font-size(1.375rem);
     text-decoration: none;
   }
 }

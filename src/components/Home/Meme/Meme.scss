@@ -1,7 +1,7 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
-#home-meme {
+#meme {
   display: flex;
   align-items: center;
   @include fluid-padding-lr;
@@ -10,8 +10,7 @@
   gap: 10em;
 
   .feature-group {
-    @include fluid-font-size(1.3125rem);
-    max-width: 28em;
+    max-width: 64em;
   }
 
   .meme-items {
@@ -24,9 +23,7 @@
   .meme-item {
     display: flex;
     align-items: center;
-    @include fluid-font-size(1.3125rem);
     gap: 2em;
-    max-width: 55em;
 
     div {
       flex-shrink: 0;
@@ -40,7 +37,7 @@
     }
 
     h2 {
-      width: 8.2em;
+      width: 8.6em;
       @include fluid-font-size(1.5625rem);
       font-weight: 700;
       text-align: center;
@@ -56,18 +53,43 @@
     }
   }
 
-  @media screen and (max-width: 47.99999rem) {
+  @media screen and (max-width: 80rem) {
+    flex-direction: column;
+    gap: 5em;
+
+    .feature-group {
+      max-width: none;
+      margin: 2em 0;
+    }
+  }
+
+  @media screen and (max-width: 56rem) {
+    .feature-group {
+      max-width: 64em;
+    }
+
+    .meme-items {
+      gap: 3em;
+    }
+
     .meme-item {
-      div {
-        flex-direction: column;
-        gap: 0.5em;
+      flex-direction: column;
+      max-width: 64em;
+
+      p {
+        text-align: center;
       }
 
+      img {
+        @include fluid-width(11.25rem);
+      }
+    }
+  }
+
+  @media screen and (min-width: 80.000001rem) and (max-width: 100rem) {
+    .meme-item {
       h2 {
-        width: auto;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        width: 4.5em;
       }
     }
   }

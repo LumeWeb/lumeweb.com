@@ -1,7 +1,7 @@
 @use "sass:math";
 
-$min-vw: 80rem;
-$max-vw: 384rem;
+$min-vw: 56rem;
+$max-vw: 476rem; // 336rem, 616rem
 
 $screen-min:     24rem; // 384px
 $screen-sm:      48rem; // 768px
@@ -13,30 +13,9 @@ $screen-default: 96rem; // 1536px
   @return math.div($value, ($value * 0 + 1));
 }
 
-@mixin fluid-font($min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
-
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-      font-size: $min-font-size;
-
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      }
-
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-      }
-    }
-  }
-}
-
 @mixin fluid-font-size($font-size) {
-  $min-font-size: calc($font-size / 1.2);
-  $max-font-size: calc($font-size * 2);
+  $min-font-size: calc($font-size * 0.75);
+  $max-font-size: calc($font-size * 2.5);
 
   $u1: unit($min-vw);
   $u2: unit($max-vw);
@@ -58,9 +37,9 @@ $screen-default: 96rem; // 1536px
 }
 
 @mixin fluid-font-size-s($font-size) {
-  $min-font-size: calc($font-size / 4.8);
-  $medium-font-size: calc($font-size / 1.2);
-  $max-font-size: calc($font-size * 2);
+  $min-font-size: calc($font-size * 0.5);
+  $medium-font-size: calc($font-size * 0.75);
+  $max-font-size: calc($font-size * 2.5);
 
   $u1: unit($min-vw);
   $u2: unit($max-vw);
@@ -71,7 +50,35 @@ $screen-default: 96rem; // 1536px
       font-size: $min-font-size;
 
       @media screen and (min-width: 20rem) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($medium-font-size - $min-font-size)} * ((100vw - 20rem) / (80 - 20)));
+        font-size: calc(#{$min-font-size} + #{strip-unit($medium-font-size - $min-font-size)} * ((100vw - 20rem) / (56 - 20)));
+      }
+
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$medium-font-size} + #{strip-unit($max-font-size - $medium-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+@mixin fluid-font-size-xs($font-size) {
+  $min-font-size: calc($font-size * 0.25);
+  $medium-font-size: calc($font-size * 0.75);
+  $max-font-size: calc($font-size * 2.5);
+
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 {
+    & {
+      font-size: $min-font-size;
+
+      @media screen and (min-width: 20rem) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($medium-font-size - $min-font-size)} * ((100vw - 20rem) / (56 - 20)));
       }
 
       @media screen and (min-width: $min-vw) {
@@ -86,11 +93,11 @@ $screen-default: 96rem; // 1536px
 }
 
 @mixin fluid-width-height($width, $height) {
-  $min-width: calc($width / 1.2);
-  $max-width: calc($width * 2);
+  $min-width: calc($width * 0.75);
+  $max-width: calc($width * 2.5);
 
-  $min-height: calc($height / 1.2);
-  $max-height: calc($height * 2);
+  $min-height: calc($height * 0.75);
+  $max-height: calc($height * 2.5);
 
   $u1: unit($min-vw);
   $u2: unit($max-vw);
@@ -116,8 +123,8 @@ $screen-default: 96rem; // 1536px
 }
 
 @mixin fluid-width($width) {
-  $min-width: calc($width / 1.2);
-  $max-width: calc($width * 2);
+  $min-width: calc($width * 0.75);
+  $max-width: calc($width * 2.5);
 
   $u1: unit($min-vw);
   $u2: unit($max-vw);
@@ -139,8 +146,8 @@ $screen-default: 96rem; // 1536px
 }
 
 @mixin fluid-height($height) {
-  $min-height: calc($height / 1.2);
-  $max-height: calc($height * 2);
+  $min-height: calc($height * 0.75);
+  $max-height: calc($height * 2.5);
 
   $u1: unit($min-vw);
   $u2: unit($max-vw);
@@ -162,11 +169,11 @@ $screen-default: 96rem; // 1536px
 }
 
 @mixin fluid-max-width-height($width, $height) {
-  $min-width: calc($width / 1.2);
-  $max-width: calc($width * 2);
+  $min-width: calc($width * 0.75);
+  $max-width: calc($width * 2.5);
 
-  $min-height: calc($height / 1.2);
-  $max-height: calc($height * 2);
+  $min-height: calc($height * 0.75);
+  $max-height: calc($height * 2.5);
 
   $u1: unit($min-vw);
   $u2: unit($max-vw);
@@ -195,7 +202,7 @@ $screen-default: 96rem; // 1536px
   $min-vw: 48rem;
   $max-vw: 96rem;
 
-  $min-margin: 3.75%;
+  $min-margin: 7.5%;
   $max-margin: 7.5%;
 
   & {
@@ -219,7 +226,7 @@ $screen-default: 96rem; // 1536px
   $min-vw: 48rem;
   $max-vw: 96rem;
 
-  $min-padding: 3.75%;
+  $min-padding: 7.5%;
   $max-padding: 7.5%;
 
   & {
@@ -242,7 +249,7 @@ $screen-default: 96rem; // 1536px
   $min-vw: 48rem;
   $max-vw: 96rem;
 
-  $min-margin: 3.75%;
+  $min-margin: 7.5%;
   $max-margin: 7.5%;
 
   & {
@@ -262,8 +269,8 @@ $screen-default: 96rem; // 1536px
 }
 
 @mixin fluid-margin-lr-rem($margin) {
-  $min-margin: calc($margin / 1.2);
-  $max-margin: calc($margin * 2);
+  $min-margin: calc($margin * 0.75);
+  $max-margin: calc($margin * 2.5);
 
   $u1: unit($min-vw);
   $u2: unit($max-vw);

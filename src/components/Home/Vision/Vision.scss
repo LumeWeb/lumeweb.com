@@ -1,21 +1,29 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
-#home-vision {
+#vision {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 27.05em;
-  margin-top: 5.32em;
+  min-height: 56.8em;
   @include fluid-margin-lr;
-  @include fluid-font-size(1.3125rem);
-  background-image: url("../../../src/assets/video-placeholder.webp");
-  background-position: 98%;
-  background-repeat: no-repeat;
-  background-size: contain;
 
-  > div {
-    max-width: 29em;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    min-width: 68em;
+    margin-left: min(0em, calc((100% - 68em) / 2));
+    background-image: url("/src/assets/video-placeholder.webp");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  .feature-group {
+    max-width: 64em;
   }
 
   @media screen and (max-width: 80rem) {

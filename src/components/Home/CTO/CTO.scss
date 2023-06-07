@@ -1,47 +1,44 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
-#home-cto {
-  @include fluid-padding-lr;
+#cto {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 185.6em;
+  min-height: 58.8em;
+  margin: 0 auto;
 
-  > div {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 auto;
-    @include fluid-font-size(1.3125rem);
-    max-width: 75em;
-    min-height: 28em;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: min(0rem, calc((100vw - 40rem) / 2));
-      width: 100%;
-      min-width: 40rem;
-      background-image: url("../../../assets/geometric-bg.webp");
-      background-position: 1%;
-      background-repeat: no-repeat;
-      background-size: contain;
-      z-index: -1;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: min(0em, calc((100% - 95em) / 2));
+    width: calc(100% - 64em - 7.5%);
+    min-width: 95em;
+    background-image: url("/src/assets/geometric-bg.webp");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
   }
 
   .feature-group {
-    max-width: 28em;
-    padding: 3.14em 0;
+    box-sizing: content-box;
+    margin: 6em 7.5%;
+    max-width: 64em;
   }
 
   .bio {
     display: inline-flex;
     align-items: center;
-    margin-top: 1.57em;
-    gap: 1.33em;
+    margin-top: 1.5em;
+    gap: 1.2em;
     font-family: $font-family-jaldi;
     color: $color-cloud;
+    @include fluid-font-size(1.5rem);
 
     img {
         @include fluid-width-height(5.875rem, 5.875rem);
@@ -55,7 +52,7 @@
   }
 
   @media screen and (max-width: 80rem) {
-    p, .bio {
+    p, .bio div {
       background: rgba($color-blue-charcoal-2, 0.65);
       border-radius: 0 0.5em 0.5em 0;
       padding: 0.3em 0.5em;

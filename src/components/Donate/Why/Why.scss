@@ -1,30 +1,34 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
 #why {
   position: relative;
-  margin: 9em 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 185.6em;
+  min-height: 58.8em;
+  margin: 0 auto;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    width: 92.2em;
-    max-width: 100vw;
-    height: 58.8em;
-    background-image: url("../../../assets/donate-why-bg.png");
-    background-position: 0%;
+    bottom: 0;
+    left: min(0em, calc((100% - 92.2em) / 2));
+    width: calc(100% - 64em - 7.5%);
+    min-width: 92.2em;
+    background-image: url("/src/assets/donate-why-bg.png");
+    background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
   }
 
   .feature-group {
-    @include fluid-font-size(1.3125rem);
-    @include fluid-position-left(43.9em, 28em);
-    max-width: 29em;
-    padding: 0.5em 0;
+    box-sizing: content-box;
+    margin: 2em 7.5%;
+    max-width: 64em;
   }
 
   @media screen and (max-width: 80rem) {
@@ -34,7 +38,7 @@
 
     ul {
       border-radius: 0.5em 0.5em 0 0;
-      padding: 0.3em 0.5em 0.3em 2em;
+      padding: 0.3em 0.5em 0.3em 1.5em;
       margin: -0.3em -0.5em 0.28em;
     }
 

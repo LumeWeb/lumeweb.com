@@ -1,7 +1,7 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
-#home-message {
+#message {
   padding: 5em 0;
   @include fluid-padding-lr;
   background: $color-aquamarine;
@@ -22,7 +22,7 @@
 
   p {
     font-family: $font-family-jaldi;
-    @include fluid-font-size(1.3125rem);
-    line-height: 157%;
+    @include fluid-font-size(1.5rem);
+    line-height: 137%;
   }
 }

@@ -1,35 +1,34 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
-#vision-people {
+#people {
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  max-width: 185.6em;
+  min-height: 78.4em;
   margin: 0 auto;
-  @include fluid-font-size(1.3125rem);
-  max-width: 88em;
-  min-height: 28em;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
-    left: min(0rem, calc((100vw - 40rem) / 2));
-    width: 100%;
-    min-width: 40rem;
-    background-image: url("../../../assets/double-brand-bg.png");
-    background-position: 0;
+    left: min(0em, calc((100% - 95em) / 2));
+    width: calc(100% - 64em - 7.5%);
+    min-width: 95em;
+    background-image: url("/src/assets/double-brand-bg.png");
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
   }
 
   .feature-group {
-    max-width: 28em;
-    padding: 4.14em 0;
-    @include fluid-margin-lr;
+    box-sizing: content-box;
+    padding: 9em 7.5%;
+    max-width: 64em;
   }
 
   @media screen and (max-width: 80rem) {

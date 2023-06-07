@@ -1,12 +1,12 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
-#home-powered-by {
+#powered-by {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4em;
-  margin: 10em 0;
+  margin: 12em 0;
 
   @media screen and (max-width: 47.99999rem) {
     flex-direction: column;

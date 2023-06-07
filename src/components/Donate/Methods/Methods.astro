@@ -9,7 +9,7 @@ const addCurrency = async (id, title, address) => {
     id: id,
     title: title,
     address: address,
-    svgLogo: await import('./icons/' + id + '.svg?raw'),
+    svgLogo: await import(`./icons/${id}.svg?raw`),
     qrSmall: await QRCode.toDataURL(address, { version: 6, scale: 1, margin: 1 }),
     qrLarge: await QRCode.toDataURL(address, { version: 6, scale: 7, margin: 2 })
   });

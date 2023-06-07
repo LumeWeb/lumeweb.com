@@ -1,25 +1,24 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
 #how {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 4em;
+  margin-top: 8em;
   @include fluid-padding-lr;
-  padding-top: 7em;
-  padding-bottom: 7em;
-  @include fluid-font-size(1.3125rem);
+  padding-top: 14em;
+  padding-bottom: 16em;
 
   &::before {
-    background-image: url("../../../src/assets/donate-gfx-right.png");
+    background-image: url("/src/assets/donate-gfx-right.png");
     background-position: 85% 100%;
     background-repeat: no-repeat;
     background-size: contain;
   }
 
-  > div {
-    max-width: 29em;
+  .feature-group {
+    max-width: 64em;
   }
 
   @media screen and (max-width: 80rem) {

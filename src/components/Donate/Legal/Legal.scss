@@ -1,5 +1,5 @@
-@import "../../../styles/mixins.scss";
-@import "../../../styles/vars.scss";
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
 
 #legal {
   display: flex;
@@ -10,14 +10,14 @@
 
   h2 {
     margin-bottom: 1em;
-    @include fluid-font-size(2.5rem);
+    @include fluid-font-size(2.8125rem);
     line-height: 122%;
   }
 
   p {
     margin-top: 1.5em;
     font-family: $font-family-jaldi;
-    @include fluid-font-size(1.3125rem);
+    @include fluid-font-size(1.375rem);
     line-height: 157%;
     color: $color-cloud;
   }

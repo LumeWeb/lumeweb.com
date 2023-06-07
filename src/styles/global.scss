@@ -1,5 +1,5 @@
-@import "mixins.scss";
-@import "vars.scss";
+@import "./mixins.scss";
+@import "./vars.scss";
 
 @import url("https://fonts.googleapis.com/css?family=Jaldi:400|JetBrains+Mono:400,700|IBM+Plex+Sans+Devanagari:400");
 
@@ -51,65 +51,15 @@ a, button {
 
     &:hover {
         color: $color-white;
-        background: transparent;
+        background: $color-blue-charcoal;
     }
-}
-
-main.vision {
-  &::before {
-    content: "";
-    position: absolute;
-    width: max(min(103.1em, 100vw), 32em);
-    height: max(min(73.3em, 100vw), 40em);
-    top: 0;
-    left: 50%;
-    margin-left: max(-51.55em, -50vw);
-    z-index: -1;
-    background: url("../assets/vision-bg.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-main.what {
-  &::before {
-    content: "";
-    position: absolute;
-    width: max(min(151.3em, 100vw), 32em);
-    height: max(min(122.4em, 100vw), 56em);
-    top: -2em;
-    left: 50%;
-    margin-left: max(-75.65em, -50vw);
-    z-index: -1;
-    background: url("../assets/what-bg.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-main.donate {
-  &::before {
-    content: "";
-    position: absolute;
-    width: max(min(144em, 100vw), 32em);
-    height: max(min(93.3em, 100vw), 56em);
-    top: -3em;
-    left: 50%;
-    margin-left: max(-72em, -50vw);
-    z-index: -1;
-    background: url("../assets/donate-bg.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
 }
 
 .feature-group {
   h2 {
     margin-bottom: 1em;
     @include fluid-font-size(1.5625rem);
+    font-weight: 700;
     line-height: 100%;
     text-transform: uppercase;
     color: $color-aquamarine;
@@ -122,13 +72,13 @@ main.donate {
   }
 
   h2, h3 {
-    font-weight: 700;
     text-shadow: 0.017em 0.017em 0.034em rgba($color-blue-charcoal, 0.65);
   }
 
-  p, li {
+  p, ul {
+    @include fluid-font-size(1.5rem);
     font-family: $font-family-jaldi;
-    line-height: 167%;
+    line-height: 148%;
     color: $color-cloud;
     transition: background $transition-duration;
   }
@@ -139,10 +89,12 @@ main.donate {
 
   ul {
     list-style-type: disc;
-    margin-left: 1.5em;
+    margin-left: 1em;
   }
 
   .btn-main {
+    font-family: $font-family-jaldi;
+    @include fluid-font-size(1.5rem);
     margin-top: 1.57em;
   }
 }
@@ -150,13 +102,13 @@ main.donate {
 .feature-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: 1fr;
   gap: 0.9em;
   @include fluid-padding-lr;
   @include fluid-font-size(1.25rem);
 
   @media screen and (min-width: 48rem) {
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
   }
 
   @media screen and (min-width: 64rem) {
@@ -180,14 +132,14 @@ main.donate {
   }
 
   h3 {
-    @include fluid-font-size(1.875rem);
-    line-height: 103.33%;
+    @include fluid-font-size(2rem);
+    line-height: 109%;
   }
 
   p {
-    @include fluid-font-size(1.3125rem);
+    @include fluid-font-size(1.375rem);
     margin-top: 0.67em;
-    line-height: 123.81%;
+    line-height: 124%;
     color: $color-cloud;
   }
 }
@@ -222,6 +174,57 @@ main.donate {
     margin: 2% 0;
     background: $color-blue-charcoal;
     transform: matrix(1, 0.04, -0.04, 1, 0, 0);
+    z-index: -1;
+  }
+}
+
+main.home {
+  .feature-group h3 {
+    font-weight: 700;
+  }
+}
+
+main.vision {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    width: 103.1em;
+    height: 73.3em;
+    transform: translate(-50%, 0);
+    background: url("/src/assets/vision-bg.png");
+    background-size: contain;
+    z-index: -1;
+  }
+}
+
+main.what {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2em;
+    left: 50%;
+    width: 151.3em;
+    height: 122.4em;
+    background: url("/src/assets/what-bg.png");
+    background-size: contain;
+    transform: translate(-50%, 0);
+    z-index: -1;
+  }
+}
+
+main.donate {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3em;
+    left: 50%;
+    width: 144em;
+    height: 93.3em;
+    background: url("/src/assets/donate-bg.png");
+    background-size: contain;
+    transform: translate(-50%, 0);
     z-index: -1;
   }
 }

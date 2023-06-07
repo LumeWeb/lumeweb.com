@@ -1,15 +1,17 @@
 @import "./mixins.scss";
 @import "./vars.scss";
 
-.jumbotron {
+#jumbotron {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 18.78em;
-  margin: 12.5em 7.5% 0;
+  margin: 12.5em 7.5% 15em;
 
   h1 {
+    display: flex;
+    align-items: center;
     max-width: 21em;
+    height: 2.74em;
     font-family: $font-family-ibm-plex-sans-devanagari;
     @include fluid-font-size-s(3.6875rem);
     line-height: 137%;
