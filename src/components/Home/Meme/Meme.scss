@@ -1,0 +1,96 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
+
+#meme {
+  display: flex;
+  align-items: center;
+  @include fluid-padding-lr;
+  padding-top: 12em;
+  padding-bottom: 12em;
+  gap: 10em;
+
+  .feature-group {
+    max-width: 64em;
+  }
+
+  .meme-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+
+  .meme-item {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+    div {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 2em;
+    }
+
+    img {
+      @include fluid-width(13.125rem);
+    }
+
+    h2 {
+      width: 8.6em;
+      @include fluid-font-size(1.5625rem);
+      font-weight: 700;
+      text-align: center;
+      color: $color-aquamarine;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: $font-family-jaldi;
+      @include fluid-font-size(1.3125rem);
+      line-height: 123.81%;
+      color: $color-cloud;
+    }
+  }
+
+  @media screen and (max-width: 80rem) {
+    flex-direction: column;
+    gap: 5em;
+
+    .feature-group {
+      max-width: none;
+      margin: 2em 0;
+    }
+  }
+
+  @media screen and (max-width: 56rem) {
+    .feature-group {
+      max-width: 64em;
+    }
+
+    .meme-items {
+      gap: 3em;
+    }
+
+    .meme-item {
+      flex-direction: column;
+      max-width: 64em;
+
+      p {
+        text-align: center;
+      }
+
+      img {
+        @include fluid-width(11.25rem);
+      }
+    }
+  }
+
+  @media screen and (min-width: 80.000001rem) and (max-width: 100rem) {
+    .meme-item {
+      h2 {
+        width: 4.5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
+
+#powered-by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  margin: 12em 0;
+
+  @media screen and (max-width: 47.99999rem) {
+    flex-direction: column;
+    gap: 2.5em;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+  }
+
+  h2 {
+    @include fluid-font-size(1.5625rem);
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $color-aquamarine;
+
+    @media screen and (min-width: 48rem) {
+      margin-top: 0.75em;
+    }
+  }
+
+  a {
+    padding: 0.5em;
+    color: $color-alto;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  .sia-logo svg {
+    @include fluid-width(5.5rem);
+  }
+
+  .hns-logo svg {
+    @include fluid-width(4.5rem);
+  }
+
+  .osi-logo svg {
+    @include fluid-width(4.5rem);
+  }
+}

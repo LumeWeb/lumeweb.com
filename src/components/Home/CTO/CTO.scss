@@ -1,0 +1,66 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
+
+#cto {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 185.6em;
+  min-height: 58.8em;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: min(0em, calc((100% - 95em) / 2));
+    width: calc(100% - 64em - 7.5%);
+    min-width: 95em;
+    background-image: url("/src/assets/geometric-bg.webp");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  .feature-group {
+    box-sizing: content-box;
+    margin: 6em 7.5%;
+    max-width: 64em;
+  }
+
+  .bio {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.5em;
+    gap: 1.2em;
+    font-family: $font-family-jaldi;
+    color: $color-cloud;
+    @include fluid-font-size(1.5rem);
+
+    img {
+        @include fluid-width-height(5.875rem, 5.875rem);
+    }
+
+    strong {
+        @include fluid-font-size(1.625rem);
+        line-height: 133%;
+        color: $color-white;
+    }
+  }
+
+  @media screen and (max-width: 80rem) {
+    p, .bio div {
+      background: rgba($color-blue-charcoal-2, 0.65);
+      border-radius: 0 0.5em 0.5em 0;
+      padding: 0.3em 0.5em;
+      margin: -0.3em -0.5em;
+    }
+
+    .bio {
+      margin-top: 1.27em;
+    }
+  }
+}

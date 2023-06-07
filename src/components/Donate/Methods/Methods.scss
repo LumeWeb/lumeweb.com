@@ -1,0 +1,287 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
+
+#methods {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2em 0 6em;
+  padding-top: 3em;
+  @include fluid-margin-lr;
+  font-family: $font-family-jaldi;
+
+  h2 {
+    margin-bottom: 1em;
+    @include fluid-font-size(2.8125rem);
+    line-height: 122%;
+  }
+
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+    margin-bottom: 4em;
+
+    @media screen and (min-width: 48rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      padding: 4em 4em 1em;
+      background: $color-blue-charcoal;
+      border: 0.1em solid transparent;
+      border-radius: 1em;
+      transition: border-color 200ms;
+
+      &:hover {
+        border-color: $color-aquamarine;
+      }
+
+      > div:first-child {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+        margin-bottom: 3em;
+
+        svg {
+          flex-shrink: 0;
+          @include fluid-max-width-height(3.4375rem, 3.4375rem);
+        }
+
+        h3 {
+          flex-grow: 1;
+          font-family: $font-family-jetbrains-mono;
+          @include fluid-font-size(1.5rem);
+        }
+
+        img {
+          @include fluid-width-height(3.4375rem, 3.4375rem);
+          image-rendering: pixelated;
+          cursor: zoom-in;
+        }
+      }
+    }
+
+    .address {
+      display: flex;
+      margin-bottom: 3em;
+      color: $color-cloud;
+
+      div {
+        order: 1;
+        flex-grow: 1;
+        position: relative;
+        @include fluid-font-size(1.375rem);
+        word-break: break-all;
+        user-select: all;
+      }
+
+      button {
+        order: 2;
+        flex-shrink: 0;
+        @include fluid-width-height(1.875rem, 1.875rem);
+        @include fluid-margin-lr-rem(0.78125rem);
+        mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" /></svg>');
+        background: $color-cloud;
+        transition: background $transition-duration;
+
+        &:hover {
+          background: $color-white;
+        }
+
+        &.success {
+          mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>');
+          background: $color-aquamarine;
+        }
+      }
+
+      button:hover + div, button.success + div {
+        &::before {
+          content: "";
+          position: absolute;
+          inset: -0.5em;
+          padding: 0.5em;
+          background: $color-blue-charcoal;
+          animation: $transition-duration overlay-opacity forwards;
+        }
+
+        &::after {
+          content: "Copy to Clipboard";
+          position: absolute;
+          top: 0;
+          right: -0.5em;
+          padding: 0 0.5em;
+          background: rgba($color-blue-charcoal, 0.75);
+          text-align: center;
+          white-space: nowrap;
+          color: $color-white;
+          border-radius: 0.5em 0 0 0.5em;
+          animation: $transition-duration hint-opacity forwards;
+          transition: color $transition-duration;
+        }
+      }
+
+      button.success + div {
+        &::after {
+          content: "Copied to Clipboard";
+          color: $color-aquamarine;
+        }
+      }
+    }
+  }
+
+  p {
+    margin-top: 1em;
+    @include fluid-font-size(1.25rem);
+    line-height: 157%;
+    color: $color-cloud;
+  }
+
+  .btn-main {
+    @include fluid-font-size(1.5rem);
+  }
+
+  #donate-bitcoin:hover {
+    border-color: #f7931a;
+  }
+
+  #donate-litecoin:hover {
+    border-color: #345d9d;
+  }
+
+  #donate-ethereum:hover {
+    border-color: #8c8c8c;
+  }
+
+  #donate-polygon:hover {
+    border-color: #8247e5;
+  }
+
+  #donate-solana:hover {
+    border-color: #dc1fff;
+  }
+
+  #donate-cardano:hover {
+    border-color: #0033ad;
+  }
+
+  #donate-siacoin:hover {
+    border-color: #20ee82;
+  }
+
+  #donate-monero:hover {
+    border-color: #f26822;
+  }
+
+  #donate-handshake:hover {
+    border-color: #fff;
+  }
+
+  #donate-cosmos:hover {
+    border-color: #6f7390;
+  }
+
+  #donate-secret:hover {
+    border-color: #fff;
+  }
+
+  #donate-algorand:hover {
+    border-color: #fff;
+  }
+
+  #donate-paypal {
+    &:hover {
+      border-color: #0070e0;
+    }
+
+    .btn-main {
+      color: #fff;
+      background: #0070e0;
+      border-color: #0070e0;
+
+      &:hover {
+        background: inherit;
+      }
+    }
+  }
+
+  #donate-patreon {
+    &:hover {
+      border-color: #ff424d;
+    }
+
+    .btn-main {
+      color: #fff;
+      background: #ff424d;
+      border-color: #ff424d;
+
+      &:hover {
+        background: inherit;
+      }
+    }
+  }
+
+  #donate-liberapay {
+    &:hover {
+      border-color: #f6c915;
+    }
+
+    .btn-main {
+      color: #000;
+      background: #f6c915;
+      border-color: #f6c915;
+
+      &:hover {
+        color: inherit;
+        background: inherit;
+      }
+    }
+  }
+
+  #donate-github {
+    &:hover {
+      border-color: #fff;
+    }
+
+    .btn-main {
+      color: #000;
+      background: #fff;
+      border-color: #fff;
+
+      &:hover {
+        color: inherit;
+        background: inherit;
+      }
+    }
+  }
+}
+
+#qr-dialog {
+  padding: 0;
+
+  &::backdrop {
+    background: rgba($color-black, 0.85);
+  }
+}
+
+@keyframes overlay-opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.75;
+  }
+}
+
+@keyframes hint-opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
