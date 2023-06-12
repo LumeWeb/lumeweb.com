@@ -37,8 +37,8 @@
     margin-top: 1.5em;
     gap: 1.2em;
     font-family: $font-family-jaldi;
-    color: $color-cloud;
     @include fluid-font-size(1.5rem);
+    color: $color-cloud;
 
     img {
         @include fluid-width-height(5.875rem, 5.875rem);
