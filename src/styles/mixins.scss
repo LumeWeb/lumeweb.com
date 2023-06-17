@@ -222,52 +222,6 @@ $screen-default: 96rem; // 1536px
   }
 }
 
-@mixin fluid-padding-lr {
-  $min-vw: 48rem;
-  $max-vw: 96rem;
-
-  $min-padding: 7.5%;
-  $max-padding: 7.5%;
-
-  & {
-    padding-left: $min-padding;
-    padding-right: $min-padding;
-
-    @media screen and (min-width: $min-vw) {
-      padding-left: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      padding-right: calc(#{$min-padding} + #{strip-unit($max-padding - $min-padding)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-    }
-
-    @media screen and (min-width: $max-vw) {
-      padding-left: $max-padding;
-      padding-right: $max-padding;
-    }
-  }
-}
-
-@mixin fluid-margin-lr {
-  $min-vw: 48rem;
-  $max-vw: 96rem;
-
-  $min-margin: 7.5%;
-  $max-margin: 7.5%;
-
-  & {
-    margin-left: $min-margin;
-    margin-right: $min-margin;
-
-    @media screen and (min-width: $min-vw) {
-      margin-left: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      margin-right: calc(#{$min-margin} + #{strip-unit($max-margin - $min-margin)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-    }
-
-    @media screen and (min-width: $max-vw) {
-      margin-left: $max-margin;
-      margin-right: $max-margin;
-    }
-  }
-}
-
 @mixin fluid-margin-lr-rem($margin) {
   $min-margin: calc($margin * 0.75);
   $max-margin: calc($margin * 2.5);

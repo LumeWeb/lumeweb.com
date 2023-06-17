@@ -4,9 +4,7 @@
 #meme {
   display: flex;
   align-items: center;
-  @include fluid-padding-lr;
-  padding-top: 12em;
-  padding-bottom: 12em;
+  padding: 12em 7.5%;
   gap: 10em;
 
   .feature-group {

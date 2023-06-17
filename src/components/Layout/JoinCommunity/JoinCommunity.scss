@@ -6,8 +6,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 2em;
-  padding: 5em 0;
-  @include fluid-padding-lr;
+  padding: 5em 7.5%;
   background: $color-aquamarine;
   color: $color-blue-charcoal-2;
   @include fluid-font-size(0.625rem);

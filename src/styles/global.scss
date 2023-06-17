@@ -19,7 +19,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  font-family: "JetBrains Mono", sans-serif;
+  font-family: $font-family-jetbrains-mono;
   background: $color-blue-charcoal-2;
   color: $color-white;
   overflow-x: hidden;
@@ -103,7 +103,7 @@ a, button {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 0.9em;
-  @include fluid-padding-lr;
+  padding: 0 7.5%;
   @include fluid-font-size(1.25rem);
 
   @media screen and (min-width: 48rem) {

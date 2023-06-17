@@ -54,7 +54,7 @@ menu {
   nav {
     position: sticky;
     top: 0;
-    background: rgba($color-blue-charcoal-2, 0.85);
+    background: rgba($color-blue-charcoal-2, 0.8);
     z-index: 2;
   }
 
@@ -67,7 +67,7 @@ menu {
     right: min(-20rem, -100vw);
     bottom: 0;
     padding: 7.5em 7.5% 1em;
-    background: rgba($color-blue-charcoal-2, 0.85);
+    background: rgba($color-blue-charcoal-2, 0.8);
     transition: right $transition-duration;
     overflow-y: auto;
 
@@ -106,6 +106,6 @@ menu {
   }
 
   100% {
-    opacity: 0.85;
+    opacity: 0.8;
   }
 }
