@@ -17,6 +17,11 @@
   .feature-group {
     max-width: 64em;
   }
+    p{
+        font-size: 1.9em;
+        font-style: italic;
+        padding-top: 1em;
+    }
 
   @media screen and (max-width: 80rem) {
     p {
