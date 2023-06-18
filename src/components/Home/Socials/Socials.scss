@@ -2,49 +2,53 @@
 @import "/src/styles/vars.scss";
 
 #socials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3em;
-  margin: 12em 7.5% 8em;
-
-  div {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2.5em;
-  }
+    justify-content: center;
+    gap: 3em;
+    margin: 12em 7.5% 8em;
 
-  h2 {
-    @include fluid-font-size(1.5625rem);
-    font-weight: 700;
-    line-height: 100%;
-    text-transform: uppercase;
-    color: $color-aquamarine;
-  }
-
-  a {
-    padding: 0.5em;
-    color: $color-alto;
-
-    &:hover {
-      color: $color-white;
+    div {
+        display: flex;
+        align-items: center;
+        gap: 2.5em;
     }
-  }
 
-  .github-logo svg {
-    @include fluid-width(3.5rem);
-  }
+    h2 {
+        @include fluid-font-size(1.5625rem);
+        font-weight: 700;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: $color-aquamarine;
+    }
 
-  .discord-logo svg {
-    @include fluid-width(3.5rem);
-  }
+    a {
+        padding: 0.5em;
+        color: $color-alto;
 
-  .twitter-logo svg {
-    @include fluid-width(3.5rem);
-  }
+        &:hover {
+            color: $color-white;
+        }
+    }
 
-  .facebook-logo svg {
-    @include fluid-width(3.5rem);
-  }
+    .github-logo svg {
+        @include fluid-width(3.5rem);
+    }
+
+    .git-logo svg {
+        @include fluid-width(3.5rem);
+    }
+
+    .discord-logo svg {
+        @include fluid-width(3.5rem);
+    }
+
+    .twitter-logo svg {
+        @include fluid-width(3.5rem);
+    }
+
+    .facebook-logo svg {
+        @include fluid-width(3.5rem);
+    }
 }
