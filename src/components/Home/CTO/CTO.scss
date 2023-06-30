@@ -18,7 +18,7 @@
     left: min(0em, calc((100% - 95em) / 2));
     width: calc(100% - 64em - 7.5%);
     min-width: 95em;
-    background-image: url("/src/assets/geometric-bg.webp");
+    background-image: url("/src/assets/single-brand-bg-1.png");
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -53,7 +53,7 @@
 
   @media screen and (max-width: 80rem) {
     p, .bio div {
-      background: rgba($color-blue-charcoal-2, 0.65);
+      background: rgba($color-blue-charcoal-2, 0.75);
       border-radius: 0 0.5em 0.5em 0;
       padding: 0.3em 0.5em;
       margin: -0.3em -0.5em;

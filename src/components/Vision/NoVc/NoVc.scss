@@ -1,6 +1,6 @@
 @import "/src/styles/vars.scss";
 
-#people {
+#no-vc {
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -32,10 +32,14 @@
 
   @media screen and (max-width: 80rem) {
     p {
-      background: rgba($color-blue-charcoal-2, 0.65);
+      background: rgba($color-blue-charcoal-2, 0.75);
       border-radius: 0.5em;
       padding: 0.3em 0.5em;
       margin: -0.3em -0.5em;
+    }
+
+    p + p {
+      margin-top: 0.48em;
     }
   }
 }

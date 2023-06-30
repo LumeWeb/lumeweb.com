@@ -1,12 +1,8 @@
 @import "/src/styles/vars.scss";
 
-#how {
+#unify {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 8em;
-  padding: 14em 7.5% 16em;
+  padding: 14em 7.5%;
 
   .custom-bg {
     position: absolute;
@@ -23,11 +19,11 @@
     &::after {
       content: "";
       position: absolute;
-      top: 3%;
-      bottom: -9%;
+      top: -1%;
+      bottom: -5%;
       left: 10%;
       right: 10%;
-      background-image: url("/src/assets/donate-gfx-right.png");
+      background-image: url("/src/assets/unifying-bg.png");
       background-position: 100% 100%;
       background-repeat: no-repeat;
       background-size: contain;
@@ -36,15 +32,20 @@
   }
 
   .feature-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 64em;
   }
 
-  @media screen and (max-width: 80rem) {
-    p {
-      background: rgba($color-blue-charcoal, 0.75);
-      border-radius: 0.5em;
-      padding: 0.3em 0.5em;
-      margin: -0.3em -0.5em;
-    }
+  p {
+    background: rgba($color-blue-charcoal, 0.75);
+    border-radius: 0.5em;
+    padding: 0.3em 0.5em;
+    margin: -0.3em -0.5em;
+  }
+
+  p + p {
+    margin-top: 0.48em;
   }
 }

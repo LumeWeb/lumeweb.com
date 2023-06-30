@@ -10,14 +10,12 @@
     font-family: $font-family-jaldi;
 
     h2 {
-        margin-bottom: 1em;
+        margin: 1.25em 0 1em;
         @include fluid-font-size(2.8125rem);
         line-height: 122%;
-    }
 
-    > div {
-        p {
-            font-style: italic;
+        &:first-child {
+            margin-top: 0;
         }
     }
 
@@ -140,6 +138,7 @@
     p {
         margin-top: 1em;
         @include fluid-font-size(1.25rem);
+        font-style: italic;
         line-height: 157%;
         color: $color-cloud;
     }

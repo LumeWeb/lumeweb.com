@@ -70,19 +70,19 @@ a, button {
 }
 
 .btn-main {
-    display: inline-block;
-    padding: 0.5em 0.8em;
-    color: $color-black;
-    background: $color-aquamarine;
-    border: 0.05em solid $color-aquamarine;
-    border-radius: 0.25em;
-    transition: color $transition-duration, background $transition-duration;
-    white-space: nowrap;
+  display: inline-block;
+  padding: 0.5em 0.8em;
+  color: $color-black;
+  background: $color-aquamarine;
+  border: 0.05em solid $color-aquamarine;
+  border-radius: 0.25em;
+  transition: color $transition-duration, background $transition-duration;
+  white-space: nowrap;
 
-    &:hover {
-        color: $color-white;
-        background: $color-blue-charcoal;
-    }
+  &:hover {
+    color: $color-white;
+    background: $color-blue-charcoal;
+  }
 }
 
 .feature-group {
@@ -106,7 +106,7 @@ a, button {
   }
 
   p, ul {
-    @include fluid-font-size(1.5rem);
+    @include fluid-font-size(1.375rem);
     font-family: $font-family-jaldi;
     line-height: 148%;
     color: $color-cloud;
@@ -149,7 +149,7 @@ a, button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2.95em 1.95em;
+    padding: 2.5em 2em;
     background: $color-blue-charcoal;
     border: 0.05em solid transparent;
     border-radius: 0.5em;
@@ -218,12 +218,12 @@ main.vision {
   &::before {
     content: "";
     position: absolute;
-    top: -1em;
+    top: -0.5em;
     left: 50%;
-    width: 103.1em;
-    height: 73.3em;
+    width: 132.9em;
+    height: 94.63334em;
     transform: translate(-50%, 0);
-    background: url("/src/assets/vision-bg.png");
+    background: url("/src/assets/main-vision-bg.png");
     background-size: contain;
     z-index: -1;
   }
@@ -237,7 +237,7 @@ main.what {
     left: 50%;
     width: 151.3em;
     height: 122.4em;
-    background: url("/src/assets/what-bg.png");
+    background: url("/src/assets/main-what-bg.png");
     background-size: contain;
     transform: translate(-50%, 0);
     z-index: -1;
@@ -252,7 +252,7 @@ main.donate {
     left: 50%;
     width: 144em;
     height: 93.3em;
-    background: url("/src/assets/donate-bg.png");
+    background: url("/src/assets/main-donate-bg.png");
     background-size: contain;
     transform: translate(-50%, 0);
     z-index: -1;

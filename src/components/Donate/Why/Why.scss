@@ -17,7 +17,7 @@
     left: min(0em, calc((100% - 92.2em) / 2));
     width: calc(100% - 64em - 7.5%);
     min-width: 92.2em;
-    background-image: url("/src/assets/donate-why-bg.png");
+    background-image: url("/src/assets/single-brand-bg-2.png");
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: contain;
@@ -32,7 +32,7 @@
 
   @media screen and (max-width: 80rem) {
     ul, p {
-      background: rgba($color-blue-charcoal-2, 0.65);
+      background: rgba($color-blue-charcoal-2, 0.75);
     }
 
     ul {

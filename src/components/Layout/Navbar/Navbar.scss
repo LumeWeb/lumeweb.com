@@ -25,7 +25,7 @@ menu {
   li > a {
     display: block;
     padding: 0.55em 0.9em;
-    @include fluid-font-size(1.375rem);
+    @include fluid-font-size(1.25rem);
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: text-decoration-color $transition-duration;
@@ -33,11 +33,15 @@ menu {
     &.current, &:hover, &:active {
       text-decoration-color: inherit;
     }
+
+    &.current {
+      font-weight: 700;
+    }
   }
 
   .download-btn {
     margin-left: 0.9em;
-    @include fluid-font-size(1.375rem);
+    @include fluid-font-size(1.25rem);
     text-decoration: none;
   }
 }
