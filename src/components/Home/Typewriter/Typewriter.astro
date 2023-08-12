@@ -1,14 +1,21 @@
 ---
-import "./Typewriter.scss";
 import TypewriterContent from "./TypewriterContent.jsx";
 ---
 
-<section id="typewriter" class="w-full overflow-hidden">
+<div class="absolute -z-10 -right-[250px] top-[250px] w-[1250px]">
   <img
-    class="absolute -z-10 -right-[250px] -bottom-[250px] w-[1250px] object-contain"
+    class="object-contain w-[1250px]"
     src="/src/assets/video-placeholder.webp"
   />
-  <h1>
+</div>
+
+<section
+  id="typewriter"
+  class="w-full overflow-hidden flex flex-row items-center justify-center"
+>
+  <h1
+    class="text-7xl md:text-9xl mt-10 mb-10 min-h-[375px] max-w-full px-10 text-center"
+  >
     <TypewriterContent client:load />
   </h1>
 </section>
