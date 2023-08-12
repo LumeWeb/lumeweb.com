@@ -37,6 +37,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-aquamarine: #7afcbb;
+  --color-dark-aquamarine: #1F4A3D;
+  --color-gray: #C7C7C7;
+}
+
 html {
   display: flex;
   flex-direction: column;
