@@ -1,9 +1,13 @@
 ---
-import './Typewriter.scss';
-import TypewriterContent from './TypewriterContent.jsx';
+import "./Typewriter.scss";
+import TypewriterContent from "./TypewriterContent.jsx";
 ---
 
-<section id="typewriter">
+<section id="typewriter" class="w-full overflow-hidden">
+  <img
+    class="absolute -z-10 -right-[250px] -bottom-[250px] w-[1250px] object-contain"
+    src="/src/assets/video-placeholder.webp"
+  />
   <h1>
     <TypewriterContent client:load />
   </h1>

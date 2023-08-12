@@ -12,14 +12,14 @@ const HeaderContent = () => {
     words = randomString.split(' ');
 
   return (
-    <Typewriter options={{ cursor: '<span class="highlight">_</span>' }} onInit={ (typewriter) => {
+    <Typewriter options={{ cursor: '<span class="highlight">_</span>' }} onInit={(typewriter) => {
       typewriter
         .changeDelay(50)
         .typeString(randomString.substring(0, randomString.lastIndexOf(' ')) + ' ')
         .start();
       typewriter
         .typeString('<span class="highlight">' + words[words.length - 1] + '</span>')
-    } }/>
+    }} />
   );
 };
 
