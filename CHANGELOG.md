@@ -1,3 +1,10 @@
+# [0.1.0-develop.5](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.4...v0.1.0-develop.5) (2023-08-13)
+
+
+### Features
+
+* refactor message component and footer ([8c14799](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/8c14799f5a0136cffffd05d90e83a81f53954b81))
+
 # [0.1.0-develop.4](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.3...v0.1.0-develop.4) (2023-08-13)
 
 
