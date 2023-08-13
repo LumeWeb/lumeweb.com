@@ -50,10 +50,10 @@ jobs:
                     secret_key: ${{ secrets.S3_SECRET_KEY }}
             -   name: Publish to S3 Dev
                 if: ${{ github.ref_name == 'develop' }}
-                run: sync "dist/" s3://${{ vars.S3_BUCKET_DEV }}/"
+                run: sync "dist/" s3://${{ vars.S3_BUCKET_DEV }}/
             -   name: Publish to S3 Prod
                 if: ${{ github.ref_name == 'master' }}
-                run: sync "dist/" s3://${{ vars.S3_BUCKET }}/"
+                run: sync "dist/" s3://${{ vars.S3_BUCKET }}/
             -   name: Setup tmate session
                 uses: mxschmitt/action-tmate@v3
                 if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled && failure() }}
