@@ -1,3 +1,31 @@
+# [0.1.0-develop.5](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.4...v0.1.0-develop.5) (2023-08-13)
+
+
+### Features
+
+* refactor message component and footer ([8c14799](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/8c14799f5a0136cffffd05d90e83a81f53954b81))
+
+# [0.1.0-develop.4](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.3...v0.1.0-develop.4) (2023-08-13)
+
+
+### Bug Fixes
+
+* update copy ([9b5fcfe](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/9b5fcfea318a83f662ae436fce0444c2dd808040))
+
+# [0.1.0-develop.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.2...v0.1.0-develop.3) (2023-08-13)
+
+
+### Bug Fixes
+
+* meme misalignment ([e773619](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/e773619524647074554005f18ec8840ddd06b1cb))
+
+# [0.1.0-develop.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.1...v0.1.0-develop.2) (2023-08-13)
+
+
+### Bug Fixes
+
+* wording change ([575a5b8](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/575a5b81495b3560a8146d4d35cd4a0064d37a32))
+
 # [0.1.0-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.0.1...v0.1.0-develop.1) (2023-08-13)
 
 
