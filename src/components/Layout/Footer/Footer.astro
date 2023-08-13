@@ -1,63 +1,79 @@
 ---
-import "./Footer.scss";
 import logo from "/src/assets/lume-logo.png";
 ---
 
-<footer>
-  <div>
-    <div class="footer-logo">
-      <a href="/">
-        <img src={logo.src} alt="Lume">
-      </a>
+<footer class="flex flex-row py-24 font-body mb-3 mx-40">
+  <div class="flex-1">
+    <a href="/">
+      <img src={logo.src} class="w-36 mb-2" alt="Lume" />
+    </a>
+    <a
+      href="mailto:contact@lumeweb.com"
+      class="flex flex-row items-center text-body text-xl"
+    >
+      <svg
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-4 h-4 mr-2"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+        >
+        </path>
+      </svg>
+      contact@lumeweb.com
+    </a>
+    <div class="text-lg text-primary font-bold font-display mt-10">
+      Freedom. Privacy. <br />Ownership.
     </div>
-    <div class="footer-contact">
-      <a href="mailto:contact@lumeweb.com">
-        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75">
-        </svg>
-        contact@lumeweb.com
-      </a>
-    </div>
-    <div class="footer-phrase">Freedom. Privacy. Ownership.</div>
   </div>
-  <div>
-    <h5>General</h5>
-    <ul>
+  <div class="flex-1">
+    <h5 class="text-3xl mb-3">General</h5>
+    <ul class="text-body font-body text-xl">
       <li>
-        <a href="/">Home</a>
-      </li>
-        <li>
-            <a href="https://git.lumeweb.com">Git</a>
-        </li>
-    </ul>
-  </div>
-  <div>
-    <h5>Community</h5>
-    <ul>
-      <li>
-        <a href="https://github.com/LumeWeb">GitHub</a>
+        <a href="/" class="hover:underline">Home</a>
       </li>
       <li>
-        <a href="https://discord.gg/qpC8ADp3rS">Discord</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/lumeweb3">Twitter</a>
+        <a href="https://git.lumeweb.com" class="hover:underline">Git</a>
       </li>
     </ul>
   </div>
-  <div>
-    <h5>Ecosystem</h5>
-    <ul>
+  <div class="flex-1">
+    <h5 class="text-3xl mb-3">Community</h5>
+    <ul class="text-body font-body text-xl">
       <li>
-        <a href="https://web3extension.io">Extension</a>
+        <a href="https://github.com/LumeWeb" class="hover:underline">GitHub</a>
+      </li>
+      <li>
+        <a href="https://discord.gg/qpC8ADp3rS" class="hover:underline"
+          >Discord</a
+        >
+      </li>
+      <li>
+        <a href="https://twitter.com/lumeweb3" class="hover:underline"
+          >Twitter</a
+        >
       </li>
     </ul>
   </div>
-  <div>
-    <h5>Support Us</h5>
-    <ul>
+  <div class="flex-1">
+    <h5 class="text-3xl mb-3">Ecosystem</h5>
+    <ul class="text-body font-body text-xl">
       <li>
-        <a href="/donate">Donate</a>
+        <a href="https://web3extension.io" class="hover:underline">Extension</a>
+      </li>
+    </ul>
+  </div>
+  <div class="flex-1">
+    <h5 class="text-3xl mb-3">Support Us</h5>
+    <ul class="text-body font-body text-xl">
+      <li>
+        <a href="/donate" class="hover:underline">Donate</a>
       </li>
     </ul>
   </div>
