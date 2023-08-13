@@ -1,3 +1,12 @@
+## [0.2.2-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.1...v0.2.2-develop.1) (2023-08-13)
+
+
+### Bug Fixes
+
+* remove scroll bars and add padding to contrast box ([0d32745](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/0d32745b1817b84211404093a0e10e7015cf6b3e))
+* update download url ([1e0485d](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/1e0485d1ccb74153557dcff46856350034594ec2))
+* update learn more link ([10ebeef](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/10ebeefaed5292d492976b078d5a2dd5ef1f3c9e))
+
 ## [0.2.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.0...v0.2.1) (2023-08-13)
 
 
