@@ -1,4 +1,5 @@
 ---
+import logo from "../../../assets/lume-logo.png";
 const { view } = Astro.props;
 
 function getActiveClass(linkView) {
@@ -10,7 +11,7 @@ function getActiveClass(linkView) {
   <div class="logo">
     <!-- TODO: Hide this logo and show simplified when 320 > width -->
     <a href="/">
-      <img class="w-44" src="/src/assets/lume-logo.png" alt="Lume Logo" />
+      <img class="w-44" src={logo.src} alt="Lume Logo" />
     </a>
   </div>
   <menu
