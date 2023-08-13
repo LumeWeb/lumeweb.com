@@ -12,7 +12,8 @@
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
-        "astro": "astro"
+        "astro": "astro",
+        "semantic-release": "semantic-release"
     },
     "dependencies": {
         "@astrojs/image": "^0.16.6",
