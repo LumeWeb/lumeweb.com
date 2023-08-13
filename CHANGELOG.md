@@ -1,3 +1,10 @@
+# [0.1.0-develop.7](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.6...v0.1.0-develop.7) (2023-08-13)
+
+
+### Bug Fixes
+
+* mobile layout on footer and message component ([5a8b20b](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/5a8b20b16e1493d4a6238acd81718f8b500c1ac4))
+
 # [0.1.0-develop.6](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.5...v0.1.0-develop.6) (2023-08-13)
 
 
