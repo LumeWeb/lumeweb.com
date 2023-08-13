@@ -1,3 +1,10 @@
+## [0.2.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.0...v0.2.1) (2023-08-13)
+
+
+### Bug Fixes
+
+* update socials ([6814ca3](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/6814ca3be56753ea9159ac5f07847fe722b6f0b3))
+
 # [0.2.0](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0...v0.2.0) (2023-08-13)
 
 
