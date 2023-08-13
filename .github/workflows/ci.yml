@@ -11,6 +11,12 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        env:
+            RCLONE_CONFIG_S3_TYPE: s3
+            RCLONE_CONFIG_S3_PROVIDER: Cloudflare
+            RCLONE_CONFIG_S3_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY }}
+            RCLONE_CONFIG_S3_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_KEY }}
+            RCLONE_CONFIG_S3_ENDPOINT: ${{ secrets.CF_ACCOUNT_ID }}.r2.cloudflarestorage.com
         steps:
             -   uses: actions/checkout@v3
             -   name: Use Node.js
@@ -32,7 +38,6 @@ jobs:
                 env:
                     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-
             -   name: Clean Up Robots Dev
                 if: ${{ github.ref_name == 'develop' }}
                 run: mv dist/robots-dev.txt dist/robots.txt
@@ -41,19 +46,15 @@ jobs:
                 if: ${{ github.ref_name == 'master' }}
                 run: rm dist/robots-dev.txt
 
-            -   name: Set up S3CMD
-                uses: s3-actions/s3cmd@v1.5.0
-                with:
-                    provider: cloudflare
-                    account_id: ${{ secrets.CF_ACCOUNT_ID }}
-                    access_key: ${{ secrets.S3_ACCESS_KEY }}
-                    secret_key: ${{ secrets.S3_SECRET_KEY }}
+            -   name: Setup RClone
+                run: curl https://rclone.org/install.sh | sudo bash -s
             -   name: Publish to S3 Dev
                 if: ${{ github.ref_name == 'develop' }}
-                run: sync "dist/" s3://${{ vars.S3_BUCKET_DEV }}
+                run: rclone sync dist/ s3:${{ vars.S3_BUCKET_DEV }}/
+
             -   name: Publish to S3 Prod
                 if: ${{ github.ref_name == 'master' }}
-                run: sync "dist/" s3://${{ vars.S3_BUCKET }}
+                run: rclone sync dist/ s3:${{ vars.S3_BUCKET }}/
             -   name: Setup tmate session
                 uses: mxschmitt/action-tmate@v3
                 if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled && failure() }}
