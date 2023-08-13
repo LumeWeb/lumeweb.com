@@ -1,3 +1,10 @@
+# [0.1.0-develop.6](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.5...v0.1.0-develop.6) (2023-08-13)
+
+
+### Bug Fixes
+
+* set url for download extension button ([fa8993b](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/fa8993b2bd422cbc2bc09c467dbc1749a8a921bb))
+
 # [0.1.0-develop.5](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.4...v0.1.0-develop.5) (2023-08-13)
 
 
