@@ -1,3 +1,10 @@
+# [0.1.0-develop.8](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.7...v0.1.0-develop.8) (2023-08-13)
+
+
+### Bug Fixes
+
+* contrast on 'ourvision' section ([2ec5873](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/2ec58730439533d5dbe329ae9a5def22c0c67566))
+
 # [0.1.0-develop.7](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.6...v0.1.0-develop.7) (2023-08-13)
 
 
