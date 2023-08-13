@@ -1,3 +1,10 @@
+# [0.1.0-develop.9](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.8...v0.1.0-develop.9) (2023-08-13)
+
+
+### Bug Fixes
+
+* revert copy for meme section ([187095e](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/187095e54f22d58d933df59bb5fcab631fcb0831))
+
 # [0.1.0-develop.8](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.7...v0.1.0-develop.8) (2023-08-13)
 
 
