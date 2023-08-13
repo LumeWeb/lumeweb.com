@@ -1,3 +1,10 @@
+# [0.2.0](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0...v0.2.0) (2023-08-13)
+
+
+### Features
+
+* add analytics ([6fcce50](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/6fcce50dab4d93aaa95520f89b676f40a29ea21d))
+
 # [0.1.0](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.0.1...v0.1.0) (2023-08-13)
 
 
