@@ -1,3 +1,10 @@
+# [0.1.0-develop.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.2...v0.1.0-develop.3) (2023-08-13)
+
+
+### Bug Fixes
+
+* meme misalignment ([e773619](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/e773619524647074554005f18ec8840ddd06b1cb))
+
 # [0.1.0-develop.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.1...v0.1.0-develop.2) (2023-08-13)
 
 
