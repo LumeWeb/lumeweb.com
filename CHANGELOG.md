@@ -1,3 +1,10 @@
+# [0.1.0-develop.4](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.3...v0.1.0-develop.4) (2023-08-13)
+
+
+### Bug Fixes
+
+* update copy ([9b5fcfe](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/9b5fcfea318a83f662ae436fce0444c2dd808040))
+
 # [0.1.0-develop.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.1.0-develop.2...v0.1.0-develop.3) (2023-08-13)
 
 
