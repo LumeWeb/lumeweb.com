@@ -1,3 +1,10 @@
+## [0.2.2-develop.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.2-develop.1...v0.2.2-develop.2) (2023-08-14)
+
+
+### Bug Fixes
+
+* overall improvements of the responsive layout ([f9362fa](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/f9362fa577172a017c8df26aefc88abba042b092))
+
 ## [0.2.2-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.1...v0.2.2-develop.1) (2023-08-13)
 
 
