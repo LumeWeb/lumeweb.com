@@ -1,3 +1,10 @@
+## [0.2.4-develop.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.4-develop.2...v0.2.4-develop.3) (2023-08-14)
+
+
+### Bug Fixes
+
+* revert global styles to unbreak site ([6b3626b](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/6b3626b6ac685fb27664ba3952fed98e16c7ebb8))
+
 ## [0.2.4-develop.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.4-develop.1...v0.2.4-develop.2) (2023-08-14)
 
 ## [0.2.4-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.3...v0.2.4-develop.1) (2023-08-14)
