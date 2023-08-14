@@ -1,0 +1,50 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/vars.scss";
+
+#socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    margin: 12em 7.5% 8em;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 2.5em;
+    }
+
+    h2 {
+        @include fluid-font-size(1.5625rem);
+        font-weight: 700;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: $color-aquamarine;
+    }
+
+    a {
+        padding: 0.5em;
+        color: $color-alto;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+
+    .github-logo svg {
+        @include fluid-width(3.5rem);
+    }
+
+    .git-logo svg {
+        @include fluid-width(3.5rem);
+    }
+
+    .discord-logo svg {
+        @include fluid-width(3.5rem);
+    }
+
+    .twitter-logo svg {
+        @include fluid-width(3.5rem);
+    }
+}
