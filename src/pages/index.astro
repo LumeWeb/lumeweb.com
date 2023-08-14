@@ -9,9 +9,14 @@ import WebComparison from "../components/Home/WebComparison/WebComparison.astro"
 import Socials from "../components/Home/Socials/Socials.astro";
 import CTO from "../components/Home/CTO/CTO.astro";
 import Message from "../components/Home/Message/Message.astro";
+import bg from "../assets/home-hero-bg.webp";
 ---
 
 <Layout view="home" title="Lume Web - Your Open Web">
+  <img
+    class="absolute -z-10 -right-[250px] top-[250px] object-contain w-[1250px] max-w-none"
+    src={bg.src}
+  />
   <Typewriter />
   <Vision />
   <Web3 />
