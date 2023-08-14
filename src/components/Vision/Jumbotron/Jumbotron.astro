@@ -1,9 +1,12 @@
 ---
-import '../../../styles/jumbotron.scss';
+import "../../../styles/jumbotron.scss";
+import backgroundSrc from "/src/assets/vision-jumbotron-bg.png";
 ---
 
-<section id="jumbotron">
-  <h1>
-      Easy access to an open, user-owned web.
-  </h1>
+<section id="jumbotron" class="relative">
+  <img
+    src={backgroundSrc.src}
+    class="-z-10 absolute left-1/2 -translate-x-1/2 w-[100em] max-w-none"
+  />
+  <h1 class="font-display2">Easy access to an open, user-owned web.</h1>
 </section>
