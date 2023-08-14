@@ -1,6 +1,6 @@
 ---
-// import "./Grid.scss";
-import GridCell from "./GridCell.astro";
+import GridCell from "../../ui/GridCell.astro";
+import GridContainer from "../../ui/GridContainer.astro";
 
 const features = [
   {
@@ -31,18 +31,17 @@ const features = [
 ];
 ---
 
-<section
-  id="grid"
-  class="flex flex-col md:mx-20 lg:mx-40 justify-between items-start gap-y-10 md:grid md:grid-cols-3 md:gap-x-10 md:gap-y-10"
->
-  <div class="w-[calc(33.33%-20px)] pl-12 pt-5 mx-[10px]">
-    <h2 class="text-primary font-display text-4xl leading-[1.6] font-bold">
-      Freedom. <br /> Privacy. Ownership.
-    </h2>
-  </div>
-  {
-    features.map((feature) => (
-      <GridCell title={feature.title} description={feature.description} />
-    ))
-  }
+<section id="grid" class="mx-10 md:mx-20 lg:mx-40">
+  <GridContainer>
+    <div class="w-[calc(33.33%-20px)] pl-12 pt-5 mx-[10px]">
+      <h2 class="text-primary font-display text-4xl leading-[1.6] font-bold">
+        Freedom. <br /> Privacy. Ownership.
+      </h2>
+    </div>
+    {
+      features.map((feature) => (
+        <GridCell title={feature.title} description={feature.description} />
+      ))
+    }
+  </GridContainer>
 </section>

@@ -51,7 +51,7 @@ const { view, title } = Astro.props;
   </head>
   <body class="max-w-[1600px] mx-auto">
     <Navbar view={view} />
-    <main class={view + " space-y-40 overflow-x-hidden relative "}>
+    <main class={view + " space-y-40 overflow-x-hidden relative mb-20"}>
       <slot />
     </main>
     {view !== "home" && <JoinCommunity />}
