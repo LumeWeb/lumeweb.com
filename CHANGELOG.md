@@ -1,3 +1,10 @@
+## [0.2.2-develop.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.2-develop.2...v0.2.2-develop.3) (2023-08-14)
+
+
+### Bug Fixes
+
+* bring back ibm font ([ccc873d](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/ccc873d547de3e9cd8ba1067d95d5ab5cfd8a9f4))
+
 ## [0.2.2-develop.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.2-develop.1...v0.2.2-develop.2) (2023-08-14)
 
 
