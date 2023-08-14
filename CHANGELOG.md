@@ -1,3 +1,11 @@
+## [0.2.4-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.3...v0.2.4-develop.1) (2023-08-14)
+
+
+### Bug Fixes
+
+* bring back ibm font ([ccc873d](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/ccc873d547de3e9cd8ba1067d95d5ab5cfd8a9f4))
+* overall improvements of the responsive layout ([f9362fa](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/f9362fa577172a017c8df26aefc88abba042b092))
+
 ## [0.2.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.2...v0.2.3) (2023-08-14)
 
 
