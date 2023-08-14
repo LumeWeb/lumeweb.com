@@ -4,7 +4,7 @@ const HeaderContent = () => {
   var
     headerStrings = [
       'Access to the web <br /> for the masses',
-      'An open web for business',
+      'An open web <br /> for business',
       'Web3 for the masses',
       'Web3 for you'
     ],
