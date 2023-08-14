@@ -1,3 +1,11 @@
+## [0.2.5](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.4...v0.2.5) (2023-08-14)
+
+
+### Bug Fixes
+
+* bring back ibm font ([ccc873d](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/ccc873d547de3e9cd8ba1067d95d5ab5cfd8a9f4))
+* revert global styles to unbreak site ([6b3626b](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/6b3626b6ac685fb27664ba3952fed98e16c7ebb8))
+
 ## [0.2.4](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.3...v0.2.4) (2023-08-14)
 
 
