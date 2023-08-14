@@ -12,6 +12,7 @@ module.exports = {
     fontFamily: {
       'body': '"Jaldi", sans-serif',
       'display': '"JetBrains Mono", monospace',
+      'display2': '"IBM Plex Sans Devanagari", monospace',
     }
   }
 }

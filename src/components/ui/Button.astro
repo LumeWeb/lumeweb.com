@@ -1,0 +1,16 @@
+---
+export interface Props {
+  label: string;
+  href: string;
+}
+
+const { label, href } = Astro.props;
+---
+
+<div class="pt-10 w-full">
+  <a
+    href={href}
+    class="text-2xl w-full block text-center md:max-w-[350px] rounded-md bg-primary py-3 px-10 text-black font-body"
+    >{label}</a
+  >
+</div>
