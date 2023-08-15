@@ -168,15 +168,17 @@ await addCurrency(
     }
   }
 </style>
-<section id="methods" class="mx-10 md:mx-20 lg:mx-40">
-  <div>
+<section id="methods">
+  <div class="mx-5 md:mx-20 lg:mx-40">
     <h2 class="text-3xl lg:text-4xl mb-5 mt-20">Donate Cryptocurrency</h2>
-    <div class="flex w-full flex-col lg:flex-row lg:flex-wrap gap-[10px]">
+    <div
+      class="flex w-full flex-col lg:flex-row lg:flex-wrap gap-y-[10px] lg:gap-x-[10px]"
+    >
       {
         currencies.map((currency) => (
           <div
             id={"donate-" + currency.id}
-            class={`hover:ring-2 flex flex-col bg-black rounded-md px-10 py-5 w-full max-w-[calc(100vw-30px)] lg:max-w-none lg:w-[calc(50%-20px)]`}
+            class={`hover:ring-2 flex flex-col bg-black rounded-md p-5 w-full max-w-[calc(100vw-40px)] lg:max-w-none lg:w-[calc(50%-20px)]`}
             style={`--tw-ring-color: ${currency.mainColor}`}
           >
             <div class="flex flex-row flex-1 gap-x-4 w-full justify-between">
@@ -206,9 +208,11 @@ await addCurrency(
         ))
       }
     </div>
+  </div>
+  <div class="mx-5 md:mx-20 lg:mx-40 max-w-[calc(100vw-40px)]">
     <h2 class="text-3xl lg:text-4xl mb-10 mt-40">Donate Fiat</h2>
     <div
-      class="flex flex-col items-center justify-between gap-4 lg:flex-row lg:flex-wrap"
+      class="flex flex-col items-center justify-between gap-y-4 lg:gap-x-4 lg:flex-row lg:flex-wrap"
     >
       <div
         id="donate-paypal"
@@ -318,12 +322,13 @@ await addCurrency(
       </div>
     </div>
   </div>
-  <p class="text-lg italic font-body text-body mt-10 mx-10">
+  <p class="text-lg italic font-body text-body mt-5 mx-10">
     If you are interested in donating through other means, please get in touch
     with us to discuss. If there is a cryptocurrency you wish to contribute with
     that we have not listed, please let me know!
   </p>
 </section>
+
 <dialog id="qr-dialog" class="backdrop:bg-black/20 backdrop:backdrop-blur-sm">
 </dialog>
 <script is:inline>
