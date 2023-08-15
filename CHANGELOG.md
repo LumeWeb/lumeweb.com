@@ -1,3 +1,13 @@
+## [0.2.6](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5...v0.2.6) (2023-08-15)
+
+
+### Bug Fixes
+
+* add opengraph seo ([45a4a8d](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/45a4a8d7125e8c1ff7f5b18f0215305d181ef85e))
+* grid cell style closer to design by centering the text ([f3498ec](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/f3498ec536862017b6e3acf33d136c81aa550d33))
+* gridcell style ([a1b998e](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/a1b998e4b941abf8557e08e8a3a1affb164cbf59))
+* incorrect font choice on gridcell ([115090f](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/115090fc562798ac2ecbb271b6612c6a2c03d564))
+
 ## [0.2.5-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.4...v0.2.5-develop.1) (2023-08-15)
 
 
