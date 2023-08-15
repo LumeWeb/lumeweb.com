@@ -9,6 +9,8 @@ module.exports = {
         "dark-aquamarine": 'var(--color-dark-aquamarine)',
         body: 'var(--color-gray)',
         "gradient-aqua": "linear-gradient(to right, var(--color-dark-aquamarine), var(--color-aquamarine))",
+        "blue-charcoal": 'var(--color-blue-charcoal)',
+        "charcoal": 'var(--color-charcoal)',
       }
     },
     fontFamily: {
