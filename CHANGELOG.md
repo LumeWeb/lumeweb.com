@@ -1,3 +1,11 @@
+## [0.2.5-develop.4](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.3...v0.2.5-develop.4) (2023-08-15)
+
+
+### Bug Fixes
+
+* last minute details ([63fb11e](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/63fb11e1b068a68f21c92343c53b9875e384b2a8))
+* layout shifting and showing overflow ([309d19c](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/309d19c73aa1a261081000f7396ec090549b3d64))
+
 ## [0.2.5-develop.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.2...v0.2.5-develop.3) (2023-08-15)
 
 
