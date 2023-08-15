@@ -1,12 +1,12 @@
 {
     "name": "@lumeweb/lumeweb.com",
-    "version": "0.2.5-develop.4",
+    "version": "0.2.5-develop.5",
     "lockfileVersion": 3,
     "requires": true,
     "packages": {
         "": {
             "name": "@lumeweb/lumeweb.com",
-            "version": "0.2.5-develop.4",
+            "version": "0.2.5-develop.5",
             "dependencies": {
                 "@astrojs/react": "^2.1.1",
                 "@astrojs/tailwind": "^3.1.1",
