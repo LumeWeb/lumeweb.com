@@ -1,3 +1,10 @@
+## [0.2.5-develop.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.2...v0.2.5-develop.3) (2023-08-15)
+
+
+### Bug Fixes
+
+* wrong color on 'How.astro' Component ([02764ea](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/02764ea73cc27f0f5165cc10564a2fd6450a5cf4))
+
 ## [0.2.5-develop.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.1...v0.2.5-develop.2) (2023-08-15)
 
 ## [0.2.5-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.4...v0.2.5-develop.1) (2023-08-15)
