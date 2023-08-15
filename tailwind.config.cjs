@@ -1,11 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  variants: {
-    extend: {
-      boxShadow: ['active']
-    }
-  },
+  important: false,
   theme: {
     extend: {
       colors: {
@@ -13,6 +9,8 @@ module.exports = {
         "dark-aquamarine": 'var(--color-dark-aquamarine)',
         body: 'var(--color-gray)',
         "gradient-aqua": "linear-gradient(to right, var(--color-dark-aquamarine), var(--color-aquamarine))",
+        "blue-charcoal": 'var(--color-blue-charcoal)',
+        "charcoal": 'var(--color-charcoal)',
       }
     },
     fontFamily: {

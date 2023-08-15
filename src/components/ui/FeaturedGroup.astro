@@ -20,7 +20,7 @@ const { title, subtitle, text } = Astro.props;
 
   {
     text.map((paragraph) => (
-      <p class="font-body text-xl md:text-3xl text-body">
+      <p class="font-body text-xl md:text-2xl text-body">
         <Fragment set:html={paragraph} />
       </p>
     ))
