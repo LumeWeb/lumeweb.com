@@ -1,3 +1,10 @@
+## [0.2.5-develop.5](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.4...v0.2.5-develop.5) (2023-08-15)
+
+
+### Bug Fixes
+
+* improved hero image ([a07e74f](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/a07e74f1901b22dc2f502699c8a96a9bda4a8cf3))
+
 ## [0.2.5-develop.4](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.3...v0.2.5-develop.4) (2023-08-15)
 
 
