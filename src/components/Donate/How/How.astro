@@ -1,18 +1,54 @@
 ---
-import './How.scss';
+import Button from "../../ui/Button.astro";
+import FeaturedGroup from "../../ui/FeaturedGroup.astro";
+// import "./How.scss";
 ---
 
-<section id="how">
-    <div class="custom-bg"></div>
-    <div class="feature-group">
-        <h2>How should I donate?</h2>
-        <h3>Donate via Gitcoin during funding rounds</h3>
-        <p>
-            When Gitcoin is doing funding rounds, donating through their website will give a matching bonus of up to
-            150%. This means that your donation will have a bigger impact on the project during this time period.
-        </p>
-        <div>
-            <a href="https://gitcoin.co/grants/4722/lume-web-web3-accessibility-freedom-and-education" class="btn-main">Gitcoin</a>
-        </div>
+<style>
+  .custom-bg {
+    position: absolute;
+    top: 0;
+    right: -12.5%;
+    bottom: 0;
+    left: -12.5%;
+    margin: 2% 0;
+    background: var(--color-blue-charcoal);
+    transform: matrix(1, 0.04, -0.04, 1, 0, 0);
+    z-index: -1;
+    overflow: hidden;
+    height: 500px;
+  }
+
+  .custom-bg::after {
+    content: "";
+    position: absolute;
+    top: 3%;
+    bottom: -9%;
+    left: 10%;
+    right: 10%;
+    background-image: url("/src/assets/donate-gfx-right.png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-2.25deg);
+  }
+</style>
+
+<section id="how" class="relative">
+  <div class="custom-bg -mx-10"></div>
+  <div class="max-w-3xl px-7 mx-10 md:mx-20 lg:mx-40">
+    <div class="bg-black/50 p-3 lg:bg-transparent lg:p-0">
+      <FeaturedGroup
+        subtitle="Donate via Gitcoin during funding rounds"
+        title="How should I donate?"
+        text={[
+          "When Gitcoin is doing funding rounds, donating through their website will give a matching bonus of up to 150%. This means that your donation will have a bigger impact on the project during this time period.",
+        ]}
+      />
+      <Button
+        href="https://gitcoin.co/grants/4722/lume-web-web3-accessibility-freedom-and-education"
+        label="Gitcoin"
+      />
     </div>
+  </div>
 </section>

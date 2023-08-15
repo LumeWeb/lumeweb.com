@@ -38,9 +38,9 @@
             border-radius: 1em;
             transition: border-color 200ms;
 
-            &:hover {
-                border-color: $color-aquamarine;
-            }
+            // &:hover {
+            //     border-color: $color-aquamarine;
+            // }
 
             > div:first-child {
                 display: flex;
@@ -147,53 +147,53 @@
         @include fluid-font-size(1.5rem);
     }
 
-    #donate-bitcoin:hover {
-        border-color: #f7931a;
-    }
+    // #donate-bitcoin:hover {
+    //     border-color: #f7931a;
+    // }
 
-    #donate-litecoin:hover {
-        border-color: #345d9d;
-    }
+    // #donate-litecoin:hover {
+    //     border-color: #345d9d;
+    // }
 
-    #donate-ethereum:hover {
-        border-color: #8c8c8c;
-    }
+    // #donate-ethereum:hover {
+    //     border-color: #8c8c8c;
+    // }
 
-    #donate-polygon:hover {
-        border-color: #8247e5;
-    }
+    // #donate-polygon:hover {
+    //     border-color: #8247e5;
+    // }
 
-    #donate-solana:hover {
-        border-color: #dc1fff;
-    }
+    // #donate-solana:hover {
+    //     border-color: #dc1fff;
+    // }
 
-    #donate-cardano:hover {
-        border-color: #0033ad;
-    }
+    // #donate-cardano:hover {
+    //     border-color: #0033ad;
+    // }
 
-    #donate-siacoin:hover {
-        border-color: #20ee82;
-    }
+    // #donate-siacoin:hover {
+    //     border-color: #20ee82;
+    // }
 
-    #donate-monero:hover {
-        border-color: #f26822;
-    }
+    // #donate-monero:hover {
+    //     border-color: #f26822;
+    // }
 
-    #donate-handshake:hover {
-        border-color: #fff;
-    }
+    // #donate-handshake:hover {
+    //     border-color: #fff;
+    // }
 
-    #donate-cosmos:hover {
-        border-color: #6f7390;
-    }
+    // #donate-cosmos:hover {
+    //     border-color: #6f7390;
+    // }
 
-    #donate-secret:hover {
-        border-color: #fff;
-    }
+    // #donate-secret:hover {
+    //     border-color: #fff;
+    // }
 
-    #donate-algorand:hover {
-        border-color: #fff;
-    }
+    // #donate-algorand:hover {
+    //     border-color: #fff;
+    // }
 
     #donate-paypal {
         &:hover {
