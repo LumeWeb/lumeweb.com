@@ -1,7 +1,7 @@
 {
     "name": "@lumeweb/lumeweb.com",
     "type": "module",
-    "version": "0.2.5-develop.6",
+    "version": "0.2.7",
     "private": true,
     "repository": {
         "type": "git",
