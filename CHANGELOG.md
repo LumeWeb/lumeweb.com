@@ -1,3 +1,10 @@
+## [0.2.5-develop.6](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.5...v0.2.5-develop.6) (2023-08-15)
+
+
+### Bug Fixes
+
+* update gitcoin url ([a95e913](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/a95e91389981afc7efac0398165a3cb184df564b))
+
 ## [0.2.5-develop.5](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.4...v0.2.5-develop.5) (2023-08-15)
 
 
