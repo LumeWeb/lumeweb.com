@@ -1,3 +1,10 @@
+## [0.2.5-develop.7](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.6...v0.2.5-develop.7) (2023-08-16)
+
+
+### Bug Fixes
+
+* spacing issues ([42b5ca2](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/42b5ca213fc74b88a53c8c699e9ccad466d2e795))
+
 ## [0.2.5-develop.6](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.5...v0.2.5-develop.6) (2023-08-15)
 
 
