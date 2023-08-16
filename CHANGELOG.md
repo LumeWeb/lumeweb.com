@@ -1,3 +1,10 @@
+## [0.2.5-develop.8](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.7...v0.2.5-develop.8) (2023-08-16)
+
+
+### Bug Fixes
+
+* add badges ([7219604](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/721960471f6c19fcf32a20a8d205c359f13a7c3d))
+
 ## [0.2.5-develop.7](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.6...v0.2.5-develop.7) (2023-08-16)
 
 
