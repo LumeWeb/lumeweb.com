@@ -33,6 +33,14 @@
   src: url("/fonts/ibm-plex-sans-devanagari.woff2") format('woff2');
 }
 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Inter-VariableFont.ttf") format('ttf');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

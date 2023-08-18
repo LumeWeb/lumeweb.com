@@ -1,13 +1,16 @@
-## [0.2.7](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.6...v0.2.7) (2023-08-15)
+## [0.2.5-develop.8](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.7...v0.2.5-develop.8) (2023-08-16)
 
 
 ### Bug Fixes
 
-* improved hero image ([a07e74f](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/a07e74f1901b22dc2f502699c8a96a9bda4a8cf3))
-* last minute details ([63fb11e](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/63fb11e1b068a68f21c92343c53b9875e384b2a8))
-* layout shifting and showing overflow ([309d19c](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/309d19c73aa1a261081000f7396ec090549b3d64))
-* update gitcoin url ([a95e913](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/a95e91389981afc7efac0398165a3cb184df564b))
-* wrong color on 'How.astro' Component ([02764ea](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/02764ea73cc27f0f5165cc10564a2fd6450a5cf4))
+* add badges ([7219604](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/721960471f6c19fcf32a20a8d205c359f13a7c3d))
+
+## [0.2.5-develop.7](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.6...v0.2.5-develop.7) (2023-08-16)
+
+
+### Bug Fixes
+
+* spacing issues ([42b5ca2](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/42b5ca213fc74b88a53c8c699e9ccad466d2e795))
 
 ## [0.2.5-develop.6](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.5...v0.2.5-develop.6) (2023-08-15)
 

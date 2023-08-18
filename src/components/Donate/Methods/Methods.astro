@@ -181,7 +181,7 @@ await addCurrency(
             class={`hover:ring-2 flex flex-col bg-black rounded-md p-5 w-full max-w-[calc(100vw-40px)] lg:max-w-none lg:w-[calc(50%-20px)]`}
             style={`--tw-ring-color: ${currency.mainColor}`}
           >
-            <div class="flex flex-row flex-1 gap-x-4 w-full justify-between">
+            <div class="flex flex-row gap-x-4 w-full justify-between">
               <div class="w-12 h-12">
                 <Fragment set:html={currency.svgLogo.default} />
               </div>
@@ -197,8 +197,8 @@ await addCurrency(
                 id="copy-address"
                 class="w-7 h-7 bg-gray-500"
                 onclick="
-                copyToClipboard(this)
-                "
+                                copyToClipboard(this)
+                                "
               />
               <div class="text-lg relative break-words max-w-[calc(100%-50px)]">
                 {currency.address}
@@ -332,48 +332,48 @@ await addCurrency(
 <dialog id="qr-dialog" class="backdrop:bg-black/20 backdrop:backdrop-blur-sm">
 </dialog>
 <script is:inline>
-var msgCallback,
-  msgTimeout,
-  qrDialog = document.getElementById("qr-dialog");
+  var msgCallback,
+    msgTimeout,
+    qrDialog = document.getElementById("qr-dialog");
 
-function copyToClipboard(element) {
-  var range = document.createRange(),
-    selection = window.getSelection();
+  function copyToClipboard(element) {
+    var range = document.createRange(),
+      selection = window.getSelection();
 
-  if (msgCallback) {
-    clearTimeout(msgTimeout);
-    msgCallback();
+    if (msgCallback) {
+      clearTimeout(msgTimeout);
+      msgCallback();
+    }
+
+    range.selectNode(element.nextElementSibling); // select address container
+    selection.removeAllRanges(); // clear current selection
+    selection.addRange(range); // select address
+    document.execCommand("copy"); // copy
+    selection.removeAllRanges(); // deselect
+
+    element.classList.add("success");
+
+    msgCallback = function () {
+      element.classList.remove("success");
+      msgCallback = undefined;
+    };
+
+    msgTimeout = window.setTimeout(msgCallback, 5000);
   }
 
-  range.selectNode(element.nextElementSibling); // select address container
-  selection.removeAllRanges(); // clear current selection
-  selection.addRange(range); // select address
-  document.execCommand("copy"); // copy
-  selection.removeAllRanges(); // deselect
-
-  element.classList.add("success");
-
-  msgCallback = function () {
-    element.classList.remove("success");
-    msgCallback = undefined;
-  };
-
-  msgTimeout = window.setTimeout(msgCallback, 5000);
-}
-
-function openDialog(qrLarge) {
-  document.body.classList.add("scroll-lock");
-  qrDialog.innerHTML = '<img src="' + qrLarge + '"/>';
-  qrDialog.showModal();
-}
-
-qrDialog.addEventListener("close", function () {
-  document.body.classList.remove("scroll-lock");
-});
-
-qrDialog.addEventListener("click", function (event) {
-  if (event.target === this) {
-    this.close();
+  function openDialog(qrLarge) {
+    document.body.classList.add("scroll-lock");
+    qrDialog.innerHTML = '<img src="' + qrLarge + '"/>';
+    qrDialog.showModal();
   }
-});
+
+  qrDialog.addEventListener("close", function () {
+    document.body.classList.remove("scroll-lock");
+  });
+
+  qrDialog.addEventListener("click", function (event) {
+    if (event.target === this) {
+      this.close();
+    }
+  });
 </script>
