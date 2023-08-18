@@ -1,3 +1,11 @@
+## [0.2.8](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.7...v0.2.8) (2023-08-18)
+
+
+### Bug Fixes
+
+* add badges ([7219604](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/721960471f6c19fcf32a20a8d205c359f13a7c3d))
+* spacing issues ([42b5ca2](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/42b5ca213fc74b88a53c8c699e9ccad466d2e795))
+
 ## [0.2.5-develop.8](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.5-develop.7...v0.2.5-develop.8) (2023-08-16)
 
 
