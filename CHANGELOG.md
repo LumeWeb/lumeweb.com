@@ -1,3 +1,18 @@
+# [0.3.0](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.8...v0.3.0) (2023-08-19)
+
+
+### Bug Fixes
+
+* add missing image ([0ebbc48](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/0ebbc48337ff81a2753f7f1ee01eff83168806c9))
+* grammar ([ff7b022](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/ff7b0227897db1a8a9eba3fcbe348e5b88d9c030))
+* meme headline and donate button ([917a818](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/917a818c8375c0c880e5c4b3bf5760698bc739f1))
+
+
+### Features
+
+* add grid feature for NFT's ([14dad07](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/14dad07901eea31b97ce741d4a1ab19961d15c7c))
+* add sitemap ([599bba5](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/599bba5c352ead5981732d68a5c83cc42a40cb65))
+
 # [0.3.0-develop.4](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0-develop.3...v0.3.0-develop.4) (2023-08-19)
 
 
