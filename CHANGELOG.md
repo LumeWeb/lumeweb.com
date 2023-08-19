@@ -1,3 +1,10 @@
+## [0.2.8-develop.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.8-develop.1...v0.2.8-develop.2) (2023-08-19)
+
+
+### Bug Fixes
+
+* add missing image ([0ebbc48](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/0ebbc48337ff81a2753f7f1ee01eff83168806c9))
+
 ## [0.2.8-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.7...v0.2.8-develop.1) (2023-08-18)
 
 
