@@ -1,3 +1,17 @@
+# [0.3.0-develop.4](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0-develop.3...v0.3.0-develop.4) (2023-08-19)
+
+
+### Bug Fixes
+
+* meme headline and donate button ([917a818](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/917a818c8375c0c880e5c4b3bf5760698bc739f1))
+
+# [0.3.0-develop.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0-develop.2...v0.3.0-develop.3) (2023-08-19)
+
+
+### Features
+
+* add sitemap ([599bba5](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/599bba5c352ead5981732d68a5c83cc42a40cb65))
+
 # [0.3.0-develop.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0-develop.1...v0.3.0-develop.2) (2023-08-19)
 
 
