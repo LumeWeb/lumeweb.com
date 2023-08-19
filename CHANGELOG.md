@@ -1,3 +1,10 @@
+# [0.3.0-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.8-develop.2...v0.3.0-develop.1) (2023-08-19)
+
+
+### Features
+
+* add grid feature for NFT's ([14dad07](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/14dad07901eea31b97ce741d4a1ab19961d15c7c))
+
 ## [0.2.8-develop.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.8-develop.1...v0.2.8-develop.2) (2023-08-19)
 
 
