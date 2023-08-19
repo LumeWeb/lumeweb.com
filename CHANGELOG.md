@@ -1,3 +1,10 @@
+# [0.3.0-develop.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0-develop.1...v0.3.0-develop.2) (2023-08-19)
+
+
+### Bug Fixes
+
+* grammar ([ff7b022](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/ff7b0227897db1a8a9eba3fcbe348e5b88d9c030))
+
 # [0.3.0-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.2.8-develop.2...v0.3.0-develop.1) (2023-08-19)
 
 
