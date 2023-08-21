@@ -1,3 +1,10 @@
+# [0.3.0-develop.4](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0-develop.3...v0.3.0-develop.4) (2023-08-19)
+
+
+### Bug Fixes
+
+* meme headline and donate button ([917a818](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/917a818c8375c0c880e5c4b3bf5760698bc739f1))
+
 # [0.3.0-develop.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0-develop.2...v0.3.0-develop.3) (2023-08-19)
 
 
