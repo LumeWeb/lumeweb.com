@@ -1,4 +1,4 @@
-## [0.3.1-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0...v0.3.1-develop.1) (2023-09-30)
+## [0.3.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0...v0.3.1) (2023-08-21)
 
 
 ### Bug Fixes
