@@ -1,3 +1,10 @@
+## [0.3.1-develop.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0...v0.3.1-develop.1) (2023-09-30)
+
+
+### Bug Fixes
+
+* spacing, button getting cutoff again :( ([7f38d40](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/7f38d409d262d972722f26f221e6be721104999f))
+
 # [0.3.0-develop.5](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0-develop.4...v0.3.0-develop.5) (2023-08-21)
 
 
