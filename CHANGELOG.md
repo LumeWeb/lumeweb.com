@@ -1,3 +1,10 @@
+## [0.3.3](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.2...v0.3.3) (2024-01-27)
+
+
+### Bug Fixes
+
+* update donation addresses ([6b60eaa](https://git.lumeweb.com/LumeWeb/lumeweb.com/commit/6b60eaa19f3b06de0f05226604fccd36c3f2ab38))
+
 ## [0.3.2](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.1...v0.3.2) (2023-09-30)
 
 ## [0.3.1](https://git.lumeweb.com/LumeWeb/lumeweb.com/compare/v0.3.0...v0.3.1) (2023-08-21)
